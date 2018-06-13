@@ -1,0 +1,382 @@
+<? session_start();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RCL Booking System</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="es" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+   <!--no flollow content-->
+    <meta name="robots" content="none" />
+	<meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="gooblebot" content="noindex, nofollow, noarchive" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <!--no flollow content-->
+	<meta name="author" content="http://kydpro.com">
+    <meta name="copyright" content="&copy; <?=date('Y');?> http://kydpro.com" />
+
+	<link rel="icon" href="https://www.casalindacity.com/favicon.ico" type="image/ico" />
+	<link rel="shortcut icon" href="https://www.casalindacity.com/favicon.
+	ico" />
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="template/css/style.css" type="text/css" media="all" />
+
+
+    <link rel="stylesheet" href="js/w/dhtmlwindow.css" type="text/css" />
+	<script type="text/javascript" src="js/w/dhtmlwindow.js"></script>
+	<link rel="stylesheet" href="js/m/modal.css" type="text/css" />
+	<script type="text/javascript" src="js/m/modal.js"></script>
+	<script type="text/javascript" src="js/states_countries.js"></script>
+
+	<script type="text/javascript" src="js/confirm.js"></script>
+
+<script language="javascript" type="text/javascript">
+	function muestraReloj()
+{
+// Compruebo si se puede ejecutar el script en el navegador del usuario
+if (!document.layers && !document.all && !document.getElementById) return;
+// Obtengo la hora actual y la divido en sus partes
+var fechacompleta = new Date();
+var horas = fechacompleta.getHours();
+var minutos = fechacompleta.getMinutes();
+var segundos = fechacompleta.getSeconds();
+var mt = "AM";
+// Pongo el formato 12 horas
+if (horas> 11) {
+mt = "PM";
+horas = horas - 12;
+}
+if (horas == 0) horas = 12;
+// Pongo minutos y segundos con dos digitos
+if (minutos <= 9) minutos = "0" + minutos;
+if (segundos <= 9) segundos = "0" + segundos;
+// En la variable 'cadenareloj' puedes cambiar los colores y el tipo de fuente
+//cadenareloj = "<font size='-1' face='verdana'>" + horas + ":" + minutos + ":" + segundos + " " + mt + "</font>";
+cadenareloj =horas + ":" + minutos + ":" + segundos + " " + mt;
+// Escribo el reloj de una manera u otra, segun el navegador del usuario
+if (document.layers) {
+document.layers.spanreloj.document.write(cadenareloj);
+document.layers.spanreloj.document.close();
+}
+else if (document.all) spanreloj.innerHTML = cadenareloj;
+else if (document.getElementById) document.getElementById("spanreloj").innerHTML = cadenareloj;
+// Ejecuto la funcion con un intervalo de un segundo
+setTimeout("muestraReloj()", 1000);
+}
+
+</script>
+
+<script language="javascript">
+
+function windowOpener(windowHeight, windowWidth, windowName, windowUri)
+{
+    var centerWidth = (window.screen.width - windowWidth) / 2;
+    var centerHeight = (window.screen.height - windowHeight) / 2;
+
+    newWindow = window.open(windowUri, windowName, 'titlebar=no, resizable=no, scrollbars=yes, toolbar=no,location=false, directories=no, status=no, menubar=no,width=' + windowWidth +
+        ',height=' + windowHeight +
+        ',left=' + centerWidth +
+        ',top=' + centerHeight);
+
+    newWindow.focus();
+    return newWindow.name;
+}
+
+</script>
+
+<SCRIPT LANGUAGE="javascript">
+<!--
+function referal(url)
+{
+window.open(url, 'Booking_System_RCL', 'width=600, height=650, resizable=yes, scrollbars=yes');
+
+}
+-->
+</SCRIPT>
+ <!--//information for colums and row color on mouseover//-->
+<!--// <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.2.6");
+    </script>
+    <script type="text/javascript" src="js/example-one.js"></script>//-->
+  <!--//information for colums and row color on mouseover//-->
+<?  require_once('RowColumnHighlighting/include_files.php');?>
+
+<style type="text/css">
+	ul.menu li.nolink, ul.menu2 li.nolink, ul.menu3 li.nolink, ul.menu4 li.nolink {
+	    color: #87867A;
+	    padding: 3px 10px 0 0;
+	}
+	ul.menu li.c2 a span {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll left -82px #F1F0E9;
+	}
+	ul.menu li.c2 a {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll right -82px #F1F0E9;
+	}
+	ul.menu li.c2 a:hover span {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll left -41px #F26C04;
+	    color: #FFFFFF;
+	}
+	ul.menu li.c2 a:hover {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll right -41px #F26C04;
+	}
+	ul.menu li.c2 a:active span {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll left -41px #F26C04;
+	    color: #FFFFFF;
+	}
+	ul.menu2 li.c2 a:active {
+	    background: url("template/img/bg_subnav_tabs3.gif") repeat scroll right -41px #F26C04;
+	}
+
+	ul.menu li.c3 a span {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll left -82px #F1F0E9;
+	}
+	ul.menu li.c3 a {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll right -82px #F1F0E9;
+	}
+	ul.menu li.c3 a:hover span {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll left -41px #F26C04;
+	    color: #FFFFFF;
+	}
+	ul.menu li.c3 a:hover {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll right -41px #F26C04;
+	}
+	ul.menu li.c3 a:active span {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll left -41px #F26C04;
+	    color: #FFFFFF;
+	}
+	ul.menu2 li.c3 a:active {
+	    background: url("template/img/bg_subnav_tabs4.gif") repeat scroll right -41px #F26C04;
+	}
+</style>
+</head>
+<body  onload="muestraReloj()" >
+	<div id="wrap-utilidades">
+		<div id="utilidades" class="clearfix">
+<!-- Publicidad -->
+            <div class="publicidad-head b-publicidad">
+            <div style="margin: 0pt auto; width: 728px;">
+            </div>
+            </div>
+			<div id="pop-login" class="emboss" style="display: none; visibility: hidden;" role="dialog">
+			<!--	<h2>Logout</h2>-->
+			</div>
+			<div id="breadcrumb">
+				<? if ($_SESSION['info']){?><p>Welcome: <!--<a href="#">--><span style="color:#006;"><? echo ucfirst($_SESSION['info']['name'])." ".ucfirst($_SESSION['info']['lastname']) ?></span><!--</a>--> <!--&gt;--> <!--- Level  &gt;--> <? /* echo $_SESSION['info']['level']*/?> </p><? }?>
+			</div>
+
+			<!-- anonimo -->
+			<ul id="identificacion">
+            	<li style="color:#006"><strong><?=formatear_fecha(date('Y-m-d'));?></strong></li>
+				<li class="primera"><!--<a href="#">--><strong><div id="spanreloj" style="color:#006"><!--CLOCK APPER HERE--></div></strong>
+<!--Date, Time--><!--</a>--></li>
+				<? if ($_SESSION['info']){?><li class="login"><a id="login-link" href="logout.php">Logout</a></li><? }?>
+			</ul>
+			 <!-- usr? -->
+		</div>
+	</div> <!-- /wrap-utilidades -->
+		<div id="wrap-header">
+
+		<div id="header" role="banner" style="background:url(&quot;template/img/fondo_014.jpg&quot;) repeat scroll 0% 0% transparent;">
+			<a href="home-welcome.php" title="Go Home to Booking System" class="limpito"><!--//<img class="pngfix" id="js-logo" src="template/img/rcl_transparente.png" alt="" border="0" height="60" width="252">//--></a>
+		</div> <!-- /header -->
+	</div> <!-- /wrap-header -->
+	<div id="wrap-navegacion">
+    <div id="navegacion" class="clearfix">	<p class="invis"><!--(Menu principal)--></p>
+   <?if ($_SESSION['info']){?>
+   
+    <ul id="nav-primaria" class="clearfix" role="navigation">
+	    <?if ($_SESSION['info']['level']<=5){?>
+			   <!--// <li <? if ($_GET['p']=='h') echo 'class="actual"';?>><a href="home-welcome.php" accesskey="1"><span>Home</span></a>	</li>//-->
+				<li <? if ($_GET['p']=='b') echo 'class="actual"';?>><a href="booking-calendar.php" accesskey="2"><span>Bookings</span></a></li>
+				<? if ($_SESSION['info']['level']<=2){?>
+					<li <? if ($_GET['p']=='a') echo 'class="actual"';?>><a href="view-services.php" accesskey="4"><span>Services</span></a></li>
+				 <? } ?>
+				<li <? if ($_GET['p']=='c') echo 'class="actual"';?>><a href="new-client.php" accesskey="3"><span>Customers</span></a></li>
+
+				 <?/* if ($_SESSION['info']['level']<=4){?>
+					<li <? if ($_GET['p']=='i') echo 'class="actual"';?>><a href="view-interm.php" accesskey="5"><span>Referrals</span></a></li>
+				 <? } */?>
+				 <? if ($_SESSION['info']['level']<=5){?>
+					<li <? if ($_GET['p']=='v') echo 'class="actual"';?>><a href="view-owners.php" accesskey="6"><span>Ref., Owners, Villas</span></a></li>
+				 <? } ?>
+				<li <? if ($_GET['p']=='p') echo 'class="actual"';?>><a href="invoices.php" accesskey="7"><span>Printing</span></a></li>
+				<?/* if ($_SESSION['info']['level']==1){?>
+					<li <? if ($_GET['p']=='u') echo 'class="actual"';?>><a href="view-users.php" accesskey="8"><span>Users</span></a></li>
+				<? } */?>
+				<?/* if ($_SESSION['info']['level']==1){?>
+					<li <? if ($_GET['p']=='r') echo 'class="actual"';?>><a href="reports.php" accesskey="9"><span>Reports</span></a></li>
+				<? } */?>
+				<?/* if ($_SESSION['info']['level']==1){?>
+					<li <? if ($_GET['p']=='pro') echo 'class="actual"';?>><a href="all_promotion.php" accesskey="10"><span>Promotion</span></a></li>
+				<? }*/ ?>
+				<? if ($_SESSION['info']['level']<=2){?>
+					<li <? if ($_GET['p']=='ad') echo 'class="actual"';?>><a href="search-invoices.php" accesskey="11"><span>Admin</span></a></li>
+				<? } ?>
+
+				<? if ($_SESSION['info']['contabilidad']==1){?>
+					<li <? if ($_GET['p']=='con') echo 'class="actual"';?>><a href="unpaid.php" accesskey="11"><span>Contabilidad</span></a></li>
+				<? } ?>
+
+				<? if ($_SESSION['info']['contabilidad']==2){?>
+					<li <? if ($_GET['p']=='cle') echo 'class="actual"';?>><a href="clean_villas.php" accesskey="11"><span>House Keeping</span></a></li>
+				<? } ?>
+		
+		<? }?>
+       		<li <? if ($_GET['p']=='tick') echo 'class="actual"';?>><a href="reported.php" accesskey="11"><span>Support Tickets</span></a></li>
+   </ul>
+   <? }else{?>
+      <ul id="nav-primaria" class="clearfix" role="navigation"><li><a href="#">&nbsp;</a></li></ul>
+   <? }?>
+	</div> <!-- /navegacion -->
+
+	</div>  <!-- /wrap-navegacion -->
+
+	<a name="a-contenido"></a>
+
+	<div id="wrap-main"><!-- need to clos-->
+
+		<div id="main" class="clearfix " role="main"><!-- need to clos-->
+			<div id="subnav" class="clearfix">
+				<? /* if ($_GET['p']=='h'){?>
+                <ul class="menu">
+
+                    <li class="actual"><a href="home-welcome.php" title=""><span>Welcome</span></a></li>
+
+                </ul>
+				<? }*/?>
+
+                <?  if ($_GET['p']=='b'){?>
+                <ul class="menu"> <!--BOOKING MENU-->
+                <li <? if ($_GET['s']=='b.h') echo 'class="actual"';?>><a href="home-welcome.php" title=""><span>Welcome</span></a></li>
+                <li <? if (($_GET['s']=='b.ca')||(!$_GET['s'])) echo 'class="actual"';?>><a href="booking-calendar.php" title="Main Calendar"><span>Calendar</span></a></li>
+
+                   <!--// <li <? if ($_GET['s']=='b.f') echo 'class="actual"';?>><a href="find-booking.php" title="Find bookings"><span>Find</span></a></li>//-->
+                    <?/* if ($_SESSION['info']['level']<=4){?>
+                    	<li <? if ($_GET['s']=='b.e') echo 'class="actual"';?>><a href="edit-booking.php" title="Change a Booking"><span>Edit</span></a></li>
+                    <?}*/?>
+                     <? if ($_SESSION['info']['level']==1){?>
+                     	<li <? if ($_GET['s']=='b.c') echo 'class="actual"';?>><a href="cancel-booking.php" title="Cancel a booking"><span>Cancel</span></a></li>
+                     <?}?>
+                    <!--<li <?/* if ($_GET['s']=='b.i') echo 'class="actual"';*/?>><a href="inhouses-book.php" title="People in House"><span>In Houses</span></a></li>-->
+                    <li <? if ($_GET['s']=='b.ck') echo 'class="actual"';?>><a href="check-in.php" title="Check In Today"><span>Check In</span></a></li>
+                    <li <? if ($_GET['s']=='b.o') echo 'class="actual"';?>><a href="check-out.php" title="Check Out Today"><span>Check Out</span></a></li>
+                    <? if ($_SESSION['info']['level']==1){?>
+
+                     	<!--//<li <? if ($_GET['s']=='b.in_out') echo 'class="actual"';?>><a href="in_out.php" title="In & Out past time"><span>In & Out</span></a></li>//-->
+                     	<li <? if ($_GET['s']=='b.book_changed') echo 'class="actual"';?>><a href="bookings_changed.php" title="Bookings Changed"><span>Booking changes</span></a></li>
+                    <?}?>
+                </ul>
+				<? }?>
+
+                <?  if ($_GET['p']=='c'){?>
+                <ul class="menu">  <!--CUSTOMERS MENU-->
+                <li <? if (($_GET['s']=='c.n')||(!$_GET['s'])) echo 'class="actual"';?> ><a href="new-client.php" title="Create Customer"><span>New</span></a></li>
+                    <li <? if ($_GET['s']=='c.v') echo 'class="actual"';?>><a href="view-clients.php" title="View customers"><span>View all</span></a></li>
+                    <?/* if ($_SESSION['info']['level']<=3){?>
+                    	<li <? if ($_GET['s']=='c.e') echo 'class="actual"';?>><a href="edit-clients.php" title="Change a customer"><span>Edit</span></a></li>
+                    <?}*/?>
+                    <!--//<li <? if ($_GET['s']=='c.f') echo 'class="actual"';?>><a href="find-client.php" title="Search Customer"><span>Find</span></a></li>//-->
+                     <? if ($_SESSION['info']['level']==1){?>
+                    	<!--<li <?/* if ($_GET['s']=='c.m') echo 'class="actual"';*/?>><a href="merge-client.php" title="Join clients as one"><span>Merge</span></a></li>-->
+                     <?}?>
+                </ul>
+				<? }?>
+
+             
+                <?  if ($_GET['p']=='v'){?>
+                <ul class="menu"> <!--VILLAS AND OWNERS MENU-->
+                  <? if ($_SESSION['info']['level']<=3){?>
+    				 <li <? if (($_GET['s']=='v.v')||(!$_GET['s'])){ echo 'class="actual"';}else{?> class="c2"<?}?>>
+                			<a href="view-villas.php" title="View all the houses"><span>Villas</span></a>
+                	</li>
+                  <?}?>
+
+                   <? if ($_SESSION['info']['level']==1){?>
+	                	<li  <? if ($_GET['s']=='v.n'){ echo 'class="actual"'; }else{?> class="c2" <?}?>><a href="new-villa.php" title="Create a New Villa"><span>New villa</span></a></li>
+	                    <!--//<li <? if ($_GET['s']=='v.c') echo 'class="actual"';?>><a href="edit-villas.php" title="Modify a villa"><span>Change villa</span></a></li>//-->
+	                    <!--<li <? /*if ($_GET['s']=='v.d') echo 'class="actual"';*/?>><a href="dis-villas.php" title="Disable a villa"><span>Delete villa</span></a></li>-->
+                    <?}?>
+                    <li <? if ($_GET['s']=='v.o'){ echo 'class="actual"';}else{?> class="c3" <?}?>><a href="view-owners.php" title="View all the Owners"><span>Owners</span></a></li>
+                   <? if ($_SESSION['info']['level']==1){?>
+	                    <li <? if ($_GET['s']=='v.no'){ echo 'class="actual"';}else{?> class="c3"<?}?>><a href="new-owner.php" title="Create a Owner"><span>New Owner</span></a></li>
+	                    <!--//<li <? if ($_GET['s']=='v.e') echo 'class="actual"';?>><a href="edit-owner.php" title="Change a owner"><span>Edit Owner</span></a></li>//-->
+	                    <!--<li <? /*if ($_GET['s']=='v.di') echo 'class="actual"';*/?>><a href="dis-owner.php" title="Disable a Owner"><span>Delete Owner</span></a></li>-->
+                     <?}?>
+                   <li <? if ($_GET['s']=='v.r') echo 'class="actual"';?>><a href="view-interm.php" title="View commisions"><span>Referrals</span></a></li>
+                  <? if ($_SESSION['info']['level']<=2){?>
+                    <li <? if ($_GET['s']=='i.n') echo 'class="actual"';?>><a href="new-interm.php" title="Create a new one"><span>New Ref.</span></a></li>
+                    <!--//<li <? if ($_GET['s']=='i.c') echo 'class="actual"';?>><a href="edit-interm.php" title="Modify one"><span>Change</span></a></li>//-->
+                  <?}?>
+
+                  <? if ($_SESSION['info']['level']==1){?>
+                    <li <? if ($_GET['s']=='i.d') echo 'class="actual"';?>><a href="dis-interm.php" title="Enable or Disalbe"><span>Delete Ref.</span></a></li>
+                  <?}?>
+
+                </ul>
+				<? }?>
+                <?  if ($_GET['p']=='p'){?>
+                <ul class="menu"><!--PRINTING MENU-->
+					<li <? if ($_GET['s']=='p.i') echo 'class="actual"';?>><a href="invoices.php" title="print a invoice"><span>Invoices</span></a></li>
+                    <!--<li <? if ($_GET['s']=='p.i') echo 'class="actual"';?>><a href="invoices.php" title="print a invoice"><span>Invoice Short Term</span></a></li>-->
+                    <li <? if ($_GET['s']=='p.r') echo 'class="actual"';?>><a href="register-sheet.php" title="print a register sheet"><span>Register Sheet</span></a></li>
+                    <!--<li <? if ($_GET['s']=='p.l') echo 'class="actual"';?>><a href="invoices_long.php" title="print a invoice"><span>Invoice Long Term</span></a></li>-->
+                    <!--<li <? if ($_GET['s']=='p.b') echo 'class="actual"';?>><a href="invoices_buyer.php" title="print a invoice"><span>Invoice Buyer</span></a></li>-->
+                    <li <? if ($_GET['s']=='p.s') echo 'class="actual"';?>><a href="security-sheet.php" title="print a invoice"><span>Security Info</span></a></li>
+                    <? if ($_SESSION['info']['contabilidad']==1){?>
+                    <li <? if ($_GET['s']=='p.o') echo 'class="actual"';?>><a href="invoice_owners.php" title="print a owner invoice"><span>Invoice for Owners</span></a></li>
+                    
+                    <?}?>
+                </ul>
+				<? }?>
+               
+
+				<? if ($_SESSION['info']['contabilidad']==1){?>
+					<?  if ($_GET['p']=='con'){?>
+	                <ul class="menu"><!--ACCOUNTING-->
+                        <li <? if ($_GET['s']=='con.u') echo 'class="actual"';?>><a href="unpaid.php" title="Unpaid"><span>No pagado</span></a></li>
+	                	<li <? if (($_GET['s']=='con.p')||(!$_GET['s'])) echo 'class="actual"';?>><a href="ready_to_pickup.php" title="Ready to pickup"><span>Listo</span></a></li>
+	                	<li <? if ($_GET['s']=='con.paid') echo 'class="actual"';?>><a href="paid.php" title="Paid"><span>Pagado</span></a></li>
+	                </ul>
+	                 <?}?>
+				<? }?>
+				<? if ($_SESSION['info']['contabilidad']==2){?>
+					<?  if ($_GET['p']=='cle'){?>
+	                <ul class="menu"><!--CLEANING-->
+	                	<li <? if ($_GET['s']=='cle.u') echo 'class="actual"';?>><a href="clean_villas.php" title="Cleaned"><span>Rentals Villas</span></a></li>
+                      <!--//  <li <? if ($_GET['s']=='cle.r') echo 'class="actual"';?>><a href="cleaned.php" title="Cleaned"><span>Cleaned</span></a></li>
+	                	<li <? if (($_GET['s']=='cle.d')||(!$_GET['s'])) echo 'class="actual"';?>><a href="dirty.php" title="Dirty"><span>Dirty</span></a></li>
+	                	<li <? if ($_GET['s']=='cle.p') echo 'class="actual"';?>><a href="cleaning_in_process.php" title="Cleaning"><span>In process</span></a></li>//-->
+	                </ul>
+	                 <?}?>
+				<? }?>
+				
+				<?if (($_SESSION['info']['manager']==1)||($_SESSION['info']['report']!=0)){?>
+					<?  if ($_GET['p']=='tick'){?>
+	                <ul class="menu"><!--TICKETS-->
+                        <li <? if ($_GET['s']=='t.r') echo 'class="actual"';?>><a href="reported.php" title="Reported"><span>Active</span></a></li>
+	                	<!--<li <? if (($_GET['s']=='t.i')||(!$_GET['s'])) echo 'class="actual"';?>><a href="inprocess.php" title="In Process"><span>In Process</span></a></li>-->
+	                	<li <? if ($_GET['s']=='t.c') echo 'class="actual"';?>><a href="ticketcompleted.php" title="Completed"><span>Completed</span></a></li>
+						<?php /*if ($_SESSION['info']['manager']==1){*/?>
+						<li <? if ($_GET['s']=='t.cc') echo 'class="actual"';?>><a href="ticketcancelled.php" title="Completed"><span>Cancelled</span></a></li>
+						<? /*}*/?>
+						<li <? if ($_GET['s']=='t.n') echo 'class="actual"';?>><a href="ticketnew.php" title="Completed"><span>New Ticket</span></a></li>
+						<li <? if ($_GET['s']=='t.m') echo 'class="actual"';?>><a href="emaint.php" title="Completed"><span>New maintenance request</span></a></li>
+	                </ul>
+	                 <?}?>
+				<? }?>
+			</div>
+
+
+<div <? if(!$_GET['estilo_content']){?> class="container_16 clearfix" <?}else{?> <?=$_GET['estilo_content']?> <?}?> >
+	<div style="padding:3px;">
+
+	<!--<div style="padding:3px; border: 3px coral solid;  ">-->
+
+	<!--CONTENT GOES HERE-->

@@ -1,0 +1,271 @@
+/* 
+  -----------------------------------
+  Image Rotator Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 01 - Dark Toolbar
+  -----------------------------------
+*/
+
+.p7IRM01 .p7IRMlist {
+	display:none;
+}
+.p7IRM01 {
+	padding:0px;
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+}
+/*Full-Size Image Wrapper*/
+.p7IRM01 .p7IRMdv {
+	padding:0px;
+	border: 0;
+	position:relative;
+	margin: 0;
+	overflow: hidden;
+}
+.p7IRM01 .p7IRMowrapper {
+	border: 0;
+	padding: 0;
+}
+.p7IRM01 .p7IRMlink {
+	padding:0px;
+	border:0;
+	display:block;
+}
+.p7IRM01 .p7IRMimage {
+	border:0;
+	display: block;
+}
+.p7IRM01 .p7IRMdesc_wrapper {
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	visibility:hidden;
+	overflow:hidden;
+}
+.p7IRM01 .p7IRMdesc {
+	color:#CCC;
+	background-image: url(img/p7IRMDark_transblack.png);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding: 12px 36px 12px 24px;
+	margin: 0;
+}
+.p7IRM01 .p7IRMdesc a {
+	color: #69C;
+}
+.p7IRM01 .p7IRMdesc a:hover {
+	color: #FFF;
+}
+.p7IRM01 .p7IRMwrapper img {
+	border: 0;
+}
+.p7IRM01 .p7IRMwrapper p {
+	margin: 6px 0;
+}
+.p7IRM01 .p7IRMdesc_close {
+	text-align:right;
+	border:0;
+	margin: 0;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+.p7IRM01 .p7IRMdesc_close a {
+	display: block;
+	background-image: url(img/p7IRMDark_infohide.gif);
+	background-repeat: no-repeat;
+	height: 12px;
+	width: 12px;
+	outline: 0;
+}
+.p7IRM01 .p7IRMdesc_close a:hover, .p7IRM01 .p7IRMdesc_close a:focus {
+	background-position: 0px -12px;
+}
+.p7IRM01 .p7IRMdesc_open_wrapper {
+	overflow:hidden;
+	position:absolute;
+	z-index:20;
+	padding:0;
+	margin:0;
+	bottom:0px;
+	visibility:hidden;
+	right: 0px;
+	height: 30px;
+	width: 30px;
+}
+.p7IRM01 .p7IRMdesc_open a {
+	display: block;
+	background-image: url(img/p7IRMDark_infoshow.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 30px;
+	outline: 0;
+}
+.p7IRM01 .p7IRMdesc_open a:hover, .p7IRM01 .p7IRMdesc_open a:focus {
+	background-position: 0px -30px;
+}
+.p7IRM01 .p7IRMdesc_close a em, .p7IRM01 .p7IRMdesc_open a em {
+	display: none;
+}
+.p7IRM01 .p7IRMTools {
+	background-color: #1D1D1D;
+	overflow: hidden;
+	zoom: 1;
+	padding: 6px 0px;
+}
+.p7IRM01 .p7IRMTools ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 140px;
+}
+.p7IRM01 .p7IRMTools li {
+	list-style-type: none;
+	float: left;
+}
+.p7IRM01 .p7IRMTools img {
+	border: 0;
+}
+.p7IRM01 .p7IRMTools em {
+	display: none;
+}
+.p7IRM01 .p7IRMTools a {
+	display: block;
+	height: 17px;
+	outline: 0;
+}
+.p7IRM01 .p7IRMTools_first a {
+	background-image: url(img/p7IRMDark_First.gif);
+	background-repeat: no-repeat;
+	width: 28px;
+}
+.p7IRM01 .p7IRMTools_prev a {
+	background-image: url(img/p7IRMDark_Prev.gif);
+	background-repeat: no-repeat;
+	width: 26px;
+}
+.p7IRM01 .p7IRMTools_play a {
+	background-image: url(img/p7IRMDark_Play.gif);
+	background-repeat: no-repeat;
+	width: 32px;
+}
+.p7IRM01 .p7IRMTools_play .pause {
+	background-image: url(img/p7IRMDark_Play.gif);
+	background-repeat: repeat;
+	background-position: 0px -34px;
+	width: 32px;
+}
+.p7IRM01 .p7IRMTools_next a {
+	background-image: url(img/p7IRMDark_Next.gif);
+	background-repeat: no-repeat;
+	width: 26px;
+}
+.p7IRM01 .p7IRMTools_last a {
+	background-image: url(img/p7IRMDark_Last.gif);
+	background-repeat: no-repeat;
+	width: 28px;
+}
+.p7IRM01 .p7IRMTools a:hover, .p7IRM01 .p7IRMTools a:focus {
+	background-position: 0px -17px;
+}
+.p7IRM01 .p7IRMTools .pause:hover, .p7IRM01 .p7IRMTools .pause:focus {
+	background-position: 0px -51px;
+}
+.p7IRM01 .p7IRMTools a.off {
+	background-position: 0px -34px;
+	cursor: default;
+}
+.p7IRM01 .p7IRMpaginator {
+	overflow: hidden;
+	font-size: 11px;
+	text-transform: uppercase;
+	display: none;
+	text-align: center;
+	padding: 6px 0;
+	background-color: #1D1D1D;
+}
+
+.p7IRM01 .overlay {
+	position: absolute;
+	left: 0px;
+	z-index: 999999;
+	padding: 6px;
+	width: 100%;
+	background-image: url(img/p7IRMDark_transtotal.gif);
+	background-color: transparent;
+	text-align: left;
+}
+
+.p7IRM01 .above {
+	top: 0px ;
+	bottom: auto;
+}
+
+.p7IRM01 .tools_top {
+	top: 27px;
+	bottom: auto;
+}
+.p7IRM01 .below {
+	top: auto;
+	bottom: 0px;
+}
+.p7IRM01 .tools_bottom {
+	top: auto;
+	bottom: 27px;
+}
+.p7IRM01 .p7IRMpaginator ul {
+	margin: 0px;
+	padding: 0px;
+}
+.p7IRM01 .p7IRMpaginator li {
+	list-style-type: none;
+	margin-right: 1px;
+	display: inline-block;
+}
+.p7IRM01 .p7IRMpaginator a {
+	color: #000;
+	text-decoration: none;
+	padding: 2px 1px;
+	border: 1px solid #000;
+	display: block;
+	outline: 0;
+	background-color: #000;
+	width: 4px;
+	overflow: hidden;
+}
+.p7IRM01 .overlay a {
+	border-color: #FFF;
+}
+.p7IRM01 .p7IRMpaginator a:hover, .p7IRM01 .p7IRMpaginator a:focus {
+	color: #999;
+	background-color: #999;
+	border-color: #CCC;
+}
+.p7IRM01 .p7IRMpaginator.overlay a:hover {
+	border-color: #FFF;
+}
+.p7IRM01 .p7IRMpaginator a.down {
+	color: #999;
+	background-color: #999;
+	border-color: #FFF;
+	cursor: default;
+}
+.p7IRM01 .p7IRMpaginator .p7IRM_play a, .p7IRM01 .p7IRMpaginator .p7IRM_pause a {
+	color: #999;
+	text-align: center;
+	padding: 2px 6px;
+	width: auto;
+}
+.p7IRM01 .p7IRMpaginator .p7IRM_play a:hover,
+.p7IRM01 .p7IRMpaginator .p7IRM_play a:focus,
+.p7IRM01 .p7IRMpaginator .p7IRM_pause a:hover,
+.p7IRM01 .p7IRMpaginator .p7IRM_pause a:focus{
+	color: #000;
+}
+/*DO NOT EDIT*/
+.p7IRM01 .p7IRMwrapper {
+	position:relative;
+	overflow: hidden;
+	zoom: 1;
+}

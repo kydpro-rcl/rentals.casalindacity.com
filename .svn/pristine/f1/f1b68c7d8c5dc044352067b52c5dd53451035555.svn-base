@@ -1,0 +1,254 @@
+<p class="header">RESERVACIONES PAGADAS</p>
+<?php
+
+
+		$data= new getQueries ();
+
+
+		$bookings_found=$data->bookings_referral_paid();
+		$total_records=$data->getAffectedRows();
+
+		?>
+
+      <? if ($bookings_found){
+		
+      ?>
+
+		<p style="font-size:10px; padding-left:15px; color:blue;"><strong>Total comisiones pagadas: <?=$total_records?></strong> </p>
+		<hr />
+		<table  align="center" cellpadding="2" cellspacing="2" border="0">
+
+			<tr class="title">
+
+				<td class='centro' id="td">
+					BOOKING<br/> REFERENCE
+				</td>
+				<td class='centro' id="td">
+					STATUS
+				</td>
+				<td class='centro' id="td">
+					REFERAL
+				</td>
+				<td class='centro' id="td">
+					CLIENT
+				</td>
+				<td class='centro' id="td">
+					VILLA
+				</td>
+				<td class='centro' id="td">
+					FROM
+				</td>
+				<td class='centro' id="td">
+					TO
+				</td>
+				<td class='centro' id="td">
+					TOTAL USD
+				</td>
+				<td class='centro' id="td">
+					COMMISSION
+				</td>
+			</tr>
+		<?php
+
+		$x=0;
+		$General_Totals=0;
+		//echo "<pre>"; print_r($bookings_found); echo "</pre>";
+
+		foreach ($bookings_found as $k){
+			$comission_discounted_amount=$data->show_any_data_limit1("bookingreferred", "ref_book", $k['ref'], "=");
+        ?>
+
+		<tr class='fila<?=$x;?>'  >
+
+           <td id='td' class='derecha'><?=$k['ref']?></td>
+		       <?
+		       switch ($k['status']){
+		       	case 0:
+		         	$status_result="<span style='color:red'>Cancelled</span>";
+			       	break;
+		       	case 1:
+		         	$status_result="<span class='azul2'>Checked in - Short</span>";
+			       	break;
+			    case 2:
+		         	$status_result="<span class='azul2'>Confirmed - Short</span>";
+			       	break;
+			    case 3:
+		         	$status_result= "<span class='morado'>No Confirmed - Short </span>";
+			       	break;
+				case 4:
+		         	$status_result= "<span class='outck'>Checked out - Short</span>";
+			       	break;
+			    case 5:
+		         	$status_result= "<span style='color:red'>Maintenance (out of service)</span>";
+			       	break;
+			   case 6:
+		         	$status_result= "<span class='r_vip'>Checked in - VIP, Short</span>";
+			       	break;
+			    case 7:
+		         	$status_result= "<span class='r_owner'>Checked in - Owner, Short</span>";
+			       	break;
+			    case 8:
+		         	$status_result= "<span class='r_long'>Checked in - Long</span>";
+			       	break;
+			    case 9:
+		         	$status_result= "<span class='r_long'>Confirmed - Long</span>";
+			       	break;
+			 	case 10:
+		         	$status_result= "<span class='r_long'>No Confirmed - Long</span>";
+			       	break;
+			    case 11:
+		         	$status_result= "<span class='r_long'>Checked Out - Long</span>";
+			       	break;
+			 	case 12:
+		         	$status_result= "<span class='r_vip'>Confirmed - VIP, Short</span>";
+			       	break;
+			    case 13:
+		         	$status_result= "<span class='r_vip'>No Confirmed - VIP, Short</span>";
+			       	break;
+			 	case 14:
+		         	$status_result= "<span class='r_vip'>Checked Out - VIP, Short</span>";
+			       	break;
+			    case 15:
+		         	$status_result= "<span class='r_vip'>Checked in - VIP, Long</span>";
+			       	break;
+			 	case 16:
+		         	$status_result= "<span class='r_vip'>Confirmed - VIP, Long</span>";
+			       	break;
+			    case 17:
+		         	$status_result= "<span class='r_vip'>No Confirmed - VIP, Long</span>";
+			       	break;
+			 	case 18:
+		         	$status_result= "<span class='r_vip'>Checked Out - VIP, Long</span>";
+			       	break;
+			    case 19:
+		         	$status_result= "<span class='r_long'>Confirmed - Owner, Short</span>";
+			       	break;
+			 	case 20:
+		         	$status_result= "<span class='r_long'>No confirmed - Owner, Short</span>";
+			       	break;
+			    case 21:
+		         	$status_result= "<span class='r_long'>Checked Out - Owner, Short</span>";
+			       	break;
+			 	case 22:
+		         	$status_result= "<span class='r_long'>Checked in - Owner, Long</span>";
+			       	break;
+			    case 23:
+		         	$status_result= "<span class='r_long'>Confirmed - Owner, Long</span>";
+			       	break;
+			 	case 24:
+		         	$status_result= "<span class='r_long'>No confirmed - Owner, Long</span>";
+			       	break;
+			    case 25:
+		         	$status_result= "<span class='r_long'>Checked Out - Owner, Long</span>";
+			       	break;
+		       	default:
+			       $status_result= "<span class='negro'><u>Unavailabe</u></span>";
+			       	break;
+		       }
+		       ?>
+           <td id='td' class='derecha'><?=$status_result?></td>
+
+           <? $db= new getQueries ();
+           $referal_d=$db->show_id("commission", $k['id_referal']);
+           ?>
+           <td id='td' class='derecha'><? echo $referal_d[0]['name']." ".$referal_d[0]['lastname'];?> </td>
+
+             <? $db= new getQueries ();
+           $client_d=$db->show_id("customers", $k['client']);
+
+           ?>
+             <td id='td' class='derecha'><? echo  $client_d[0]['name']." ". $client_d[0]['lastname'];?></td>
+
+			<? $db= new getQueries ();
+           $villa_d=$db->show_id("villas", $k['villa']);
+           /*$total_booking=$k['subtotal']-$k['itbis'];*/
+            $total_booking=(($k['ppn']*$k['NLS'])+($k['PHS']*$k['NHS']));
+           $General_Totals+=$total_booking;//sum this booking to total
+           ?>
+              <td id='td' class='derecha'><? echo  $villa_d[0]['no'];?></td>
+
+               <td id='td' class='derecha'><?=formatear_fecha($k['start']);?></td>
+                <td id='td' class='derecha'><?=formatear_fecha($k['end']);?></td>
+
+                  <!--//   codigo para promotion code//-->
+					<?
+						/*echo "<pre>";
+						print_r($k);
+						echo "</pre>"; */
+
+		                $this_disc=$db->show_any_data_limit1("discount", "reference", $k['ref'], "=");
+		                $disc_found=$this_disc[0];
+			              if ($disc_found){
+			               /*echo "<pre>";
+			              	print_r($disc_found);
+			              	echo "</pre>"; */
+			                    //hacer calculos
+			                    /*$amount_nightsLS=($ocupabilidad['NLS']*$ocupabilidad['ppn']);
+			                    $amount_nightsHS=($ocupabilidad['NHS']*$ocupabilidad['PHS']);
+			                    $amount_nights=$amount_nightsLS+$amount_nightsHS;*/
+			                    $amount_nights=$total_booking;
+
+			                     if  ($disc_found['pro_type']=="2"){   //Amount
+			                           $descuento=($disc_found['pro_qty']);
+			                         /*  $variable_descuento="US$ ".$disc_found['pro_qty']." ";
+			                           $tipo_desc="monto";
+			                           $promotion_code=$disc_found['pro_code']; */
+
+			                     }elseif($disc_found['pro_type']=="1"){ //percent
+			                        $descuento=($amount_nights*($disc_found['pro_qty']/100));
+			                        /* $variable_descuento=number_format($disc_found['pro_qty'],0)." % ";
+			                         $tipo_desc="porcient";
+			                         $promotion_code=$disc_found['pro_code']; */
+			                     }elseif($disc_found['pro_type']=="3"){ //days
+			                       // $descuento=($amount_nights*($disc_found['pro_qty']/100));
+			                       //  $variable_descuento=number_format($disc_found['pro_qty'],0)." % ";
+			                        /* $tipo_desc="days";
+			                         $promotion_code=$disc_found['pro_code']; */
+
+			                         if ($k['NLS']!=0 &&  $k['NHS']==0){//solo low season
+			                           $descuento=$k['ppn']*$disc_found['qty_days'];
+			                        }
+
+			                        if (($k['NLS']==0)&&( $k['NHS']!=0)){//solo High season
+			                           $descuento=$k['PHS']*$disc_found['qty_days'];
+			                        }
+
+			                        if (($k['NLS']!=0) && ($k['NHS']!=0)){//ambas season
+			                          if($k['NLS']>=$disc_found['qty_days']){
+			                         	$descuento=$k['ppn']*$disc_found['qty_days'];
+			                          }else{
+			                          	$descuento=$k['ppn']*$k['NLS'];
+			                          	$descuento+=$k['PHS']*($disc_found['qty_days']-$k['NLS']);
+			                          }
+		                       		}
+
+		                       		/*$variable_descuento=$disc_found['qty_days']." Nights";*/
+			                     }
+
+			              }
+                ?>
+                 <!--//   codigo para promotion code//-->
+                <td id='td' class='derecha'><?=number_format(($total_booking-$descuento),2);?></td>
+                <td id='td' class='derecha'><?
+				$percent_2_charge=(($referal_d[0]['percent']*100)-$comission_discounted_amount[0]['discounted']);
+				$percent_2_charge/=100;
+				echo number_format((($total_booking-$descuento)*$percent_2_charge),2);
+				
+				?></td>
+             </tr>
+
+
+         <?
+		 if ($x==0){$x++;} elseif ($x==1){$x--;}
+		 $referal_id=$k['id_referal'];
+		}
+		//.utf8_encode($k['lastname'])
+		?>
+
+		</table>
+
+	  <?}else{
+        echo "<p style='text-align:center; color:red; font-size:16px;'>NO HAY RESERVAS PAGADAS.</p>";
+
+	  }?>
+

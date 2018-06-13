@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Reservation created="2018-02-21">
+	<ConfirmationNumber>00004</ConfirmationNumber>
+	<BookingDetails>
+		<VillaNumber>25</VillaNumber>
+		<Checkin>2018-02-21</Checkin>
+		<Checkout>2018-02-25</Checkout>
+		<Nights>4</Nights>
+		<Total>$1050</Total>
+		<Adults>7</Adults>
+		<Children>8</Children>
+	</BookingDetails>
+</Reservation>

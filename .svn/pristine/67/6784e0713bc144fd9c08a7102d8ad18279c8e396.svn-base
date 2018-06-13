@@ -1,0 +1,556 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*<!--*/
+p {
+	text-align:justify;
+	}
+	
+	
+body {
+	text-align: center;
+	background-image: url(images/rental%20back%20chairs.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin-top: 0px;
+	background-color: #FFF;
+}
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #42939B;
+	line-height: 14px;
+}
+.services {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+}
+.heading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+}
+#wrapper {
+	text-align: left;
+	height: 1600px;
+	width: 965px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#mainnavigation {
+	float: left;
+	height: 25px;
+	width: 965px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	position: relative;
+	z-index: 1000;
+	background-color: #384244;
+	text-align: center;
+}
+#flash {
+	float: right;
+	height: 855px;
+	width: 700px;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-left: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	background-image: url(images/screened%20blue%20back.png);
+}
+#rentalnavigation {
+	height: 29px;
+	width: 965px;
+	float: left;
+}
+#bookingbar {
+	background-color: #384244;
+	float: left;
+	height: 287px;
+	width: 220px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+#blogbarleft {
+	float: left;
+	height: 590px;
+	width: 195px;
+	padding-top: 0px;
+	padding-left: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 16px;
+	font-weight: normal;
+	padding-right: 20px;
+	color: #2B5B79;
+	margin-top: 0px;
+	background-color:#384244;
+}
+#text {
+	float: left;
+	height: 800px;
+	width: 465px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	line-height: 16px;
+	padding-top: 15px;
+	padding-right: 25px;
+	padding-left: 5px;
+}
+#testimonial {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 16px;
+	color: #058EAB;
+	float: left;
+	height: 150px;
+	width: 350px;
+	margin-left: 85px;
+}
+#flashmovie {
+	float: left;
+	height: 855px;
+	width: 716px;
+}
+#weather {
+	float: right;
+	height: 95px;
+	width: 250px;
+	margin-top: 5px;
+	text-align: right;
+	margin-right: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #0091C0;
+}
+h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #CA0000;
+	line-height: 18px;
+}
+#leftbar {
+	float: left;
+	height: 900px;
+	width: 223px;
+	padding-right: 8px;
+	background-color: #FFF;
+}
+#rightwrap {
+	float: right;
+	height: 530px;
+	width: 440px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3E3E3E;
+	line-height: 13px;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #666;
+	background-color: #FFF;
+	margin-top: 18px;
+	margin-right: 3px;
+	font-size: 10px;
+}
+#boxthree {
+	float: left;
+	height: 600px;
+	width: 600px;
+	padding-left: 40px;
+	padding-top: 10px;
+	margin-left: 5px;
+}
+.txtboxthree {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #FFF;
+}
+#boxtwo {
+	float: left;
+	height: 60px;
+	width: 550px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: 5px;
+	padding-top: 15px;
+}
+#boxone {
+	float: left;
+	height: 600px;
+	width: 238px;
+	text-align: center;
+}
+#boxtwocontainer {
+	float: left;
+	height: 600px;
+	width: 193px;
+	margin-right: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#boxtwob {
+	float: left;
+	height: 240px;
+	width: 176px;
+	background-color: #E6E6E6;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+	margin-top: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: italic;
+	font-size: 0.95em;
+}
+#socialmedia {
+	float: right;
+	height: 35px;
+	width: 240px;
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+#boxoneA {
+	float: left;
+	height: 85px;
+	width: 236px;
+	background-image: url(images/christmas.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+	border: thin solid #19859D;
+	padding-top: 175px;
+}
+#header {
+	height: 95px;
+	width: 965px;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+#leftcontainer {
+	float: left;
+	height: 525px;
+	width: 240px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #3E3E3E;
+	font-size: 0.9em;
+	text-align: left;
+	line-height: 16px;
+	padding-left: 15px;
+	margin-top: 20px;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #666;
+	padding-top: 10px;
+	padding-right: 10px;
+	background-color: #E4EAEF;
+}
+#welcome {
+	float: left;
+	height: 280px;
+	width: 400px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #3E3E3E;
+	line-height: 16px;
+	font-size: 1em;
+	text-align: left;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #384244;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+#translate {
+	float: right;
+	height: 45px;
+	width: 235px;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.christmastext {
+	color: #930000;
+	font-size: 14px;
+	font-weight: bold;
+}
+#boxtwoc {
+	float: left;
+	height: 125px;
+	width: 176px;
+	background-color: #FFF;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+	margin-top: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 0.95em;
+	font-weight: bold;
+	color: #970000;
+}
+#widgetcontainer {
+	float: left;
+	height: 50px;
+	width: 120px;
+}
+#weatherwidget {
+	float: left;
+	height: 60px;
+	width: 240px;
+	text-align: center;
+	padding-top: 5px;
+}
+#bottomwrap {
+	float: left;
+	height: 500px;
+	width: 680px;
+	padding-left: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #666;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+}
+#christmastext {
+	float: right;
+	height: 50px;
+	width: 285px;
+	padding-right: 10px;
+}
+#MonkeyJungle {
+	float: left;
+	height: 215px;
+	width: 800px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+
+#monkeyshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#coffeecocoa {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#coffeetext {
+	float: left;
+	height: 185px;
+	width: 325px;
+}
+
+#monkeytext {
+	float: left;
+	height: 220px;
+	width: 466px;
+	
+}
+a {
+    color: #00BCFC;
+}
+/*-->*/
+
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:200;
+	z-index:1001;
+}
+#coffeeshow {
+	float: right;
+	height: 185px;
+	width: 200px;
+}
+#oceanworld {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#oceanworldtext {
+	float: left;
+	height: 185px;
+	width: 325px;
+}
+#oceanworldshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#scubashow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#scuba {
+	float: left;
+	height: 215px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#scubatext {
+	float: left;
+	height: 185px;
+	width: 325px;
+}
+#catamaran {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#fishing {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#golf {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#paradiseisland {
+	float: left;
+	height: 190px;
+	width: 550px;
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #333;
+	border-bottom-color: #000;
+}
+#catamarantext {
+	float: left;
+	height: 215px;
+	width: 325px;
+}
+#paradiseislandtext {
+	float: left;
+	height: 215px;
+	width: 325px;
+}
+#golftext {
+	float: left;
+	height: 215px;
+	width: 325px;
+}
+#fishingtext {
+	float: left;
+	height: 215px;
+	width: 325px;
+}
+#catamaranshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#golfshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#paradiseislandshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}
+#fishingshow {
+	float: right;
+	height: 215px;
+	width: 200px;
+}

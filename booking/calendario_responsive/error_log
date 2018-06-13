@@ -1,0 +1,38 @@
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/db.php on line 7
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:11 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:12 America/Santo_Domingo] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/db.php on line 65
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/db.php on line 7
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Property access is not allowed yet in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/Logger.php on line 31
+[05-Jan-2016 02:01:18 America/Santo_Domingo] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home/casalindacity/public_html/casalindacity_backend/booking/inc/db/db.php on line 65
+[05-Jan-2016 15:05:07 America/Santo_Domingo] PHP Warning:  require_once(display_book.php): failed to open stream: No such file or directory in /home/casalindacity/public_html/casalindacity_backend/booking/inc/settings.php on line 13
+[05-Jan-2016 15:05:07 America/Santo_Domingo] PHP Fatal error:  require_once(): Failed opening required 'display_book.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/casalindacity/public_html/casalindacity_backend/booking/inc/settings.php on line 13

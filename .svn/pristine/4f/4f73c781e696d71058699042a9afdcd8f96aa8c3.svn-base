@@ -1,0 +1,310 @@
+/* 
+  ----------------------------------------
+  Horizontal Glider Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 09 - Trigs left Greystone
+  ----------------------------------------
+*/
+.p7HGM09 {
+	zoom: 1;
+	padding: 0px;
+	overflow: hidden;
+	background-image: url(img/p7hgmGreystone_Root.jpg);
+	background-repeat: repeat-x;
+	background-color: #D8D8D8;
+	border: 4px solid #DDD;
+}
+.p7HGM09 .p7HGM_viewport_wrapper {
+	position: relative;
+	margin: 0px 0px 0px 200px;
+	background-color: #FFF;
+	zoom: 1;
+	border-left: 1px solid #DDD;
+}
+.p7HGM09 .p7HGM_panel_content {
+	font-size: 12px;
+	line-height: 1.5em;
+	padding: 12px 20px;
+}
+.p7HGM09 .p7HGMtrig {
+	overflow: hidden;
+	font-size: 12px;
+	zoom: 1;
+	float: left;
+	width: 200px;
+	margin: 0;
+}
+.p7HGM09 .p7HGMtrig.trigbottom {
+	margin-bottom: 0px;
+	margin-top: 6px;
+}
+.p7HGM09 .p7HGMtrig ul {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM09 .p7HGMtrig li {
+	list-style-type: none;
+	margin-bottom: 0px;
+}
+.p7HGM09 .p7HGMtrig a {
+	display: block;
+	padding: 6px 16px 6px 20px;
+	color: #000;
+	outline: 0;
+	text-transform: none;
+	text-decoration: none;
+	zoom: 1;
+	background-image: url(img/p7hgmGreystone_Trig.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.p7HGM09 .p7HGMtrig a:hover, .p7HGM09 .p7HGMtrig a:focus {
+	color: #FFF;
+	background-image: url(img/p7hgmGreystone_TrigOver.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #666;
+}
+.p7HGM09 .p7HGMtrig .panel_open {
+	background-image: url(img/p7hgmGreystone_TrigOpen.gif) !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #666 !important;
+	background-color: #DDD !important;
+	cursor: default;
+	text-transform: uppercase;
+}
+.p7HGM09 .p7HGM_controls div {
+	position: absolute;
+	top: 50%;
+	z-index: 9999;
+	margin-top: -8px;
+	height: 15px;
+	width: 18px;
+	display: none;
+}
+.p7HGM09 .p7HGM_controls div.p7HGM_prev {
+	left: -11px;
+}
+.p7HGM09 .p7HGM_controls div.p7HGM_next {
+	right: -20px;
+}
+.p7HGM09 .p7HGM_controls div img {
+	border: 0;
+	width: 8px;
+	height: 15px;
+}
+.p7HGM09 .p7HGM_controls div.p7HGM_prev a {
+	background-image: url(img/p7hgmGreystone_CTRLPrev.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM09 .p7HGM_controls div.p7HGM_next a {
+	background-image: url(img/p7hgmGreystone_CTRLNext.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM09 .p7HGM_controls a:hover {
+	background-position: 0px -15px;
+}
+.p7HGM09 .p7HGM_controls a.off, .p7HGM09 .p7HGM_controls a.off:hover {
+	cursor: default;
+	background-position: 0px -30px;
+}
+.p7HGM09 .p7HGMpaginator {
+	overflow: hidden;
+	zoom: 1;
+	background-color: #E4E4E4;
+	margin-bottom: 0px;
+	padding: 6px 0 6px 16px;
+	text-transform: uppercase;
+	background-image: url(img/p7hgmGreystone_Pag.jpg);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #ccc;
+	clear: both;
+}
+.p7HGM09 .p7HGMpaginator ul {
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM09 .p7HGMpaginator.pagbottom {
+	border-bottom: 0;
+	border-top: 1px solid #FFF;
+
+}
+.p7HGM09 .p7HGMpaginator li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM09 .p7HGMpaginator a {
+	display: block;
+	padding: 3px;
+	color: #999;
+	text-decoration: none;
+	border: 1px solid #999;
+	line-height: 1;
+	cursor: default;
+	background-color: #999;
+	height: 8px;
+	width: 2px;
+	overflow: hidden;
+	outline: 0;
+}
+.p7HGM09 .p7HGMpaginator a:hover {
+
+}
+.p7HGM09 .p7HGMpaginator a:hover, 
+.p7HGM09 .p7HGMpaginator a:focus, 
+.p7HGM09 .p7HGMpaginator .panel_open,
+.p7HGM09 .p7HGMpaginator .panel_open:hover,
+.p7HGM09 .p7HGMpaginator .panel_open:focus {
+	color: #CC0;
+	background-color: #CC0;
+	border-color: #CC0;
+	cursor: default;
+}
+.p7HGM09 .p7HGMvcr {
+	padding: 8px;
+	background-image: url(img/p7hgmGreystone_Pag.jpg);
+	background-repeat: repeat-x;
+	background-color: #E4E4E4;
+	clear: both;
+	zoom: 1;
+	border-bottom: 1px solid #FFF;
+}
+.p7HGM09 .p7HGMvcr ul {
+	margin: 0 auto;
+	width: 140px;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM09 .p7HGMvcr li {
+	list-style-type: none;
+	float: left;
+}
+.p7HGM09 .p7HGMvcr.vcrbottom {
+	border-bottom: 0;
+	border-top: 1px solid #FFF;
+}
+.p7HGM09 .p7HGMvcr.vcrtop {
+	margin-bottom: 0px;
+}
+.p7HGM09 .p7HGMvcr.vcrtop li {
+	margin: 0;
+}
+.p7HGM09 .p7HGMvcr img {
+	border: 0;
+}
+.p7HGM09 .p7HGMvcr a {
+	display: block;
+	height: 17px;
+	float: left;
+	outline: 0;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_first a {
+	background-image: url(img/p7hgmGreystone_First.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_first img {
+	width: 26px;
+	height: 17px;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_prev a {
+	background-image: url(img/p7hgmGreystone_Prev.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_prev img {
+	width: 26px;
+	height: 17px;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_play a {
+	background-image: url(img/p7hgmGreystone_Play.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_play img, .p7HGM09 .p7HGMvcr .p7HGM_play .pause img {
+	width: 32px;
+	height: 17px;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_play .pause {
+	background-image: url(img/p7hgmGreystone_Play.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -34px !important;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_next a {
+	background-image: url(img/p7hgmGreystone_Next.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_next img {
+	width: 26px;
+	height: 17px;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_last a {
+	background-image: url(img/p7hgmGreystone_Last.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_last img {
+	width: 28px;
+	height: 17px;
+}
+.p7HGM09 .p7HGMvcr a:hover, .p7HGM09 .p7HGMvcr a:focus {
+	background-position: 0px -17px;
+}
+.p7HGM09 .p7HGMvcr .p7HGM_play .pause:hover {
+	background-position: 0px -51px !important;
+}
+.p7HGM09 .p7HGMvcr a.off {
+	background-position: 0px -34px;
+	cursor: default;
+}
+.p7HGM09 .p7HGMvcrtext {
+	font-size: 12px;
+	margin-top: 0px;
+	zoom: 1;
+	clear: both;
+	background-image: url(img/p7hgmGreystone_Pag.jpg);
+	background-repeat: repeat-x;
+	background-color: #E4E4E4;
+	border-top: 1px solid #FFF;
+	padding: 6px;
+}
+.p7HGM09 .p7HGMvcrtext.vcrtext_top {
+	margin-bottom: 0px;
+	border-bottom: 1px solid #CCC;
+}
+.p7HGM09 .p7HGMvcrtext ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM09 .p7HGMvcrtext li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM09 .p7HGMvcrtext a {
+	padding: 2px 8px;
+	display: block;
+	color: #666;
+	text-decoration: none;
+	border: 1px solid #999;
+}
+.p7HGM09 .p7HGMvcrtext a:hover, .p7HGM09 .p7HGMvcrtext a:focus {
+	color: #000;
+	border-color: #000;
+}
+.p7HGM09 .p7HGMvcrtext a.off, .p7HGM09 .p7HGMvcrtext a.off:hover, .p7HGM09 .p7HGMvcrtext a.off:focus {
+	color: #BBB;
+	border-color: #D8D8D8;
+	cursor: default;
+}
+.p7HGM09 .p7HGMtrig .current_mark {
+	font-weight:bold;
+}
+.p7HGM09 .p7HGM_panel_content .current_mark {
+	color:#000;
+	font-weight:bold;
+}

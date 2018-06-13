@@ -1,0 +1,473 @@
+<?
+$villa_id=$_POST['villa']; $f_date=$_POST['from']; $t_date=$_POST['to'];
+$client=$_POST['client']; $adults=$_POST['adults']; $children=$_POST['children'];
+$comment=$_POST['comment'];
+/*=====================rental cars==================================*/
+if($_POST['car']){
+ $_SESSION['cars']=$_POST['car'];
+ $_SESSION['cars_qty']=$_POST['car_qty'];
+ $_SESSION['car_price']=$_POST['car_price'];
+
+ foreach($_POST['car'] AS $k){
+ 	$_SESSION['car_price'][$k]=priceRentalCar($idCar=$k, $start_date=$starting, $qtyDays=$_SESSION['cars_qty'][$k]);
+ }
+}
+/*===================================================================*/
+
+if($_POST['exp_id']!=''){$_SESSION['exp_id']=$_POST['exp_id'];}
+if($_POST['exp_amount']!=''){$_SESSION['exp_amount']=$_POST['exp_amount'];}
+
+if ((!validate_date($f_date))||(!validate_date($t_date))){
+	 echo '<h2>Error with dates</h2>';
+}else{
+ if (is_date($f_date)){
+	  if (is_date($t_date)){
+			$massage=$_POST['massage']; $pickup=$_POST['pickup'];$VIPpickup=$_POST['VIPpickup']; $chef=$_POST['chef']; $fridge=$_POST['fridge'];/*//varibles para servicios*/
+			$busyid=$_POST['busyid'];   $reference=$_POST['ref'];
+			$nights=dayPeriod($t_date, $f_date);/*//get nights in period*/
+		if ($nights>0){
+			 $status=$_POST['status'];
+			 $reserveid=$_POST['reserveid'];
+			if ($_POST['refnumb']) $reference=$_POST['refnumb'];
+			if ($_GET['refnumb']) $reference=$_GET['refnumb'];
+				$db= new getQueries();
+
+			 if (($reference!="")&&($f_date!="")&&($t_date!="")&&($villa_id!="")&&($status!="")&&($client!="")){
+				/*//VERIFY PERIOD############################################################################*/
+			   $edit_busy=check_villa_edit($villa_id, $start_date=$f_date, $end_date=$t_date, $id_this_reserve=$reserveid);
+			   $cant_edit=count($edit_busy);
+			   if(!$cant_edit>0){
+						/*//VERIFY ####################################################################################*/
+					   $villa_selected=$db->villa($villa_id);  /*//GET VILLA DETAILS*/
+					   $booking=$db->see_occupancy_ref($reference);  /*//GET BOOKING DETAILS*/
+					   /*//--------------------high season and low season prices-----*/
+						if ($booking[0]['villa']==$villa_id){/*//si la misma villa precio anterior si > k cero*/
+						  if ($booking[0]['ppn']<>0){$price_LS=$booking[0]['ppn'];}else{$price_LS=$villa_selected[0]['p_low'];}
+						  if ($booking[0]['PHS']<>0){$price_HS=$booking[0]['PHS'];}else{$price_HS=$villa_selected[0]['p_high'];}
+						}else{
+						  
+							
+						  $price_LS=$villa_selected[0]['p_low'];
+						  $price_HS=$villa_selected[0]['p_high'];
+						  
+						  $before_priceHS=$price_HS;
+						  $before_priceLS=$price_LS;
+						  /*//$price_HS=price_mid($bed=$villa_selected[0]['bed'], $normal_price=$price_HS);
+						 // $price_LS=price_mid($bed=$villa_selected[0]['bed'], $normal_price=$price_LS);*/
+						 $price_HS=price_rent_online($nights, $price_HS, $villa_selected[0]['bed']);
+						 $price_LS=price_rent_online($nights, $price_LS, $villa_selected[0]['bed']);
+						}
+					   /*//---------------------------------------------------------*/
+					   $qty_nights=$nights;
+					   /*#$qty_nights=$noches;*/
+					   if ($_POST['from'] && $_POST['to']){
+						$starting_date=$_POST['from']; $ending_date=$_POST['to'];
+					   }else{
+						$starting_date=$_GET['start']; $ending_date=$_GET['end'];
+					   }
+					  /*//--------------starting and ending dates --------------*/
+					 $fecha_empiezas=date_to_insert($starting_date);
+					 $fecha_termina=date_to_insert($ending_date);
+					  /*//----------------------- hight and low seasons dates -----------------*/
+					  $seasons=$db->seasons();/*//GET SEASONS DETAILS*/
+					  $start_HS=$seasons[0]['h_starting']; $end_HS=$seasons[0]['h_ending'];
+					  $start_LS=$seasons[0]['l_starting']; $end_LS=$seasons[0]['l_ending'];
+					  /*//--------------------------------------------------------------------*/
+
+					   $casa=$villa_selected[0];
+				?>
+				<p>&nbsp;</p>
+				<?php 
+					$estado=$status; 
+				?>
+				<h2 >Editing booking <span style="color:black;">No.<?=$reference?></span> - Try and Buy - step 2</h2>
+				 <hr />
+				<form method="post" action="edit-bookingtb2.php">
+
+			<div style="width:300px; float:left;">
+					<fieldset><legend>Villa details</legend>
+						   <!--INFORMACIONES DE LA VILLAS INICIAN-->
+						   <input type="hidden" name="starting" value="<?=$starting_date?>"  />
+						   <input type="hidden" name="ending" value="<?=$ending_date?>"  />
+						   <input type="hidden" name="nights" value="<?=$qty_nights?>"  />
+						   <input type="hidden" name="villa_id" value="<?=$casa['id']?>"  />
+						   <input type="hidden" name="villa_no" value="<?=$casa['no']?>" />
+
+						   <img  style="float:right; padding-right:5px; padding-left:5px;" src="<?=$casa['pic']?>" width="123" height="73"/>
+						   <p id="td0" style="font-weight:bold;">No. <span class="azul"><?=$casa['no']?></span></p>
+						   <p id="td0" style="font-weight:bold;">Size: <span class="azul"><?=$casa['m2']?>&nbsp;M&sup2;&nbsp;/&nbsp;<?=number_format($casa['ft2'],0)?>&nbsp;Ft&sup2;</span></p>
+						   <p  id="td0" style="font-weight:bold;">Bedrooms: <span class="azul"><?=$casa['bed']?></span> <br/> Airs: <span class="azul"><?=$casa['AC']?></span> <br/> Baths: <span class="azul"><?=$casa['bath']?></span></p>
+
+						   <p  id="td0" style="font-weight:bold;">Max. Persons: <span class="azul"><?=$casa['capacity']?></span>
+						   <!--START PRICE FOR THIS RENT-->
+						   <?
+
+	/*//-----------------------HIGHT AND LOW SEASONS QUANTITY-----------------------------------------------------------------------------*/
+
+								 if (is_date($fecha_empiezas)){
+								 	if (is_date($fecha_termina)){
+
+										$db= new getQueries ();
+										$season=$db->show_id('seasons', 1);
+										/*//echo date("M-d-Y", easter_date(2010));  //easter day of an year   (Domingo Santo)*/
+
+										$inicio_t_alta=$season[0]['h_starting'];
+										$fin_t_alta=$season[0]['h_ending'];
+
+										 $HS_inicio=explode('-', $inicio_t_alta);
+										 $HS_fin=explode('-', $fin_t_alta);
+										/* $LS_inicio=explode('-', $inicio_t_baja);
+										 $LS_fin=explode('-', $fin_t_baja);*/
+										$Fecha_Inicio=explode('-', $fecha_empiezas);
+										$Fecha_Final=explode('-', $fecha_termina);
+										/*// ---------------------------------------------*/
+										$MI=$Fecha_Inicio[1];   /*//Mes inicio*/
+										$DI=$Fecha_Inicio[2];   /*//dia inicio*/
+										$AI=$Fecha_Inicio[0];  /*//año inicio*/
+
+										$MF=$Fecha_Final[1];  /*//mes final*/
+										$DF=$Fecha_Final[2];  /*//dia final*/
+										$AF=$Fecha_Final[0];  /* //año final*/
+
+										$MIHS=$HS_inicio[1];  /*//mes inicio HS*/
+										$DIHS=$HS_inicio[2];   /*//dia inicio HS*/
+										$AIHS=$HS_inicio[0];    /*//año inicio HS*/
+
+										$MFHS=$HS_fin[1];    /*//mes final HS*/
+										$DFHS=$HS_fin[2];   /*//Dia final HS*/
+										$AFHS=$HS_fin[0];    /*//año final HS*/
+
+										 /*//================================================================================*/
+										  $temporada_alta_mes_dia=array();  /*//array than content all the month and day of HS*/
+
+										 /*//SOLO SI FECHA DE INICIO DE HS IS MAYOR FINAL, SINO ERROR (WEBMASTER)*/
+										 if ($AIHS==$AFHS){
+										 	echo "Error year1:Seasons";
+										 	die();
+										  /*//echo "el mismo year";*/
+
+										 }elseif(($AIHS+1)==$AFHS){ /*//año de inio de HS es uno anterior al que termina*/
+										   /*// echo "diferente year";*/
+										   $m=0;
+										   $x=0;
+										  /*// echo "year inicio:"; echo "<br/>";*/
+										   for ($m=$MIHS; $m<=12; $m++){       /*//meses*/
+
+
+										   	 if ($m==$MIHS){ 	$i=$DIHS;	}else{  $i=1; }
+										         $ultimo_dia_mes=ultimoDia($m,$AIHS);
+										    for ($x=$i; $x<=$ultimo_dia_mes; $x++){  /*//dias*/
+
+										     	$HS_array=array('mes'=>$m,'dia'=>$x);
+												/*//if (!in_array($esta_villa,$villas_ocupadas)){*/
+											     array_push($temporada_alta_mes_dia,$HS_array);
+
+										    }
+										   }
+										   /*//proximo año*/
+										   $m=0;
+										   $x=0;
+										  /*// echo "year fin:"; echo "<br/>";*/
+										    for ($m=1; $m<=$MFHS; $m++){     /*  //meses*/
+
+										     if ($m==$MFHS){$i=$DFHS;}else{$ultimo_dia_mes=ultimoDia($m,$AFHS);$i=$ultimo_dia_mes;}
+
+										    for ($x=1; $x<=$i; $x++){      /* //dias*/
+										     $HS_array1=array('mes'=>$m,'dia'=>$x);
+										     array_push($temporada_alta_mes_dia,$HS_array1);
+										    /* // echo "mes:".$m." dia:".$x;
+										     // echo "<br/>";*/
+										    }
+										   }
+										  /*////TERMINO DE ESCRIBIR LOS MES CON SUS DIAS CORRESPONDIENTE A LA TEMPORADA ALTA*/
+										   $night_qty=daysDifference2($fecha_termina, $fecha_empiezas);
+										  /*//INICIO PROCESO CON LAS FECHAS SELECCIONADAS PARA ESTA RESERVA A DETERMINAR LOS HS Y LS*/
+										   $m=0; $cant_noches_LS=0;
+										   $x=0; $cant_noches_HS=0;
+										  for ($z=$AI;$z<=$AF; $z++  ){/*//años*/
+										          if($z==$AI){$iniciar_mes=$MI;}else{$iniciar_mes=1;}
+										          if($z==$AF){$finalizar_mes=$MF;}else{$finalizar_mes=12;}
+											  for ($m=$iniciar_mes; $m<=$finalizar_mes; $m++){/*//meses*/
+										           if (($z==$AI)&&($m==$MI)){$dia_comienzo=$DI;}else{$dia_comienzo=1;}
+										           if (($z==$AF)&&($m==$MF)){$dia_finaliza=($DF-1);}else{$dia_finaliza=ultimoDia($m,$z);}
+												  for($x=$dia_comienzo; $x<=$dia_finaliza; $x++){/*//dias*/
+
+										           $mes_y_dia=array('mes'=>$m,'dia'=>$x);
+										           if (in_array($mes_y_dia,$temporada_alta_mes_dia)){$cant_noches_HS++;}
+												  }
+											  }
+										  }
+										 }else{
+										 	echo "Error year:Seasons";
+										 	die();
+										 }
+									}else{
+								 	echo "Wrong,ending date";
+								 	 die();
+								 	}
+								 }else{
+								 	echo "Wrong,starting date";
+								    die();
+								 }
+
+
+									$LS_nights=($night_qty-$cant_noches_HS);          $HS_nights=$cant_noches_HS;
+
+									if (($LS_nights=="0")&&($HS_nights>=
+									"1")){   /* //solo HS*/
+						             ?>
+						            	<? if ($_SESSION['info']['level']==1){?>
+								       		PriceHS&nbsp;US$&nbsp;<span class="azul"><input type="text" name="priceHS" size="5" value="<?=number_format($price_HS,2);?>" /></span>
+								       		<input type="hidden" name="price" value="0" />
+								       		<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}else{?>
+							            	PriceHS&nbsp;US$&nbsp;<span class="azul"><?=number_format($price_HS,2);?></span>
+							            	<input type="hidden" name="priceHS" value="<?=number_format($price_HS,2);?>" />
+							            	<input type="hidden" name="price" value="0" />
+							            	<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}?>
+						            <?
+									}elseif(($HS_nights=="0")&&($LS_nights>="1")){ /*//solo LS*/
+						             ?>
+							             <? if ($_SESSION['info']['level']==1){?>
+								       		PriceLS&nbsp;US$&nbsp;<span class="azul"><input type="text" name="price" size="5" value="<?=number_format($price_LS,2);?>" /></span>
+								       		<input type="hidden" name="priceHS" value="0" />
+								       		<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}else{?>
+							            	PriceLS&nbsp;US$&nbsp;<span class="azul"><?=number_format($price_LS,2);?></span>
+							            	<input type="hidden" name="price" value="<?=number_format($price_LS,2);?>" />
+							            	<input type="hidden" name="priceHS" value="0" />
+							            	<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}?>
+						            <?
+
+									}else{ /*//existen ambas*/
+						                 ?>
+						             	<? if ($_SESSION['info']['level']==1){?>
+								       		PriceLS&nbsp;US$&nbsp;<span class="azul"><input type="text" name="price" size="5" value="<?=number_format($price_LS,2);?>" /></span>
+								       		PriceHS&nbsp;US$&nbsp;<span class="azul"><input type="text" name="priceHS" size="5" value="<?=number_format($price_HS,2);?>" /></span>
+								       		<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}else{?>
+							            	PriceLS&nbsp;US$&nbsp;<span class="azul"><?=number_format($price_LS,2);?></span>
+							            	<input type="hidden" name="price" value="<?=number_format($price_LS,2);?>" />
+							            	PriceLH&nbsp;US$&nbsp;<span class="azul"><?=number_format($price_HS,2);?></span>
+							            	<input type="hidden" name="priceHS" value="<?=number_format($price_HS,2);?>" />
+							            	<input type="hidden" name="HS_nights" value="<?=$HS_nights;?>" />
+							            	<input type="hidden" name="LS_nights" value="<?=$LS_nights;?>" />
+							            <?}?>
+						            <?
+									}
+/*//-----------------------END HIGHT AND LOW SEASONS QUANTITY-----------------------------------------------------------------------------*/
+						   ?>
+					</fieldset>
+						   </p>
+						   <!--END PRICE FOR THIS RENT-->
+				  </div>
+
+
+				<div style="width:600px; float:left;">
+				  <p class="p_estilos">From: <span class="azul"><?=$starting_date?></span></p>
+				   <p class="p_estilos">To: <span class="azul"><?=$ending_date?></span></p>
+				   <? $cl=$db->customer($client);?>
+				   <p class="p_estilos">Customer: <span class="azul"> <?/*=$client*/?> <? echo $cl['name']." ".$cl['lastname']; ?></span> Phone: <span class="azul"><? echo $cl['phone']?></span> Email: <span class="azul"><? echo $cl['email']?></span></p>
+				   <p class="p_estilos">Total nights:<span class="azul"> <?=$nights?></span> (LS <span class="azul"><?=$LS_nights?></span> and HS<span class="azul"> <?=$HS_nights?></span>)<p>
+				   <p class="p_estilos">Adults: <span class="azul"><?=$adults?></span><p>
+				   <p class="p_estilos">Kids: <span class="azul"><?=$children?></span><p>
+				</div>
+
+				<div style="width:900px; clear:both; margin-left:auto; margin-right:auto;">
+				   <!--STATUS-->   <?/*-- echo $status;*/?>
+				 <!-- <p>status</p> <p>niños</p><p>adultos</p>-->
+				   <? if (($status==38)||($status==39)||($status==40)||($status==41)){ /*//it is short rental*/
+				   ?>
+						<p style="text-align:leftt; font-size:11px;">
+						  <span style="font-weight:bold;">Status:</span>
+						  <span style="color:#09F">
+						  	   <? if ((strtotime($ending_date))<(strtotime(date("Y-m-d")))){?>
+								<input type="radio" name="status" value="41" checked="checked">Checked out
+								<? if($_SESSION['info']['manager']==1){?>
+									<input type="radio" name="status" value="38" <? if ($status==38){?> checked="checked" <?}?>>Checking in
+								<?}?>
+							  <?}elseif ((strtotime($ending_date))==(strtotime(date("Y-m-d")))){?>
+								<? if($_SESSION['info']['manager']==1){?>
+								 <input type="radio" name="status" value="41" checked="checked">Checked out
+								<?}?>
+								<input type="radio" name="status" value="38" <? if ($_SESSION['info']['manager']!=1){?> checked="checked" <?}?>>Checking in
+
+							  <?}elseif((strtotime($starting_date))==(strtotime(date("Y-m-d")))){?>
+							   <? if(($_SESSION['info']['manager']==1)||($status==38)){?>
+								 <input type="radio" name="status" value="38" <? if ($status==38){?> checked="checked" <?}?>>Checking in
+							   <?}?>
+								 <input type="radio" name="status" value="40" <? if ($status==40){?> checked="checked" <?}?>>Confirmed
+								 <input type="radio" name="status" value="39"  <? if ($status==39){?> checked="checked" <?}?> <?  if (($status!=38)&&($status!=40)&&($status!=41)){?> checked="checked" <?}?>>No confirmed
+							  <?}elseif((strtotime($starting_date))>(strtotime(date("Y-m-d")))){?>
+								 <input type="radio" name="status" value="40" <? if ($status==40){?> checked="checked" <?}?>>Confirmed
+								 <input type="radio" name="status" value="39" <? if ($status==39){?> checked="checked" <?}?> <?  if (($status!=40)&&($status!=39)){?> checked="checked" <?}?>>No confirmed
+							  <?}elseif((strtotime($starting_date))<(strtotime(date("Y-m-d")))&&(strtotime($ending_date))>=(strtotime(date("Y-m-d")))){?>
+								<input type="radio" name="status" value="38" checked="checked">Checked in
+							  <?}?>
+						  </span>
+					  <!--// </p>//-->
+				   <?}?>
+				   
+				  <?   $this_disc=$db->show_any_data_limit1("discount", "reference", $reference, "="); /*echo $this_disc[0]['pro_id']; echo "ides";*//*echo $booking[0]['vehicles']*/ ?>
+				   <!--//<p id="parraf">//--><span style="padding-left:25px;">Promotion Code</span> <input type="text" size="7" name="promotion_code" value=""/>ID<input type="text" size="7" name="promotion_id" value="<?=$this_disc[0]['pro_id'];?>"/>
+	    	Number of Vehicules: <select name="vehicles">
+	        			<? for ($i=0; $i<=5; $i++){?>
+							<option value="<?=$i?>" <? if ($booking[0]['vehicles']==$i){ echo "selected='selected'";}?> ><?=$i?></option>
+						<? }?>
+	                 </select>
+	    		</p>
+
+			       <? $excursions=$db->show_all('excursions', 'id');
+			          $excursiones_reserva=$db->excrusiones_reserved($booking[0]['reserveid']);
+			        /*//  echo '<pre>'; print_r($excursiones_reserva); echo '</pre>';*/
+			           unset($_SESSION['exc_ant']); /*//quitar las sessiones de otros bookings*/
+				       if (!empty($excursiones_reserva)){
+						/*//$total_excursion=0;*/
+
+		                 foreach ($excursiones_reserva as $k){
+                         $_SESSION['exc_ant'][$k['id_excursion']]['adults']=$k['qty_a'];
+                         $_SESSION['exc_ant'][$k['id_excursion']]['kids']=$k['qty_c'];
+		                 /*//$total_excursion+=$k['total'];*/
+		                 }
+
+					  }
+			     ?>
+
+				 <table><tr><td>
+				 
+                     <table align="center" width="100%" cellpadding="0" cellspacing="1" style="border-bottom:1px solid #ffa500;border-right:1px solid #ffa500;border-left:1px solid #ffa500;">
+                     <tr><td style="text-transform:uppercase; font-weight:bold; background-color:orange;">Excursions</td><td style="text-transform:uppercase; font-weight:bold; background-color:orange;">Pricing</td><td style="text-transform:uppercase; font-weight:bold; background-color:orange;">Adults</td><td style="text-transform:uppercase; font-weight:bold; background-color:orange;">Kids</td></tr>
+					    <?
+					     $contador=1;
+					     foreach($excursions AS $k){?>
+					    	<tr <? if($contador==2){?>style="background-color:#e7dcdd;"<?}?>>
+					    		<td><?=$k['title']?></td>
+					    		<td><?=$k['price_a']?> - <?=$k['price_c']?></td>
+					    		<td><select id="adults<?=$k['id']?>" name="adults_excrusions[<?=$k['id']?>]" >
+					    				<? for($i=0; $i<=90; $i++){?>
+					    					<option value="<?=$i?>" <? if ($_SESSION['exc_ant'][$k['id']]['adults']==$i){ echo 'selected="selected"'; }?> ><?=$i?></option>
+					    				<?}?>
+					    			</select>
+					    		</td>
+					    		<td>
+					    		<select id="kids<?=$k['id']?>" name="kids_excrusions[<?=$k['id']?>]" >
+					    			<? for($i=0; $i<=90; $i++){?>
+					    				<option value="<?=$i?>" <? if ($_SESSION['exc_ant'][$k['id']]['kids']==$i){ echo 'selected="selected"'; }?> ><?=$i?></option>
+					    			<?}?>
+					    		</select>
+					    		</td>
+					    	</tr>
+			            <?
+			            $contador++;
+			            if ($contador==3) $contador-=2;
+			            }
+			            $_SESSION['excursiones']=$excursions;/*//poner todas las excuriones en una varibles array*/
+
+						
+				
+			            ?>
+		            </table>
+				</td><td valign="top">
+				<?php
+					$traynbuyinfo=$db->tbuy($ref=$reference);
+					//print_r($traynbuyinfo); echo "hola"; echo $reference;
+				?>
+				<fieldset><legend>Try and Buy options</legend>
+					<p>
+						<select name="tbtype">
+							<option value="1" <? if($traynbuyinfo['tbtype']==1){?>selected="selected" <?}?> >TB price per night </option>
+							<option value="2" <? if($traynbuyinfo['tbtype']==2){?>selected="selected" <?}?>  >TB flat total price </option>
+						</select>
+					</p>
+					<?php
+					if($traynbuyinfo['tbtype']==1){
+						$preciotb=$traynbuyinfo['ppn'];
+					}else{
+						$preciotb=$traynbuyinfo['total'];
+					}
+					?>
+					<p>
+						<input type="text" name="tbprice" value="<?=number_format($preciotb,2);?>" />
+						<input type="hidden" name="tbid" value="<?=$traynbuyinfo['id'];?>" />
+					</p>
+				</fieldset>
+				<?php
+				
+				/*$servicios=$db->show_all($table='services', $order='id');
+				$servicios_reservados=$db->services_reserved($reserveid); //get services reserved
+				//print_r($servicios_reserva);
+				if($servicios_reservados)
+				{
+					$services_booked2=array();
+					foreach($servicios_reservados AS $k){
+						if($k['tipo']==2){
+							$services_booked2[$k['id_service']]['id']=$k['id_service'];
+							$services_booked2[$k['id_service']]['qty']=$k['qty'];
+						}
+					}
+				}
+				servicios_reserva_edit($servicios,$qty_nights, $beds=$casa['bed'],$services_booked2);*/
+				?>
+				</td></tr></table>
+					
+                  <!--//LAS EXCURSIONES MAS ARRIBA//-->
+
+				   <!--STATUS-->
+				   <input type="hidden" name="from" value="<?=$f_date?>"/>
+				   <input type="hidden" name="to" value="<?=$t_date?>"/>
+				   <input type="hidden" name="ref" value="<?=$reference?>"/>
+				   <input type="hidden" name="villa" value="<?=$villa_id?>"/>
+				   <input type="hidden" name="client" value="<?=$client?>"/>
+				   <input type="hidden" name="adults" value="<?=$adults?>"/>
+				   <input type="hidden" name="children" value="<?=$children?>"/>
+				   <input type="hidden" name="comment" value="<?=$comment?>"/>
+
+				   <input type="hidden" name="busyid" value="<?=$busyid?>"/>
+				   <input type="hidden" name="reserveid" value="<?=$reserveid?>"/>
+                   <input type="hidden" name="referal" value="<?=$_POST['referal']?>"/>
+
+
+				   <?
+				   /* variables para los nuevos servicios empiezan aqui*/
+                    foreach($_POST['servicios_id'] AS $ids){
+                     ?>
+                     <input type="hidden" name="servicios_id[]" value="<?=$ids?>"/>
+                    <?
+                    }
+
+                    foreach($_POST['qty'] AS $key=>$value){
+                     ?>
+                      <input type="hidden" name="qty[<?=$key?>]" value="<?=$value?>"/>
+                     <?
+                    }
+
+				   ?>
+<hr/>
+				 <p>  <INPUT class="book_but" TYPE="button" onClick="location.href='edit-booking.php?refnumb=<?=$reference?>'"  VALUE="Back" title="Hit to go back">&nbsp;
+				 <input type="submit" name="next" value="next" class="book_but" />  </p>
+				</div>
+
+
+
+				 </form>
+
+			 <?
+               }else{
+               	change_booking_busy_error($f_date, $t_date);
+               }
+             	}else{
+			  echo '<h2>Error with data, try again</h2>';
+			 /*// die();*/
+			 }
+         }else{ echo "<h2>Error on nights quantity</h2>"; }
+     }else{ echo "<h2>Error on ending date</h2>"; }
+   }else{ echo "<h2>Error on starting date</h2>"; }
+}
+?>

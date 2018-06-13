@@ -1,0 +1,108 @@
+.uiStepList ol {
+    background: url("weak.png") repeat scroll 0 0 transparent;
+    height: 51px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.pbs {
+    padding-bottom: 5px;
+	
+	 word-wrap: break-word;
+	 color: #333333;
+    direction: ltr;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    text-align: left;
+}
+.uiStep {
+    list-style-type: none;
+}
+
+.uiStep .back {
+    background-position: -24px 0;
+	
+	color: #333333;
+    direction: ltr;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    text-align: left;
+}
+
+.uiStepFirst .back {
+    width: 3px;
+}
+
+.uiStep .part {
+    background: url("arrows.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 51px;
+}
+
+
+
+.uiStepFirst .content {
+    margin-left: 15px;
+}
+
+.uiStep .content {
+    margin: 11px 10px 0;
+	  word-wrap: break-word;
+}
+
+.uiStepSelected .title, .uiStepSelected .description, .uiStepSelected a {
+    color: #FFFFFF;
+}
+
+.uiStep .title {
+    margin-bottom: 1px;
+	
+}
+
+.fwb {
+    font-weight: bold;
+	
+	direction: ltr;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    text-align: left;
+}
+
+.fsl {
+    font-size: 13px;
+}
+
+
+
+.uiStep .point {
+    background-position: -30px 0;
+    width: 21px;
+}
+/* paso en el medio*/
+.midleSelected .point{
+    background-position: -52px 0;
+    /*width: 21px;*/
+}
+/* fin paso en el medio */
+
+.uiStepSelected .point {
+    background-position: 0 0;
+}
+
+.uiStep .middle {
+    background: url("weak.png") repeat scroll 0 0 transparent;
+}
+
+.uiStepSelected .middle {
+    background: url("strong.png") repeat scroll 0 0 transparent;
+}
+
+#text_input
+{
+   background-color: #dafdc7;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10pt;
+   color: #000000;
+   border-style:groove;
+   
+} 

@@ -1,0 +1,218 @@
+<? include('menu_CSS/menu-admin.php');?>
+
+<?
+if($_POST){
+	if($_POST['price']!=0){
+		$_GET['result']="New prices for villas saved";
+	}
+}
+?>
+
+
+<p class="header">Prices for villas</p>
+	<?php
+	if($_GET['result']){
+	?>
+      <p style="text-align:center;font-weight:bold; color: white; background-color:green; padding:10px;"> <?=$_GET['result']?></p>
+    <?
+	}
+	?>
+
+	<form method="post" action="price_villas.php" >
+
+	
+	<table align="center">
+		<tr>
+			<td>
+				<p style="font-size:12px; text-align:right;">Bedrooms
+					<select name="beds"  style="font-size:12px; text-align:right;">
+						<? for($i=1; $i<=6; $i++){?>
+						<option value="<?=$i?>"><?=$i?></option>
+						<?}?>
+					</select>
+						Type
+					<select name="villatype"  style="font-size:12px; text-align:right;">
+						<option value="1">Premium</option>
+						<option value="2">Deluxe</option>
+						<option value="3">Standard</option>
+					</select>
+					<select name="season"  style="font-size:12px; text-align:right;">
+						<option value="1">All Season</option>
+						<option value="2">Peak</option>
+						<option value="3">None Peak</option>
+					</select>
+						Price
+					<input type="text" name="price" value="" /> 
+					<input class="book_but" type="submit" name="save" value="Submit"/>
+				</p>
+			</td>
+		</tr>
+	</table>
+	</form>
+<hr />
+<? 
+
+$link= new getQueries ();
+
+if ($_POST){
+
+	
+	if($_POST['price']!=0){
+		//poner el precio a todas las villas de renta
+		
+		$villas_acualizar_precio=$link->display_table($table='villas', $condition=" bed='".$_POST['beds']."' AND able_r='1' AND classification='".$_POST['villatype']."'", $order='id');
+		
+		$data=new DB();
+		/*echo "<pre>";
+		print_r($villas_acualizar_precio);
+		echo "<pre>";*/
+		if($villas_acualizar_precio){
+			switch($_POST['season']){
+				case 1: /*all season*/
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price'],'p_high'=>$_POST['price']), $table='villas');
+					}
+					break;
+				case 2: /*peak*/
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_high'=>$_POST['price']), $table='villas');
+					}
+					break;
+				case 3: /*None peak*/
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price']), $table='villas');
+					}
+					break;
+				default: /*all season*/
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price'],'p_high'=>$_POST['price']), $table='villas');
+					}
+			}
+		}
+		
+		$precio_anterior=$link->display_table($table='prices_villas', $condition=" beds='".$_POST['beds']."' AND type='".$_POST['villatype']."' AND active='1' ", $order='id');
+		
+			switch($_POST['season']){
+				case 1: /*all season*/
+					if($precio_anterior){
+						foreach ($precio_anterior AS $k){
+							$data->update_gral($id=$k['id'], $info=array('active'=>'0'), $table='prices_villas');
+						}
+					}
+					$info=array('beds'=>$_POST['beds'], 'type'=>$_POST['villatype'], 'price'=>$_POST['price'], 'pricehs'=>$_POST['price'], 'active'=>'1', 'adm'=>$_SESSION['info']['id'], 'date'=>time());
+					$data->insert($info, $table='prices_villas');
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price'],'p_high'=>$_POST['price']), $table='villas');
+					}
+					break;
+				case 2: /*peak*/
+					if($precio_anterior){
+						foreach ($precio_anterior AS $k){
+							$data->update_gral($id=$k['id'], $info=array('pricehs'=>$_POST['price']), $table='prices_villas');
+						}
+					}
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_high'=>$_POST['price']), $table='villas');
+					}
+					break;
+				case 3: /*None peak*/
+					if($precio_anterior){
+						foreach ($precio_anterior AS $k){
+							$data->update_gral($id=$k['id'], $info=array('price'=>$_POST['price']), $table='prices_villas');
+						}
+					}
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price']), $table='villas');
+					}
+					break;
+				default: /*all season*/
+					if($precio_anterior){
+						foreach ($precio_anterior AS $k){
+							$data->update_gral($id=$k['id'], $info=array('active'=>'0'), $table='prices_villas');
+						}
+					}
+					$info=array('beds'=>$_POST['beds'], 'type'=>$_POST['villatype'], 'price'=>$_POST['price'], 'pricehs'=>$_POST['price'], 'active'=>'1', 'adm'=>$_SESSION['info']['id'], 'date'=>time());
+					$data->insert($info, $table='prices_villas');
+					foreach ($villas_acualizar_precio AS $k){
+						$data->update_gral($id=$k['id'], $info=array('p_low'=>$_POST['price'],'p_high'=>$_POST['price']), $table='villas');
+					}
+			}
+		
+		
+		
+		//desactivar todos los precios con estos criterios, pero dejar el historial
+		
+		
+		/*echo "<pre>";
+		print_r($precio_anterior);
+		echo "<pre>";*/
+		
+		
+		//insertar nuevo precio
+		
+	}
+	//mostrar todos los precios
+	
+ }
+
+ $precios_2bdr_pre=$link->display_table($table='prices_villas', $condition=" beds='2' AND type='1' AND active='1'", $order='id');
+ $precios_2bdr_del=$link->display_table($table='prices_villas', $condition=" beds='2' AND type='2' AND active='1'", $order='id');
+ $precios_2bdr_st=$link->display_table($table='prices_villas', $condition=" beds='2' AND type='3' AND active='1'", $order='id');
+ 
+ $precios_3bdr_pre=$link->display_table($table='prices_villas', $condition=" beds='3' AND type='1' AND active='1'", $order='id');
+ $precios_3bdr_del=$link->display_table($table='prices_villas', $condition=" beds='3' AND type='2' AND active='1'", $order='id');
+ $precios_3bdr_st=$link->display_table($table='prices_villas', $condition=" beds='3' AND type='3' AND active='1'", $order='id');
+ 
+ $precios_4bdr_pre=$link->display_table($table='prices_villas', $condition=" beds='4' AND type='1' AND active='1'", $order='id');
+ $precios_4bdr_del=$link->display_table($table='prices_villas', $condition=" beds='4' AND type='2' AND active='1'", $order='id');
+ $precios_4bdr_st=$link->display_table($table='prices_villas', $condition=" beds='2' AND type='4' AND active='1'", $order='id');
+ 
+ $precios_5bdr_pre=$link->display_table($table='prices_villas', $condition=" beds='5' AND type='1' AND active='1'", $order='id');
+ $precios_5bdr_del=$link->display_table($table='prices_villas', $condition=" beds='5' AND type='2' AND active='1'", $order='id');
+ $precios_5bdr_st=$link->display_table($table='prices_villas', $condition=" beds='5' AND type='3' AND active='1'", $order='id');
+ 
+ $precios_6bdr_pre=$link->display_table($table='prices_villas', $condition=" beds='6' AND type='1' AND active='1'", $order='id');
+ $precios_6bdr_del=$link->display_table($table='prices_villas', $condition=" beds='6' AND type='2' AND active='1'", $order='id');
+ $precios_6bdr_st=$link->display_table($table='prices_villas', $condition=" beds='6' AND type='3' AND active='1'", $order='id');
+ /*print_r($precios_2bdr_pre);
+ echo "<br/>";
+ print_r($precios_2bdr_del);*/
+ ?>
+<table align="center" border="1" cellpadding="4" Cellspacing="0">
+	<tr>
+		<td>Bedrooms</td>
+		<td>Premiun</td>
+		<td>Deluxe</td>
+		<td>Standard</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td><?=$precios_2bdr_pre[0]['price']?>/<?=$precios_2bdr_pre[0]['pricehs']?></td>
+		<td><?=$precios_2bdr_del[0]['price']?>/<?=$precios_2bdr_del[0]['pricehs']?></td>
+		<td><?=$precios_2bdr_st[0]['price']?>/<?=$precios_2bdr_st[0]['pricehs']?></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td><?=$precios_3bdr_pre[0]['price']?>/<?=$precios_3bdr_pre[0]['pricehs']?></td>
+		<td><?=$precios_3bdr_del[0]['price']?>/<?=$precios_3bdr_del[0]['pricehs']?></td>
+		<td><?=$precios_3bdr_st[0]['price']?>/<?=$precios_3bdr_st[0]['pricehs']?></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td><?=$precios_4bdr_pre[0]['price']?>/<?=$precios_4bdr_pre[0]['pricehs']?></td>
+		<td><?=$precios_4bdr_del[0]['price']?>/<?=$precios_4bdr_del[0]['pricehs']?></td>
+		<td><?=$precios_4bdr_st[0]['price']?>/<?=$precios_4bdr_st[0]['pricehs']?></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td><?=$precios_5bdr_pre[0]['price']?>/<?=$precios_5bdr_pre[0]['pricehs']?></td>
+		<td><?=$precios_5bdr_del[0]['price']?>/<?=$precios_5bdr_del[0]['pricehs']?></td>
+		<td><?=$precios_5bdr_st[0]['price']?>/<?=$precios_5bdr_st[0]['pricehs']?></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td><?=$precios_6bdr_pre[0]['price']?>/<?=$precios_6bdr_pre[0]['pricehs']?></td>
+		<td><?=$precios_6bdr_del[0]['price']?>/<?=$precios_6bdr_del[0]['pricehs']?></td>
+		<td><?=$precios_6bdr_st[0]['price']?>/<?=$precios_6bdr_st[0]['pricehs']?></td>
+	</tr>
+</table>

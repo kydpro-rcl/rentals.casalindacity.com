@@ -1,0 +1,181 @@
+	<?php
+		$date_today = date('Y-m-d');
+		$end_date=date('m/d/Y', strtotime($date_today. ' + 5 days'));
+	?>
+
+	<form action="../rentals/vacation-villas-search.php" method="post" name="FormX">
+				<div class="secondary-search-main">
+					
+					<input type="hidden" name="Complete" value="Yes">
+					<input type="hidden" name="Searchform" class="search-form" value="1">
+					
+					
+					
+					<input type="hidden" name="pagedataid" value="0">
+					
+					
+						<input type="hidden" name="communityid" value="0">
+					
+					
+					
+					<!-- mobile dates -->
+					<div id="s-dates-mobile" class="row visible-xs">
+						<div id="s-arrival-mobile" class="col-xs-12">
+							<div class="form-group">
+								<label for="txtStartDate-mobile">Arriving</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm mobile-datepicker start-date" value="<?=date('m/d/Y');?>" id="txtStartDate-mobile" name="txtStartDate-mobile" readonly>
+								</div>
+							</div>
+						</div>
+						<div id="s-departure-mobile" class="col-xs-12">
+							<div class="form-group">
+								<label for="txtEndDate-mobile">Departing</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm mobile-datepicker end-date" value="<?=$end_date;?>" id="txtEndDate-mobile" name="txtEndDate-mobile" readonly>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- desktop dates -->
+					<div id="s-dates" class="row hidden-xs input-daterange datepicker-range secondary-search-dates">
+						<div id="s-arrival" class="col-xs-12 col-md-6">
+							<div class="form-group">
+								<label for="txtStartDate">Arriving</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm start-date" value="<?=date('m/d/Y');?>" id="txtStartDate" name="fecha_ini" readonly>
+								</div>
+							</div>
+						</div>
+						<div id="s-departure" class="col-xs-12 col-md-6">
+							<div class="form-group">
+								<label for="txtEndDate">Departing</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm end-date" value="<?=$end_date;?>" id="txtEndDate" name="fecha_ter" readonly>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="s-submit">
+						
+						<button type="submit" class="btn btn-primary btn-block">Check Availability</button>
+						
+					</div>
+				
+				</div>
+			
+				
+					
+				<div id="secondary-bedrooms-sleeps" class="row" style="margin-bottom: 5px;">		
+					<div class="col-xs-6" id="secondary-bedrooms">
+						<div class="input-group">
+							<label for="AmenBedrooms">Bedrooms</label>
+							<select name="beds" class="form-control input-sm search-item" id="Bedrooms">
+								<option value="2" selected >All</option>
+								
+											<option value="2"  >
+												2 Bedrooms
+											</option>
+										
+											<option value="3"  >
+												3 Bedrooms
+											</option>
+										
+											<option value="4"  >
+												4 Bedrooms
+											</option>
+										
+											<option value="5"  >
+												5 Bedrooms
+											</option>
+										
+											<option value="6"  >
+												6 Bedrooms
+											</option>
+										
+							</select>
+						</div>
+					</div>
+								
+					<div class="col-xs-6" id="secondary-guests">
+						<div class="input-group">
+							<label for="MaxPersons">Guests</label>
+							<select name="MaxPersons" class="form-control input-sm search-item" id="Guests">
+								<option value="0">All</option>
+								
+											<option value="1" >
+												1 Guest
+											</option>
+										
+											<option value="2" >
+												2 Guests
+											</option>
+										
+											<option value="3" >
+												3 Guests
+											</option>
+										
+											<option value="4" >
+												4 Guests
+											</option>
+										
+											<option value="5" >
+												5 Guests
+											</option>
+										
+											<option value="6" >
+												6 Guests
+											</option>
+										
+											<option value="7" >
+												7 Guests
+											</option>
+										
+											<option value="8" >
+												8 Guests
+											</option>
+										
+											<option value="9" >
+												9 Guests
+											</option>
+										
+											<option value="10" >
+												10 Guests
+											</option>
+										
+											<option value="11" >
+												11 Guests
+											</option>
+										
+											<option value="12" >
+												12 Guests
+											</option>
+										
+							</select>
+						</div>
+					</div>
+				</div>
+						
+				
+				<div id="secondary-location" class="search-margin-bottom ">
+					<div class="form-group">
+						<label for="LocationDataID">Locations</label>
+						<select name="LocationDataID" class="form-control input-sm search-item" id="LocationDataID">
+							<option select="" value="0">All</option>
+							
+									<option value="7867"  >
+										Sosua - Cabarete
+									</option>
+								
+						</select>
+					</div>
+				</div>
+				
+			
+			</form>

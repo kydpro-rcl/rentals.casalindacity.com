@@ -1,0 +1,12 @@
+@charset "utf-8";
+#rentalvillashow {
+	float: right;
+	height: 300px;
+	width: 364px;
+	margin-left: 10px;
+	margin-top: 50px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	margin-right: 50px;
+}

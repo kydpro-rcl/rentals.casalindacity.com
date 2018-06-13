@@ -1,0 +1,94 @@
+<?
+
+//============================START ACCESS RESTRICTED======================================================================
+require_once('../core/config.php');
+$db= new Basededatos();
+
+//$vi = $db->checkUser($username='juan',$password='test');
+$vi = $db->checkToken($token=$_POST['token']);
+if(!$vi){
+	die('Access denied: restricted access');
+}else{
+	require_once('../../booking/init.php');
+	$night_qty=daysDifference2($fecha_de_termino=$_POST['checkout_date'], $fecha_de_inicio=$_POST['checkin_date']);
+	//print_r($vi);
+	$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	$info=array('ipaddress'=>$_SERVER['REMOTE_ADDR'],
+				'url_access'=>$actual_link,
+				'iduser'=>$vi[0]['id'],
+				'date'=>time());
+	$saveVisit = $db->insert_id($info, $table='api_access');
+	
+	if($night_qty>=2){/*validate quantity of nights*/
+		//echo $night_qty;
+	 //verify that this villa is available if real booking and not send the info to reception.
+	
+		if($vi[0]['booking_mode']!=2){ /*2 is when it is not allow to book*/
+			$info2=array('token'=>$_POST['token'],
+						'api_user_id'=>$vi[0]['id'],
+						'ip'=>$_SERVER['REMOTE_ADDR'],
+						'date'=>time(),
+						'client_fname'=>$_POST['client_fname'],
+						'client_lname'=>$_POST['client_lname'],
+						'client_email'=>$_POST['client_email'],
+						'client_phone'=>$_POST['client_phone'],
+						'client_id'=>'',
+						'property_id'=>$_POST['property_id'],
+						'qty_adults'=>$_POST['qty_adults'],
+						'qty_kids'=>$_POST['qty_kids'],
+						'checkin_date'=>$_POST['checkin_date'],
+						'checkout_date'=>$_POST['checkout_date'],
+						'unit_price'=>$_POST['unit_price'],
+						'total_amount'=>$_POST['total_amount'],
+						'qty_nights'=>$night_qty,
+						'tax'=>($_POST['total_amount']/1.18),
+						'online'=>'16',
+						'status'=>'2',
+						'ref'=>'',
+						'id_occupancy'=>'',
+						'amount_paid'=>$_POST['amount_paid'],
+						'pp_transc_id'=>$_POST['pp_transc_id'],
+						'booking_mode'=>$vi[0]['booking_mode']);/* 0= test ; 1=live ; 2= no allow [no save this table if so]*/
+						
+			$saveBooking = $db->insert_id($info2, $table='api_bookings');
+		}
+		if($vi[0]['booking_mode']==1){ /*1 means it's a live user mode*/
+		//Email to Rental manager and reception
+		//notification of booking creation
+		
+		}
+		if($saveBooking){
+			//============================END ACCESS RESTRICTED======================================================================
+			 if ($_POST['property_id']){
+				header("Content-type: text/xml");
+				echo '<?xml version="1.0"?>'; 
+				
+				$link= new getQueries();
+				$villas = $link->villa_forent($_GET['property_id']);
+				$villa=$villas[0];
+				$season=$link->seasons3(); //temporadas informations
+				//$temporada=$season[0];
+				$fecha=date('Y-m-d');
+				
+				echo '<Reservation created="'.$fecha.'">';
+						echo '<ConfirmationNumber>0000'.$saveBooking.'</ConfirmationNumber>';
+						echo '<BookingDetails>';
+							echo '<VillaNumber>'.$_POST['property_id'].'</VillaNumber>';
+							echo '<Checkin>'.$_POST['checkin_date'].'</Checkin>';
+							echo '<Checkout>'.$_POST['checkout_date'].'</Checkout>';
+							echo '<Nights>'.$night_qty.'</Nights>';
+							echo '<Total>$'.$_POST['total_amount'].'</Total>';
+							//echo '<Clientid>50</Clientid>';
+							echo '<Adults>'.$_POST['qty_adults'].'</Adults>';
+							echo '<Children>'.$_POST['qty_kids'].'</Children>';
+						echo '</BookingDetails>';
+				echo '</Reservation>';
+			 }
+		}else{
+			die('Error: we couldn\'t make the booking');
+		}
+	}else{
+		die('Error: nights quantity');
+	}
+}
+?>

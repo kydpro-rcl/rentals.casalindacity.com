@@ -1,0 +1,1231 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <!-- locale: en_US -->
+    <!-- body: portal.body.home -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<meta name="keywords" content="transfer money, money transfer, send money, transfer money online"/>
+<meta name="description" content="With PayPal, you can safely transfer money online, or send money to family and friends. A PayPal money transfer is safe and easy."/>
+<meta name="Payflow-Build-ID" content="PF-BWR-72_int-0012"/>
+
+    <title>Account overview - PayPal</title>
+
+    
+    <style type="text/css">
+    @media print
+    {
+  
+
+    body {margin:0; padding:0; color:#000; background:#fff; font:75%/1.2em Arial, sans-serif;}
+
+    h1, h2, h3, h4 {line-height:1em;}
+    h1 {font-size:1.5em;}
+    h2 {font-size:1.333em;}
+    h3 {font-size:1.167em;}
+    h4 {font-size:1em;}
+    a {color:#333;}
+    a img {border:0;}
+    p {margin:1em 0;}
+    ul, ol, dl {margin:1em 0; padding:0;}
+    dt {margin:0; padding:0;}
+    li, dd {margin:0 0 0 1.7em;}
+    em {font-style:italic;}
+    strong {font-weight:bold;}
+    dfn, var {font-style:normal;}
+    code, kbd, samp {font:1em "Courier New", Courier, monospace;}
+    q:before, q:after {content:"";}
+    cite {font-style:normal;}
+    cite span {display:block;}
+    abbr, acronym {border:none; color:#333; text-decoration:underline; cursor:pointer;}
+    form {margin:0; padding:0;}
+    legend {padding:0; font-weight:bold;}
+    label {display:block;}
+    input, select, textarea {border:1px solid #999; font:1.1em Arial, sans-serif;}
+    input, textarea {padding:2px;}
+    input[type=checkbox], input.checkbox {border:none;}
+    input[type=radio], input.radio {border:none;}
+    button, input.button {width:auto !important; border:1px solid #bbb; border-right-color:#999; border-bottom-color:#999; color:#000;}
+    table {border-collapse:collapse;}
+    hr {height:1px; border-top:1px solid #000; background:#000;}
+    .printLink, .footerAction .closer, #title .secure {display: none;}
+    body.popup table {width: 100%;}
+    #navGlobal, #navPrimary, #navFull, #rosetta {display:none;}
+    #footer h5, #footer ul {display:none;}
+    }
+    </style>
+    
+
+    
+    <link media="screen" rel="stylesheet" type="text/css" href="/stylesheet/min/globalCmn.css"/>
+    
+
+
+    
+    <link media="screen" rel="stylesheet" type="text/css" href="/stylesheet/min/index.css"/>
+    
+
+    
+    <!--[if IE 8]><link media="screen" rel="stylesheet" type="text/css" href="/stylesheet/min/cmnIe8.css"><![endif]-->
+    <!--[if IE 7]><link media="screen" rel="stylesheet" type="text/css" href="/stylesheet/min/cmnIe7.css"><![endif]-->
+    <!--[if lte IE 6]><link media="screen" rel="stylesheet" type="text/css" href="/stylesheet/min/cmnIe6.css"><![endif]-->
+    <!--[if lte IE 6]><link media="print" rel="stylesheet" type="text/css" href="/stylesheet/min/globalPrint.css"/><![endif]-->
+    
+
+
+    
+
+    <script type="text/javascript" src="/js/min/global.js"></script>
+    
+</head>
+<body id="sandBox" >
+<noscript><p class="nonjsAlert">NOTE: Many features on the PayPal Web site require Javascript and cookies. You can enable both via your browser's preference settings.</p></noscript>
+
+    <!--<div id="lightbox" class="accessAid">-->
+        <!--<div class="header">-->
+          
+        <!--</div>-->
+        <!--<div class="body">-->
+            
+            <!--<span class="buttons">-->
+                
+            <!--</span>-->
+        <!--</div>-->
+        <!--<div class="footer">&nbsp;</div>-->
+    <!--</div>-->
+
+    <div id="serviceManagement">
+        
+            
+
+
+
+
+
+
+
+
+
+<div id="sandboxHeader">
+	<img src="/images/en_US/logo_ic.gif" alt="PayPal Sandbox">
+	<span>logged in as ing.joseluis@msn.com.</span>
+</div>
+<h1 id="sandboxTitle">Test Site</h1>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="smHeader">
+    <h1>
+        <img src="/images/en_US/hdr_logo_paypal.gif" border="0" alt="Payments By PayPal">       
+    </h1>
+    <div id="smNavGlobal">
+    <ul>
+    
+
+    
+    
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+
+            <li><a href="logout.do">Log Out</a></li>
+         
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/helpweb?cmd=_help">Help</a></li>
+         
+            <li class ="last"><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=_security-center">Security Center</a></li>
+         
+      </ul>
+    </div>
+    
+
+
+
+
+    
+<form class="rosetta" id="rosetta" name="rosettaUserSelectionForm" method="post" action="/rosettaUserSelection.do">
+<fieldset>
+<legend><span class="accessAid">Change Your Language</span></legend>
+<label for="rosetta_dropdown">Language Select</label>
+<select id="rosetta_dropdown" name="localeSelection">
+<option value="en_US" selected >U.S. English</option>
+<option value="fr_US">Français</option>
+<option value="es_US">Espanol</option>
+<option value="zh_US">简体中文(Chinese)</option>
+</select>
+<button type="submit" name="n" value="v">
+<img src ="/images/en_US/btn_circlewitharrow.gif" border="0" alt="">
+</button>
+<input type="hidden" id="change_locale_x" name="change_locale.x" value="1">
+</fieldset>
+<input name="form_charset" type="hidden" value="UTF-8">
+<script type="text/javascript">flashreference = PAYPAL.util.Flash.insertFlash("/m/rosetta.swf", 150, 70, "rosetta", true, 7, "rosettaFlashId",false,PAYPAL.rosettaRetrofit.Flash.stringFromRosettaDropDown())</script>
+</form>
+
+
+
+</div>
+
+
+    <div id="navPrimary" class="srd">
+        <ul>
+            
+                <li>
+                    <a href="home.do">
+My Account</a>
+                </li>
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_send-money&nav=1">
+Send Money</a>
+                </li>
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_rm&nav=2">
+Request Money</a>
+                </li>
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_merchant&nav=3">
+Merchant Services</a>
+                </li>
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_auction&nav=">
+Auction Tools</a>
+                </li>
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=xpt/Marketing_CommandDriven/general/ProductsandServices&nav=4">
+Products and Services</a>
+                </li>
+            
+        </ul>
+    </div>
+
+        
+
+<!-- TEMPLATE: /jsp/home/index.jsp  -->
+
+
+	
+    
+	
+	
+	
+
+
+
+
+
+
+
+<div id="bodyContent">
+    <!-- To show the restrictions message box -->
+    
+
+
+
+
+
+<div id="title">
+    <h2>
+        Welcome
+        
+            Joseluis
+        
+        
+            Diaz Rodriguez
+        
+    </h2>
+    <ul>
+        <li class="last">
+            
+            
+                <a href="https://www.sandbox.paypal.com/en_US/vhelp/servicemanagement_help/home.htm" target="_blank" onclick="PAYPAL.core.openWindow(event, {'width':750, 'height':475})">
+            
+            Help with this page</a>
+         </li>
+    </ul>
+</div>
+<ul class="accountInfo">
+    <li>
+        
+            Business:
+            Joseluis Diaz Rodriguez&#039;s Test Store (ing.jo_1304607577_biz@msn.com)
+        
+	</li>
+    <li >Account status:
+    
+        
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_status">
+                            Verified</a>
+        
+        
+    
+    </li>
+    
+        <li class="last">
+            
+                
+                
+                    Application status:
+                
+            
+            
+            
+            
+            
+                 <span class="autoTooltip" title="Your account is fully approved. Just finish your next steps and start processing transactions.">
+                    Approved
+                </span>
+            
+            
+            
+        </li>
+    
+</ul>
+
+     
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Left Navigation -->
+    <div id="mainContentRight">
+        <!--jsp:include page="accountSetupTasks.jsp"/ -->
+        
+
+
+
+<div class="eventsBox" id="transactionSearchBox">
+    <form name="SearchTransactionForm" id="searchTransactionForm" action="reskinning.do?reskinExternalUrlServiceKey=paypalreporting&amp;noLocale=y&amp;reskinRelativeUrl=AdvancedSearch?submitedFrom=DBR&amp;reskinRelativeDynamicUrlParamsId=search_keyword" method="post">
+        <fieldset class="group">
+            <legend class="accessAid">Search transactions</legend>
+            <p class="fieldRow">
+                <label for="search_keyword">Search transactions
+                    <input type="text" name="search_keyword" value="" class="transSearch"/>
+                    <span class="button mini">
+                    <input type="submit" name="subaction" value="Search">
+                    </span>
+                </label>
+            </p>
+        </fieldset>
+    </form>
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+    <div class="datatable">
+        <div class="title">
+            <h3>PayPal balance</h3>
+            <div id="menu">
+                <p><a href="#">Options</a></p>
+                <ul id="menuItems">
+                    <li id="item1"><a  href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_add-funds">Add funds</a></li>
+                    <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_withdraw-funds">Withdraw funds</a></li>
+                    <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_profile-currencies">Manage currency</a></li>
+                </ul>
+            </div>
+        </div>
+        <table class="tableData" summary="PayPal balance">
+            <caption><strong>PayPal balance</strong></caption>
+            <colgroup class="currency"/>
+            <colgroup  class="currencyBalance"/>
+            <thead>
+                <tr>
+                    <th class="currency">
+                        Currency
+                    </th>
+                    
+                    <th class="currencyText"><span class="autoTooltip" title="The total available and pending amount in each currency.">Balance</span></th>
+                </tr>
+            </thead>
+            <tfoot>
+                
+                    <tr>
+                        <td>
+                            
+                                
+                                
+                                    Total in&nbsp;USD
+                                
+                            
+                        </td>
+                        
+                        <td class="textright">
+                            
+                                
+                                
+                                    $0.00 USD
+                                
+                            
+                        </td>
+                    </tr>
+                
+                
+            </tfoot>
+           <tbody>
+            
+            
+            
+            
+                
+                    <tr>
+                        <td>
+                        
+                            U.S. Dollar
+                            
+                                &nbsp;(Primary)
+                            
+                            
+                        </td>
+                        
+                        <td class="textright">$0.00 USD
+                        </td>
+                    </tr>
+                
+            
+            
+                <tr>
+                    <td>PayPal Money Market Rate</td>
+                    <td  class="textright">1.68%</td>
+                </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+	    
+<div class="stepsBox transactionsBox">
+	<h3>View transactions</h3>
+	<div class="content">
+		<ul>
+			<li>
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeDynamicUrlParamsId=filter&reskinRelativeUrl=cgi-bin/webscr?cmd=_history&filter=1">All account activity</a>
+            </li>
+			<li>
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeDynamicUrlParamsId=filter&reskinRelativeUrl=cgi-bin/webscr?cmd=_history&filter=3">Payments received</a>
+            </li>
+			<li>
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeDynamicUrlParamsId=filter&reskinRelativeUrl=cgi-bin/webscr?cmd=_history&filter=4">Payments sent</a>
+            </li>
+			<li>
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeDynamicUrlParamsId=filter&reskinRelativeUrl=cgi-bin/webscr?cmd=_history&filter=39">Account withdrawals</a>
+            </li>
+			<li class="last">
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_history-search">Advanced search</a>
+            </li>
+		</ul>
+	</div>
+</div>
+	    
+
+
+
+<div class="stepsBox toolsBox">
+    <h3>Tools</h3>
+    <div class="content" id="toolsContent">
+    <ul>
+		<li class="iconInvoice">
+			<a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_profile-invoice-templates">Invoicing</a></li>
+		<li class="iconButton">
+			<a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_button-management">My Saved Buttons</a>
+		</li>
+		<li class="iconGift">
+			<a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=xpt/merchant/GCIntro">Gift certificates</a>
+		</li>
+        
+            <li class="iconMultiOrder">
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_bulk-ship">
+                    Multi-order shipping</a>
+            </li>
+        
+        
+        
+            
+                <li class="iconVT">
+                    <a href="vtOrderTransaction.do">Virtual Terminal</a>
+                </li>
+            
+        
+        
+        
+            
+                <li class="iconRecurring">
+                    <a href="rpHome.do">Recurring Payments</a>
+                </li>
+            
+        
+        <!--Reusing the same key form profile page -->
+        
+            <li class="iconFraud">
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinSection=profile&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=xpt/Risk/merchant/RiskControlsAbout">Fraud Management</a>
+            </li>
+        
+    </div>
+</div>
+
+        
+        
+
+
+    </div>
+	<div id="mainContentLeft">
+        
+
+
+
+
+
+
+        
+
+
+<!-- Todo - Move this code to new page -->
+
+    
+        <div class="stepsBox">
+			<h3>Account actions</h3>
+            <div class="content">
+                <ul>
+                    
+                    
+                   
+                    <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_accountsetup-ppbasics">My Business Setup</a></li>
+                 
+                    
+                   
+                    <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_unconfirmed-payments">Claim payments</a></li>
+                 
+                    
+                   
+                    <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_account-authenticate-cc">Verify a credit card</a></li>
+                 
+               </ul>
+          </div>
+            
+        </div>
+    
+ 
+
+<!-- Policy updates box -->
+<div class="stepsBox">
+    <h3>
+        Quick links
+    </h3>
+    <div class="content">
+        <ul>
+            <li>
+                <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_update-policy">
+                    Policy updates</a>
+            </li>
+            
+            
+                <li>
+                    <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_web-referrals-mrb">
+                        Referrals</a>
+                </li>
+            
+            
+            <li>
+                <a href="/refund.do">Refund Tutorial</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Oppurtunities section banner-->
+
+    
+
+
+<!-- PayLater Starts-->
+    
+<!--PayLater Ends -->
+
+    </div>
+    
+</div>
+
+<!-- Advertiser 'PayPal. Inc.',  Include user in segment 'PayPal_Yahoo_Targeting_3' - DO NOT MODIFY THIS PIXEL IN ANY WAY -->
+<img src="https://ad.yieldmanager.com/pixel?id=707621&t=2" width="1" height="1" />
+<!-- End of segment tag -->
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1048257392/?label=vI8DCJiQ6gEQ8Mbs8wM&guid=ON&script=0"/>
+<img src="https://secure.leadback.advertising.com/adcedge/lb?site=695501&srvc=1&betr=paypal100_cs=[+]3&betq=12413=[+]429887" width = "1" height = "1" border = "0"/>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+<!--
+SiteCatalyst Code
+Copyright 1997-2005 Omniture, Inc.
+More info available at http://www.omniture.com
+-->
+
+
+
+    <script type="text/javascript" src="/js/site-catalyst/pp_jscode_080706.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+	if (typeof s != "undefined")
+	{
+        
+
+            s.channel ="Reporting Portal";
+            s.prop7="Business";
+            s.prop10="US";
+            s.prop11 = "Login_Tier";
+            s.prop45="PRO 3.0";
+            s.prop46="PRIMARY";
+            s.prop50="en_US";
+            s.pageName = "MF:SM:Overview";
+            
+//            /*** This section is used for tracking products for Pro merchants ! ****/
+            
+            
+                
+            
+            s.eVar4 = "KKYQZCF8HT6EA";
+            s.events = "event2";
+        
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		var s_code=s.t();if(s_code)document.write(s_code);
+	}
+//]]>
+</script>
+<!-- End SiteCatalyst Code -->
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+
+<div id="footer">
+    <h5 class="accessAid">More Information</h5>
+    <ul>
+    
+
+        
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/about">About Us</a></li>
+        
+
+        
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=_help&t=escalateTab">Contact Us</a></li>
+        
+
+        
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=_display-fees">Fees</a></li>
+        
+
+        
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/ua/ua">Legal Agreements</a></li>
+        
+
+        
+            <li><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/ua/policy_privacy">Privacy</a></li>
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+            
+        
+        
+            
+
+
+
+
+
+
+<li class="last">
+    <script type="text/javascript" src="js/oo_engine.js"></script><script type="text/javascript">
+//<![CDATA[
+        var feedback_link='Site Feedback';
+        O_GoT(feedback_link);
+        custom_var='Business|MF:SM:Overview|US|en_US';
+        // Paypal Custom URL class
+        var PayPalURL = function(pagename) {
+            this.language_country_code = "en_US";
+            this.dd = "US";
+            this.nn = "00";
+            this.pagename = escape(pagename.replace(/\s|\//g, "_"));
+            this.to_str = function() {
+            // returns url of the format Error! Hyperlink reference not valid.<pagename>.page
+            return "https://"+this.dd+".paypal.com/"+this.language_country_code+"/"+this.nn+"/"+this.pagename+".page"
+            }
+        }
+        var paypal_url = new PayPalURL("MF:SM:Overview");
+        // Below gives you the ability to change the other properties after the object is created paypal_url.dd="ES"; paypal_url.nn="01";
+        _ht = paypal_url.to_str();
+//]]>    
+    </script>
+</li>
+            
+        </ul>
+        
+        <p>
+            <script type="text/javascript">var lang = 'en';var baseUrl ='https://seal.verisign.com/splash?form_file=fdf\/splash.fdf&dn=SCGI.EBAY.COM&lang='+lang;document.write ('<a href=\"'+baseUrl+'\" onclick=\"PAYPAL.core.openWindow(event,\{location:1,status:1,resizable:1,scrollbars:1,width:560,height:500\})\">');var ver = -1;var v_ua = navigator.userAgent.toLowerCase();if (v_ua.match(/msie ([0-9]{1,}[\.0-9]{0,})/) != null){ver = parseFloat( RegExp.$1 );}if((v_ua.indexOf("msie")!=-1) && (ver>=7)) {var plat=-1;if (v_ua.match(/windows nt ([0-9]{1,}[\.0-9]{0,})/) != null){plat = parseFloat( RegExp.$1 );}if (plat >= 5.1) {document.write("<img src='https://extended-validation-ssl.verisign.com/dot_clear.gif' style='display: none;' />");}}</script><img src="/images/en_US/verisign.gif" border="0"><script type="text/javascript">document.write ('<\/a>');</script>
+        </p>
+        <p>
+            <a target="_blank" href="http://www.verisign.com/ssl-certificate">About SSL Certificates</a>
+        </p>
+        
+        <p>
+            Copyright &copy 1999-2011 PayPal. All rights reserved.
+        </p>
+</div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="navFull">
+    <ul>
+        
+        <li  class="active">
+            <a href="home.do">
+My Account</a>
+        
+            <ul>
+                
+                        <li  class="active"><a href="home.do">
+Overview</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_add-funds&nav=0.1">
+Add Funds</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_withdraw-funds&nav=0.2">
+Withdraw</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_history&nav=0.3">
+History</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_complaint-view&nav=0.4">
+Resolution Center</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypalreporting&noLocale=y&reskinRelativeUrl=Dashboard">
+Reports</a></li>
+                    
+                        <li ><a href="settings.do">
+Profile</a></li>
+                    
+                </ul>
+                
+            </li>
+        
+        <li >
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_send-money&nav=1">
+Send Money</a>
+        
+            <ul>
+                
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_send-money&nav=1.0">
+Pay Anyone</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_auction-fastpay-init&nav=1.1">
+Pay for eBay items</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_batch-payment&nav=1.2">
+Make a Mass Payment</a></li>
+                    
+                </ul>
+                
+            </li>
+        
+        <li >
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_rm&nav=2">
+Request Money</a>
+        
+            <ul>
+                
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_manage-invoice&nav=2.0">
+Manage Invoices</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_request-money&nav=2.1">
+Request Money</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_create-invoice&nav=2.2">
+Create Invoice</a></li>
+                    
+                        <li ><a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_invoice-settings&nav=2.3">
+Invoice Settings</a></li>
+                    
+                </ul>
+                
+            </li>
+        
+        <li >
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_merchant&nav=3">
+Merchant Services</a>
+        
+            </li>
+        
+        <li >
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_auction&nav=">
+Auction Tools</a>
+        
+            </li>
+        
+        <li >
+            <a href="reskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=xpt/Marketing_CommandDriven/general/ProductsandServices&nav=4">
+Products and Services</a>
+        
+            </li>
+        
+    </ul>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    if(typeof PAYPAL != 'undefined'){
+        PAYPAL.core.Navigation.init();
+    }
+//]]>    
+</script>
+        
+            
+
+
+
+
+
+
+
+
+<div id="sandboxFooter">
+	<div class="nav-footer">
+		<img src="/images/en_US/corner_left.gif" border="0" class="left_corner">
+		<ul>
+			<li class="first">
+				<a title="Fees" href="noSessionReskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_display-fees-outside">Fees</a>
+			</li>
+			<li>
+				<a title="Privacy" href="noSessionReskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside">Privacy</a>
+			</li>
+			<li>
+				<a title="Security Center" href="noSessionReskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=_security-center-outside">Security Center</a>
+			</li>
+			<li>
+				<a title="Contact Us" href="https://www.sandbox.paypal.com/IntegrationCenter/ic_contact-support.html">Contact Us</a>
+			</li>
+			<li>
+				<a title="User Agreement" href="noSessionReskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/ua/ua-outside">User Agreement</a>
+			</li>
+		</ul>
+		<p class="company">PayPal, an eBay Company</p>
+        <img src="/images/en_US/corner_right.gif" border="0" class="right_corner">
+	</div>
+	<div class="copyright">
+		<p>Copyright &copy 1999-2011 PayPal. All rights reserved.</p>
+		<p><a title="Information about FDIC pass-through insurance" href="noSessionReskinning.do?reskinExternalUrlServiceKey=paypal&amp;reskinRelativeUrl=cgi-bin/webscr?cmd=p/gen/fdic-outside">Information about FDIC pass-through insurance</a></p>
+	</div>
+</div>
+        
+    </div>
+    
+        
+            <script type="text/javascript" src="/js/min/widgets.js"></script>
+        
+            <script type="text/javascript" src="/js/min/homePage.js"></script>
+        
+    
+</body>
+</html>

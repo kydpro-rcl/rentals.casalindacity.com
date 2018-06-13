@@ -1,0 +1,30 @@
+<link type="text/css" rel="stylesheet" href="steps2/estilo_paso.css">
+<div id="flechas">
+    <div class="paso">
+    	<p class="titl">step 1 of 5</p>
+        <p class="parf">choose your villa</p>
+    </div>
+    <div class="divi1"></div>
+    <div class="paso">
+    	<p class="titl">step 2 of 5</p>
+        <p class="parf">Excursions</p>
+    </div>
+    <div class="divi1"></div>
+    
+     <div class="paso">
+    	<p class="titl">step 3 of 5</p>
+        <p class="parf">Additional Services</p>
+        <!-- <p class="parf">Some booking info </p> -->
+    </div>
+    <div class="divi1"></div>
+     <div class="paso">
+    	<p class="titl">step 4 of 5</p>
+         <p class="parf">Client and Booking details</p>
+    </div>
+    <div class="divi2"></div>
+     <div class="paso1">
+    	<p class="titl1">step 5 of 5</p>
+        <p class="parf1">Check Out</p>
+    </div>
+    <div class="divi"></div>
+</div>

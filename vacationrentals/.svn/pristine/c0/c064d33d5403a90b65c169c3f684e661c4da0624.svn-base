@@ -1,0 +1,381 @@
+<div class="main-wrapper">
+	
+	<div class="container">
+		<div class="row breadcrumb-wrapper">
+			<div class="col-xs-12">
+				<ol class="breadcrumb">
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						Search Results
+					</li>
+				</ol>
+			</div>
+		</div>
+		<div class="row main-content-row">
+			
+			<div class="col-xs-12 col-sm-4 col-md-3" id="content2Left">
+			
+				
+
+<div id="searchBox2">
+	
+	<div class="search-results-map-button hidden"></div>
+	
+	<div class="sidebar sidebar-left">
+		<div class="secondary-search">
+			
+			<button class="btn btn-danger visible-xs mobile-sidebar-close-button hide-sidebar pull-right">
+				<i class="fa fa-times"></i>
+			</button>
+			
+			<div class="search-title " id="secondary-search-title">
+				Search Rentals
+			</div>
+			
+			<form action="/vacation-rentals-homes-search.asp" method="post" name="FormX">
+				<div class="secondary-search-main">
+					
+					<input type="hidden" name="Complete" value="Yes">
+					<input type="hidden" name="Searchform" class="search-form" value="1">
+					
+					
+					
+					<input type="hidden" name="pagedataid" value="0">
+					
+					
+							<input type="hidden" name="communityid" value="0">
+						
+					
+					
+					<!-- mobile dates -->
+					<div id="s-dates-mobile" class="row visible-xs">
+						<div id="s-arrival-mobile" class="col-xs-12">
+							<div class="form-group">
+								<label for="txtStartDate-mobile">Arriving</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm mobile-datepicker start-date" value="12/13/2016" id="txtStartDate-mobile" name="txtStartDate-mobile" readonly>
+								</div>
+							</div>
+						</div>
+						<div id="s-departure-mobile" class="col-xs-12">
+							<div class="form-group">
+								<label for="txtEndDate-mobile">Departing</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm mobile-datepicker end-date" value="12/18/2016" id="txtEndDate-mobile" name="txtEndDate-mobile" readonly>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- desktop dates -->
+					<div id="s-dates" class="row hidden-xs input-daterange datepicker-range secondary-search-dates">
+						<div id="s-arrival" class="col-xs-12 col-md-6">
+							<div class="form-group">
+								<label for="txtStartDate">Arriving</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm start-date" value="12/13/2016" id="txtStartDate" name="txtStartDate" readonly>
+								</div>
+							</div>
+						</div>
+						<div id="s-departure" class="col-xs-12 col-md-6">
+							<div class="form-group">
+								<label for="txtEndDate">Departing</label>
+								<div class="left-inner-addon">
+									<i class="fa fa-calendar-o"></i>
+									<input type="text" class="form-control input-sm end-date" value="12/18/2016" id="txtEndDate" name="txtEndDate" readonly>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="s-submit">
+						
+						<button type="button" class="btn btn-primary btn-block search-update-dates hide-sidebar">Change Dates</button>
+						
+					</div>
+				
+				</div>
+			
+				
+				<legend id="secondary-advanced-legend">Filter properties by</legend>
+				
+					
+				<div id="secondary-bedrooms-sleeps" class="row" style="margin-bottom: 5px;">		
+					<div class="col-xs-6" id="secondary-bedrooms">
+						<div class="input-group">
+							<label for="AmenBedrooms">Bedrooms</label>
+							<select name="AmenBedrooms" class="form-control input-sm search-item" id="Bedrooms">
+								<option value="-1" selected >All</option>
+								
+											<option value="2"  >
+												2 Bedrooms
+											</option>
+										
+											<option value="3"  >
+												3 Bedrooms
+											</option>
+										
+											<option value="4"  >
+												4 Bedrooms
+											</option>
+										
+											<option value="5"  >
+												5 Bedrooms
+											</option>
+										
+											<option value="6"  >
+												6 Bedrooms
+											</option>
+										
+							</select>
+						</div>
+					</div>
+								
+					<div class="col-xs-6" id="secondary-guests">
+						<div class="input-group">
+							<label for="MaxPersons">Guests</label>
+							<select name="MaxPersons" class="form-control input-sm search-item" id="Guests">
+								<option value="0">All</option>
+								
+											<option value="1" >
+												1 Guest
+											</option>
+										
+											<option value="2" >
+												2 Guests
+											</option>
+										
+											<option value="3" >
+												3 Guests
+											</option>
+										
+											<option value="4" >
+												4 Guests
+											</option>
+										
+											<option value="5" >
+												5 Guests
+											</option>
+										
+											<option value="6" >
+												6 Guests
+											</option>
+										
+											<option value="7" >
+												7 Guests
+											</option>
+										
+											<option value="8" >
+												8 Guests
+											</option>
+										
+											<option value="9" >
+												9 Guests
+											</option>
+										
+											<option value="10" >
+												10 Guests
+											</option>
+										
+											<option value="11" >
+												11 Guests
+											</option>
+										
+											<option value="12" >
+												12 Guests
+											</option>
+										
+							</select>
+						</div>
+					</div>
+				</div>
+						
+				
+				<div id="secondary-location" class="search-margin-bottom ">
+					<div class="form-group">
+						<label for="LocationDataID">Locations</label>
+						<select name="LocationDataID" class="form-control input-sm search-item" id="LocationDataID">
+							<option select="" value="0">All</option>
+							
+									<option value="7867"  >
+										Sosua - Cabarete
+									</option>
+								
+						</select>
+					</div>
+				</div>
+				
+				<div class="visible-xs">
+					<a href="javascript: void(0)" class="btn btn-block btn-primary hide-sidebar">
+						<i class="fa fa-check"></i> Apply Filters
+					</a>
+				</div>
+				
+			
+			</form>
+			
+		</div><!-- secondary search -->
+	</div><!-- sidebar -->
+</div> <!-- searchbox 2 -->
+
+<div class="secondary-left-feature hidden-xs">
+	
+		<h4>Featured Property</h4>
+		<div class="sidebar-feature">
+			<a href="/vacation-rental-home.asp?PageDataID=116257">
+				<img class="img-responsive" src="http://cdn.liverez.com/5/13260/1/116257/250/1.jpg" width="250" border="1" style="margin-right:5px;float:left;">
+			</a>
+			<a href="/vacation-rental-home.asp?PageDataID=116257">
+				3 Bedroom Villa
+			</a>
+		</div>
+
+	
+</div>
+
+
+<div class="secondary-left-reviews hidden-xs">
+	
+	<script src="https://cdn.liverez.com/0/JS/jquery-raty.2.4.5.js"></script>
+	<script type="text/javascript" src="https://cdn.liverez.com/3/JS/DisplayPropertyManagerRatingsBlock.js"></script>
+
+</div>
+
+<div class="secondary-left-content hidden-xs">
+	<font face="arial, helvetica, sans-serif"><span style="font-size: 14px; line-height: 22.4px;">Rates include partial electricity credit per day which varies by Villa size, full Villa cleaning services upon check-out and make up of rooms during your stay.</span></font><br />
+&nbsp;
+</div>
+			
+			</div>
+			
+			<div class="col-xs-12 col-sm-8 col-md-9" id="content2Right">
+			
+
+			<h1 class="listing-results-h1 pull-left">Available Properties</h1>
+
+			<div class="search-avail-table-dates pull-right">
+				<span class="search-avail-table-dates-span"></span>
+			</div>
+			
+			<div class="clearfix"></div>
+			
+			<!-- sort bar -->
+			<div class="search-result-list-sorting pull-left hidden-xs">
+				<ul class="list-inline list-flush serach-results-list-sort">
+					<li>Sort by:</li>
+					<li><a href="javascript: LIVEREZ.SearchResults.searchOrder(1).searchRun();">Sleeps</a></li>
+					<li><a href="javascript: LIVEREZ.SearchResults.searchOrder(2).searchRun();">Bedrooms</a></li>
+					<li><a href="javascript: LIVEREZ.SearchResults.searchOrder(4).searchRun();">Bathrooms</a></li>
+					<li><a href="javascript: LIVEREZ.SearchResults.searchOrder(3).searchRun();">Price: Low to High</a></li>
+					<li><a href="javascript: LIVEREZ.SearchResults.searchOrder(6).searchRun();">Price: High to Low</a></li> 
+				</ul>
+			</div>					
+			
+			<div class="search-results-views hidden-xs pull-right">
+				<div class="btn-group" role="group">
+					<button class="btn btn-default search-view-button" data-view="list" title="List View">
+						<i class="fa fa-list"></i>
+					</button>
+					<button class="btn btn-default search-view-button" data-view="grid" title="Grid View">
+						<i class="fa fa-th-large"></i>
+					</button>
+					<button id="srchrslt-list-compare-right" class="btn btn-default search-compare-button search-result-list-compare hidden" onclick="LIVEREZ.SearchResults.CompareProperties();">
+						Compare Properties
+					</button>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+			<div class="clearfix"></div>
+			
+			
+			<div class="row visible-xs" style="padding-top: 10px; padding-bottom: 5px;">
+				<div class="col-xs-6">
+					<select class="form-control" onchange="LIVEREZ.SearchResults.searchOrder(this.value).searchRun();">
+						<option value="1">Sort: Sleeps</option>
+						<option value="2">Sort: Bedrooms</option>
+						<option value="4">Sort: Bathrooms</option>
+						<option value="3">Sort: Price Low to High</option>
+						<option value="12">Sort: Price High to Low</option>
+					</select>
+				</div>
+				<div class="col-xs-6">
+					<a href="javascript:void(0)" class="btn btn-block btn-default show-sidebar" style="height: 34px;"><i class="fa fa-filter"></i> Filter</a> 
+				</div>
+			</div>
+			
+			
+			<!-- search results injected into this inner div -->
+			<div class="search-results-properties"> 
+			
+				<div class="search-results-available-properties-count"></div>
+			
+				<div class="search-results-loading-message hidden">
+					<i class="fa fa-circle-o-notch fa-spin"></i> Loading Available Properties
+				</div>
+				
+				
+				<div class="property-list"></div>
+				
+				
+				<br>
+				<br>
+				<div class="search-results-calendar-suggestions hidden">
+					<div class="text-center">
+						<h3>Flexible Dates? View other Properties close to your Date Range.</h3>
+						<div style="padding: 10px;">
+							<span style="background:#ffffff; border: 1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Available
+							<span style="background:#FFCC66;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Unavailable
+							<span style="background: url('http://cdn.liverez.com/0/images/yahoo-calendar-arrival-bg.gif') top no-repeat; background-size:100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Check-in
+							<span style="background: url('http://cdn.liverez.com/0/images/yahoo-calendar-departure-bg.gif') top no-repeat; background-size:100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Check-out
+						</div>
+					</div>
+					<div class="search-results-calendar-suggestions-list"></div>
+					
+					<div class="search-results-calendar-suggestions--view-more-box text-center hidden" style="margin-top: 30px;">
+						<h3>Not finding what you're looking for?</h5>
+						<button class="btn btn-primary search-results-calendar-suggestions--view-more">View More Property Calendars</button>
+					</div>
+					
+				</div>
+				
+				<!-- calendar search form // DO NOT REMOVE // -->
+				<form action="vacation-rental-home-calendars.asp" method="post" name="Calendar_Search" id="search-results-calendar-form">
+					<input type="hidden" Name="Complete" value="Yes" />
+					<input type="hidden" id="calendarstartDate" name="startDate" class="calendar-start-date" />	
+					<input type="hidden" id="calendarNumberOfNights" name="numberOfNights" class="calendar-location" />	
+					<input type="hidden" id="calendarlocationDataID" name="locationDataID" class="calendar-location" />	
+					<input type="hidden" id="calendarGuests" name="guests" class="calendar-guests" />	
+					<input type="hidden" id="calendarBedrooms" name="bedrooms" class="calendar-bedrooms" />	
+				</form>
+				
+				
+			
+			</div>
+						
+			<!-- compare property form // DO NOT REMOVE // -->
+			<form action="compare-vacation-homes.asp" method="post" name="Search_xml" id="search-results-compare-form">
+				<input type="hidden" Name="Complete" value="Yes" />
+				<input type="hidden" name="change_selected" value="No" />
+				<input type="hidden" name="location" value="avail" />
+				<input type="hidden" id="AD" name="AD" class="start-date" value="12/13/2016" />
+				<input type="hidden" id="DD" name="DD" class="end-date" value="12/18/2016" />
+				<input type="hidden" id="PageDataID" name="PageDataID" />
+			</form>			
+		
+				
+			</div>
+			<!--content2Right -->
+			
+		</div>
+		<!--row -->
+	</div>
+	<!--container -->
+	
+</div>
+<!--main-wrapper -->

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Residencial Casa Linda - Chef on Site</title>
+</head>
+<body style="padding: 10px;" onClick="parent.agreewin.hide()">
+
+
+<h3 style="margin-top: 0; color:#09F;">On Site Chef</h3>
+
+<p style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">The price for this service will be <strong><u>US$ 90</u></strong> for <strong><u>up to 10 people</u></strong>, for additional person, please, <a href="../../contact.php" target="_blank"> ask for prices.</a><br>
+<ul style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">
+<li style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">The chef will prepare, breakfast, lunch and dinner, also will serve them during the day and go shopping.</li>
+
+<li style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">The reservation must be done at least 10 days before the arrival of the client.</li>
+
+<li style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">The chef will cook at the choice of the client, client pays for the products to be used.</li> 
+</ul>
+</p>
+
+</body>
+</html>

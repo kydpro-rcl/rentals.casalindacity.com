@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload villa images</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <style type="text/css">
+      img {border-width: 0}
+      * {font-family:'Lucida Grande', sans-serif;}
+    </style>
+    <link href="css/uploadfilemulti.css" rel="stylesheet">
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery.fileuploadmulti.min.js"></script>
+</head>
+<body>
+<form method="post" action="upload.php" enctype="multipart/form-data">
+<input type="file" name="myfile" />
+<input title="Upload selected file to the current working directory" type="submit"  name="submit" value="submit"/>
+</form>
+
+</body>
+</html>

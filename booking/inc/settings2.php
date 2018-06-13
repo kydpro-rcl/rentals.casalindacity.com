@@ -1,0 +1,14 @@
+<?
+require_once('config.php');
+require_once('db/Logger.php');
+require_once('db/db.php');
+require_once('functions.php');
+require_once('class/DB_class.php');
+require_once('functions_class.php');
+require_once('class/getQueries.php');
+require_once('display_book_not_rent.php');
+/*require_once('config.php');
+require_once('config.php');*/
+require_once('page_maker.php');
+require_once('PDF/fpdf.php');
+?>

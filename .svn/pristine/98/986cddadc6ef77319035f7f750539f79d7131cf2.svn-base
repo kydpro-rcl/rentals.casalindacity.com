@@ -1,0 +1,152 @@
+﻿a
+{
+    color:Blue;
+}
+
+td
+{
+	text-align:left;
+}
+
+
+td.field
+{
+	text-align:right;
+	font-size:x-small;
+	font-family:Verdana;
+	font-weight:bold;
+}
+
+td.thinfield
+{
+	text-align:right;
+	font-size:x-small;
+	font-family:Verdana;
+	
+}
+
+
+a.home
+{
+	font-weight:bold;
+	margin:2em 2em 2em 2em
+}
+body
+{
+   font-size:small;   
+   font-family:Verdana;
+   color:Black;
+   background-image:url(../images/rental.jpg);
+   background-position:top center;
+   font-size:2em;
+}
+
+a
+{
+    color:Blue;
+}
+
+#calls
+{
+    font-family:Verdana;
+    width:70%;
+} 
+
+#calls th
+{
+    padding:10%;
+}
+
+table
+{
+   font-size:1.2em; 
+}
+
+td.header
+{
+	text-align:right;
+	font-size:x-small;
+	color:Black;
+	font-family:Verdana;
+	font-weight:bold;
+}
+
+#normalBold
+{
+   color:Black;
+   font-family:Verdana;
+	font-weight:bold;
+}
+
+.smaller
+{
+   font-size:smaller;
+}
+
+#normal
+{
+   color:Black;
+   font-size:small;   
+   font-family:Verdana;
+}
+
+#redBold
+{
+   color:Red;
+   font-size:small;   
+   font-family:Verdana;
+	font-weight:bold;
+}
+
+#apiheader
+{
+	text-align:center;
+	font-weight:bold;
+	font-size:larger;
+	font-family:Verdana;
+}
+
+table.api
+{
+	width:100%;
+}
+
+a.home
+{
+	font-weight:bold;
+}
+
+.cuerpo{
+	background-color:#FFF;
+	margin-top:160px;
+	
+	width: 100%;
+	max-width:844px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0;
+	}
+.boton {
+  background-color:#B9391B;
+  border:1px solid #F98905;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  color:white;
+  font-weight:bold;
+  padding:5px 15px;
+  text-transform:uppercase;
+}
+
+.boton:hover {
+    background-color: #236ea7 !important;
+    border: 1px solid #F98905;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    padding: 5px;
+	padding-right:15px;
+	padding-left:15px;
+	font-weight:bold;
+	text-transform:uppercase;
+}

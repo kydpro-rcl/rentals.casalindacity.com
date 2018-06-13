@@ -1,0 +1,150 @@
+body{
+
+}
+
+.content{
+	width:100%;
+	max-width:720px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	box-shadow: 0 0 5px 5px #888888;
+	padding:0.5em;
+}
+
+#error_s {
+    background-color: #FFFF00;
+    color: #FF0000;
+    font-size: 55%;
+}
+
+p{
+padding:0;
+margin:0;
+text-align:right;
+}
+
+.parrafo{
+	
+	float: left;
+	width:50%;
+}
+
+.parrafos{
+	
+	float: left;
+	width:28%;
+	text-align:right;
+}
+.parrafoser{
+	
+	float: left;
+	width:16%;
+	text-align:right;
+}
+#bookingbar{
+	clear:both;
+	min-height:2.5em;
+	border: 1px solid #9C0000;
+}
+
+.fieldsets{
+float:left; width:96%;
+}
+
+.label{
+	width:10%;
+}
+.logo{
+	width:66%;
+}
+.input{
+	margin-top:0.3em;
+	margin-right:0.3em;
+	border: 1px solid #8BA0DF;
+    font-size: 12px;
+    height: 24px;
+    padding: 2px;
+    /*width: 100px;*/
+}
+h1 {
+	font-size:1.5em;
+}
+.bulk_price{
+	padding:0; margin:0; font-size:10px; line-height:12px;
+}
+.price_t{
+	font-size:1em;
+}
+.villas_detalles{
+	border-bottom:1px solid red;
+}
+/* All Mobile Portrait size smaller than 768 (devices and browsers) */
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	.parrafo{
+		float: left;
+		width:50%;
+	}
+	.parrafos{
+	
+	float: left;
+	width:50%;
+	text-align:left;
+	}
+	.parrafoser{
+		
+		float: left;
+		width:50%;
+		text-align:left;
+	}
+	#bookingbar{
+	border: 1px solid #9C0000;
+	clear:both;
+	min-height:5.5em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	h1 {
+	font-size:1em;
+	}
+	.bulk_price{
+	display:none; visibility:hidden;
+	}
+	.price_t{
+	font-size:0.7em;
+	}
+	.parrafo{
+
+		width:100%;
+	}	
+
+	.fieldsets{
+	 width:89%;
+	}
+	.logo{
+		width:100%;
+	}
+	.parrafos{
+		
+		float: left;
+		width:100%;
+		text-align:left;
+	}
+	.parrafoser{
+	
+	float: left;
+	width:100%;
+	text-align:left;
+	}
+	#bookingbar{
+	border: 1px solid #9C0000;
+	clear:both;
+	min-height:9em;
+	}
+	.input{
+	 margin:0;
+	 padding:0;
+	}
+}

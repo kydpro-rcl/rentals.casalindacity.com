@@ -1,0 +1,19 @@
+
+{
+    "requestVersion": "1.0",
+    "systemExternalId": "ABC123",
+    "advertiserExternalId": "12345",
+    "listingExternalId": "55512",
+    "dateRange": {
+        "arrivalDate": "2020-11-10",
+        "departureDate": "2020-11-15"
+    },
+    "adults": 10,
+    "children": 0,
+    "pets": 0,
+    "units": [
+        {
+            "unitExternalId": "55512"
+        }
+    ]
+}

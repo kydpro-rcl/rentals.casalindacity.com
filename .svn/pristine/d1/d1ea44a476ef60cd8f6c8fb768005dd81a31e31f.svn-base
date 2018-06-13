@@ -1,0 +1,107 @@
+<? session_start();
+if ($_SESSION['referal']['tipo']==2){
+  $_GET['main']=3;   $_GET['secund']=3.2;
+  require_once('init.php');
+	if ($_POST){
+		 // start validation
+		 $name = $_POST['name'];
+		 $lastname = $_POST['lastname'];
+		 $passport = strtoupper($_POST['passport']);
+		 $cedula = $_POST['cedula'];
+		 $email = strtolower($_POST['email']);
+		 $phone = $_POST['phone']; 
+		 $phone2 = $_POST['phone2'];
+		 $fax = $_POST['fax'];
+		 $language = $_POST['language'];
+		 $zip = $_POST['zip'];
+		 $country = $_POST['country'];
+		 $password = $_POST['password'];
+		 $address = $_POST['address'];
+		 $comentario = $_POST['info']; 
+		 $ename = $_POST['name_emerg']; 
+		 $ephone = $_POST['phone_emerg'];
+		 $state=$_POST['state'];
+		 $city=$_POST['city'];
+			 if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+			  {
+				$_GET['error']['email']='E-mail is not valid';
+			  }else{
+				$db= new getQueries();
+				$result=$db->checkEmail($email);
+			  if ($result[0]['email']==$email){ 
+				   $_GET['error']['email']='Email already registered';
+				   //send email to admin and agent
+				   $body_agent='The client that your are trying to create is already in our system, please, contact us for more information.';
+				   correo_agent($toemail=$_SESSION['referal']['email'], $body_agent, $type='2');
+							   
+				   $body_admin='This referral Agent is trying to register a client already saved in the system ('.$result[0]['id'].')';		
+					
+				   correo_info2($body_admin, $fromadd=$_SESSION['referal']['email'], $fromnam=$_SESSION['referal']['name']." ".$_SESSION['referal']['lastname'], $type='2', $result[0]);
+			   }
+			  }
+			  if (!filter_var($_POST['name'], FILTER_SANITIZE_STRING)) $_GET['error']['name']='Invalid name';
+			  if (!filter_var($_POST['lastname'], FILTER_SANITIZE_STRING)) $_GET['error']['lastname']='Invalid Last name';
+			  if(!preg_match("#^[-A-Za-z' 'ñíÑáéóúÁÉÍÓÚ]*$#",utf8_decode($_POST['name']))) $_GET['error']['name']='Invalid name';
+			  if(!preg_match("#^[-A-Za-z' 'ñíÑáéóúÁÉÍÓÚ]*$#",utf8_decode($_POST['lastname']))) $_GET['error']['lastname']='Invalid Last name';
+			  if ($cedula!=''){
+				 if (!validate_cedula($cedula)){  $_GET['error']['cedula']='Invalid Cedula';	}else{
+						$db= new getQueries();	$result=$db->checkCedula($cedula);  if ($result[0]['cedula']==$cedula){ $_GET['error']['cedula']='Cedula already registered:'.$result[0]['id'];}
+					}
+				}
+			if ($passport!=''){
+				$db= new getQueries();	$result=$db->checkPassport($passport);  if ($result[0]['passport']==$passport){ $_GET['error']['passport']='already registered:'.$result[0]['id'];}
+			}						 
+		    if (!$_GET['error']){ // if not error save data
+			  //introducir aqui en la base de datos
+			  $db= new DB;
+			  $info=array('id_commission'=>$_SESSION['referal']['id'],
+						  'pass'=>$password,
+						  'online'=>'2',
+						  'name'=>$name,
+						  'lastname'=>$lastname,
+						  'email'=>$email,
+						  'phone'=>$phone,
+						  'phone2'=>$phone2,
+						  'fax'=>$fax,
+						  'cedula'=>$cedula,
+						  'passport'=>$passport,
+						  'language'=>$language,
+						  'zip'=>$zip,
+						  'address'=>$address,
+						  'country'=>$country,
+						  'state'=>$state,
+						  'city'=>$city,
+						  'info'=>$comentario,
+						  'date'=>FECHA,
+						  'active'=>'1',
+						  'ename'=>$ename,
+						  'ephone'=>$ephone,
+						  'id_seller'=>$_SESSION['referal']['id']);
+			  $id_inserted=$db->insert_gral($info, 'customers');
+			   $info2=array('fecha'=>FECHA,
+						  '	id_client'=>$id_inserted,
+						  'id_sale'=>$_SESSION['referal']['id'],
+						  'id_rental'=>$_SESSION['referal']['id'],
+						  'active'=>'1');
+				$db->insert_gral($info2, 'clients_referred');
+			  //send email to admin and 
+			   $body_agent='Your client has been created in our system, please, contact us if you need more information.';
+			   correo_agent($toemail=$_SESSION['referal']['email'], $body_agent);			   			   
+			   
+			   $body_admin='This referal Agent has created a new client ('.$id_inserted.').\n';
+				$body_admin .= "Client Details\n";
+				$body_admin .= "Name: ".$name." $lastname\n";
+				$body_admin .= "Email: ".$email."\n\n";
+				$body_admin .= "id: ".$id_inserted."\n";
+				
+			   correo_info($body_admin, $fromadd=$_SESSION['referal']['email'], $fromnam=$_SESSION['referal']['name']." ".$_SESSION['referal']['lastname'], $type='1');
+			   
+			  $_GET['done']=1;
+		   }
+	}
+  dibujar('new_client');
+}else{
+	header('Location:login.php');
+	die();
+}
+?>

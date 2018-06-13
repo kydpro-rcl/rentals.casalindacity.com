@@ -1,0 +1,101 @@
+<?php
+function salida($page){  require_once('pages/template.header.php');
+  require_once('pages/template.'.$page.'.php');
+  require_once('pages/template.footer.php');}
+function salida2($page){
+  require_once('pages/template.header2.php');
+  require_once('pages/template.'.$page.'.php');
+  require_once('pages/template.footer2.php');
+}
+function createRandomPassword() {
+
+
+
+    $chars = "abcdefghijkmnopqrstuvwxyz023456789";
+
+    srand((double)microtime()*1000000);
+
+    $i = 0;
+
+    $pass = '' ;
+
+
+
+    while ($i <= 7) {
+
+        $num = rand() % 33;
+
+        $tmp = substr($chars, $num, 1);
+
+        $pass = $pass . $tmp;
+
+        $i++;
+
+    }
+
+
+
+    return $pass;
+
+
+
+}
+
+/*
+function ftp_mkdir_recursive($conn_id, $mode=0777, $path){//creación de un árbol de directorios
+	if(substr($path,0,1)=="/"){$path=substr($path,1);}
+	if(substr($path,-1)=="/"){$path=substr($path,0,-1);}
+$dir=explode("/", $path);
+$path="";
+$ret=true;
+	if(!is_resource($conn_id)){return "no FTP";}
+$original_directory=ftp_pwd($conn_id);
+	if(!$original_directory){return false;}
+	for ($i=0;$i<count($dir);$i++){
+	$path.="/".$dir[$i];
+		if(!@ftp_chdir($conn_id,$path)){
+		ftp_chdir($conn_id, $original_directory );
+			if(!@ftp_mkdir($conn_id,$path)){
+			$ret=false;
+			break;
+			}else{
+			@ftp_chmod($conn_id, 0777, $path);
+			}
+		}
+	}
+return $ret;
+}
+
+function connect_ftp($server,$user_ftp, $pass_ftp){
+//$server=str_replace("ftp.","",$server);
+//$server="ftp.".$server;
+$io=ftp_connect($server);
+	if($io==false){return false;}
+ftp_login($io, $user_ftp, $pass_ftp);
+ftp_pasv($io, true);
+return $io;
+}
+
+function sendMail_to_owner($body, $address, $subject, $from_add, $from_name) {
+
+		$extra_header  = '';
+		$extra_header  .= "MIME-Version: 1.0\n";
+		$extra_header  .= "Content-type: text/html; charset=utf-8\n";
+		$extra_header  .= "Content-transfer-encoding: 8bit\n";
+		$extra_header  .= "Date: ". date('r'). "\n";
+		$extra_header  .= "X-Priority: 3\n";   // send email with high priority; 3 is normal, 1 is high and 5 is de lowest.
+		$extra_header  .= "X-Mailer: PHP\n";
+		$extra_header  .= "X-MSMail-Priority: Normal\n";
+		$extra_header  .= "From: $from_name <$from_add>\n";
+		$extra_header  .= "Reply-to: <$from_add>\n";
+		$extra_header  .= "Return-path: $from_name <$from_add>\n";
+		$extra_header  .= "Bcc: ".ADMIN_EMAIL."\n";
+		$extra_header  .= "CC: ".MANAGING_EMAIL."\n";
+
+
+		$mailsend = mail($address, $subject, $body, $extra_header);
+
+		return true;
+
+}  */
+?>

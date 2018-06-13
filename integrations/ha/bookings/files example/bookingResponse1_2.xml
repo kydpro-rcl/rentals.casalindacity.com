@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookingResponse>
+	<documentVersion>1.2</documentVersion>
+	<bookingResponseDetails>
+		<advertiserAssignedId>1931</advertiserAssignedId>
+		<listingExternalId>AH2</listingExternalId>
+		<unitExternalId>AH2</unitExternalId>
+		<externalId>16676</externalId>
+		<locale>en_US</locale>
+		<orderList>
+			<order>
+				<currency>USD</currency>
+				<orderItemList>
+					<orderItem>
+						<description>Rent</description>
+						<feeType>RENTAL</feeType>
+						<name>Rent</name>
+						<preTaxAmount currency="USD">2100</preTaxAmount>
+						<status>ACCEPTED</status>
+						<totalAmount currency="USD">2329.95</totalAmount>
+					</orderItem>
+					<orderItem>
+						<description>Resort Fee</description>
+						<feeType>MISC</feeType>
+						<name>Resort Fee</name>
+						<preTaxAmount currency="USD">63</preTaxAmount>
+						<status>ACCEPTED</status>
+						<totalAmount currency="USD">69.9</totalAmount>
+					</orderItem>
+				</orderItemList>
+				<paymentSchedule>
+					<acceptedPaymentForms>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>VISA</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>MASTERCARD</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>DISCOVER</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentInvoiceDescriptor>
+							<paymentFormType>INVOICE</paymentFormType>
+							<paymentNote>A note about invoice processing</paymentNote>
+						</paymentInvoiceDescriptor>
+					</acceptedPaymentForms>
+					<paymentScheduleItemList>
+						<paymentScheduleItem>
+							<amount currency="USD">2399.85</amount>
+							<dueDate>2013-07-20</dueDate>
+						</paymentScheduleItem>
+					</paymentScheduleItemList>
+				</paymentSchedule>
+				<reservationCancellationPolicy>
+					<description>cancellation poilcy text or URL to policy on website</description>
+				</reservationCancellationPolicy>
+				<stayFees>
+					<stayFee>
+						<description>An addition City Fee of $15 cash must also be collected upon arrival.</description>
+					</stayFee>
+				</stayFees>
+			</order>
+		</orderList>
+		<rentalAgreement>
+			<agreementText>Agreement Text goes here</agreementText>
+		</rentalAgreement>
+		<reservationPaymentStatus>UNPAID</reservationPaymentStatus>
+		<reservation>
+			<numberOfAdults>1</numberOfAdults>
+			<numberOfChildren>0</numberOfChildren>
+			<numberOfPets>0</numberOfPets>
+			<reservationDates>
+				<beginDate>2013-09-01</beginDate>
+				<endDate>2013-09-07</endDate>
+			</reservationDates>
+			<checkinTime>15</checkinTime>
+			<checkoutTime>11</checkoutTime>
+			<reservationOriginationDate>2001-12-17T09:30:47Z</reservationOriginationDate>
+		</reservation>
+		<reservationStatus>CONFIRMED</reservationStatus>
+	</bookingResponseDetails>
+</bookingResponse>

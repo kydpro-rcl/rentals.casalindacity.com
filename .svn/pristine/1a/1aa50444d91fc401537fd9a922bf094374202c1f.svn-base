@@ -1,0 +1,231 @@
+
+<!--<link href="demo_files/main.css" type="text/css" rel="stylesheet">-->
+<script src="demo_files/yahoo-dom-event.js" type="text/javascript"></script>
+<!--<script src="http://www.onressystems.com/vendors/webdemo/autonav.js" type=text/javascript></script>-->
+
+<script language="JavaScript" src="demo_files/pagereferrer.js"></script>
+<script language="JavaScript" src="demo_files/OnResBookOnlineCode2.js"></script>
+<style type="text/css">
+.onresCalendarTable {
+  table-layout: fixed;
+  width: 100%;
+  border-style:none;
+  border-collapse:collapse;
+  margin:0px;
+  padding:0px;
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size:9pt;
+}
+
+.onresCalendarTable td {
+  text-align:center;
+  margin:0px;
+  padding:2px;
+}
+
+.onresCalendarDayOfWeek {
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+.onresDay {
+  cursor:hand;
+  cursor:pointer;
+  background-color: #f1f1e5;
+}
+
+.onresDaySelected {
+  cursor:hand;
+  cursor:pointer;
+  background-color: #00CCFF;
+}
+
+.onresDayToday {
+  cursor:hand;
+  cursor:pointer;
+  background-color: #f1f1e5;
+  color: #FF3333;
+}
+
+.onresDayDisabled {
+  background-color: #f1f1e5;
+  color: #999999;
+}
+
+.onresClearButton {
+  cursor:hand;
+  cursor:pointer;
+  color: #FFFFFF;
+  font-weight: bold;
+  float: right;
+  margin: 3px;
+  border: solid 1px #00CCFF;
+  background-color: #999999;
+  padding: 2px;
+}
+</style>
+<!--START CONTENT FOR BOOK SEARCH-->
+
+
+					<div id="content-inner" style="float:right; padding-right:100px;">
+                    
+						<div style="background-image: url(&quot;http://www.onressystems.com/vendors/webdemo/title-border.gif&quot;); background-repeat: no-repeat; background-position: 0px 38px; height: 45px; vertical-align: top;"> <img src="demo_files/hdrRates.gif" alt="Rates &amp; Reservations" class="PSST" style="border: medium none; margin-left: 2px; margin-top: 6px;"> </div>
+						<p style="color:#06F; font-family:Arial, Helvetica, sans-serif; ">After choosing starting and ending dates click on <b>Continue button</b> on the down left to view the available villas.</p>
+						<table border="0" cellpadding="1" cellspacing="1" align="center">
+						<tbody><tr>
+							<td>
+							<!-- START -->
+
+								<form name="bookform" id="bookform" method="post" action="availability_result.php">
+
+							
+							<input name="DaysInAdvanceBooking" id="DaysInAdvanceBooking" value="-1" type="hidden">
+							<table border="0" cellpadding="1" cellspacing="1">
+									<tbody><tr>
+									<td valign="top">
+
+								<table id="tblSearchForm" width="280" bgcolor="#ffffff" border="1" bordercolor="#224192" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+
+										<td valign="top">
+
+									<table width="100%" border="0" cellpadding="0" cellspacing="1">
+										<tbody><tr>
+											<td colspan="4" style="background-color: #0091c0; padding-top: 5px; padding-bottom: 5px;" align="center"><span style="font-family: Verdana; font-size: 11pt; color: rgb(255, 255, 255); font-weight: bold;">Check Availability </span></td>
+										</tr>
+										<tr>
+											<td colspan="4">&nbsp;</td>
+										</tr>
+										<tr>
+											<td width="10px">&nbsp;</td>
+											<td onclick="alert(document.getElementById('StartDate').value);" align="left"><span style="font-family: Verdana; font-weight: bold; font-size: 10pt; color: rgb(0, 0, 0);"> Arrival: </span></td>
+											<td align="left"><select id="ddlStartDay" name="ddlStartDay" onchange="onchangeDropDownDate()"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option selected="selected">14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select>
+												<select id="ddlStartMonth" name="ddlStartMonth" onchange="onchangeDropDownDate()">
+													<option value="Jan">Jan</option>
+													<option value="Feb">Feb</option>
+													<option value="Mar">Mar</option>
+													<option value="Apr">Apr</option>
+													<option value="May">May</option>
+													<option value="Jun">Jun</option>
+													<option value="Jul">Jul</option>
+													<option value="Aug">Aug</option>
+													<option value="Sep">Sep</option>
+													<option value="Oct">Oct</option>
+													<option selected="selected" value="Nov">Nov</option>
+													<option value="Dec">Dec</option>
+
+												</select>
+												<select name="ddlStartYear" id="ddlStartYear" onchange="onchangeDropDownDate()"><option selected="selected" value="2010">10</option><option value="2011">11</option><option value="2012">12</option><option value="2013">13</option><option value="2014">14</option><option value="2015">15</option><option value="2016">16</option><option value="2017">17</option><option value="2018">18</option><option value="2019">19</option></select>
+												<input value="14 Oct 2010" name="StartDate" id="StartDate" type="hidden"></td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td width="10px">&nbsp;</td>
+											<td align="left"><span style="font-family: Verdana; font-weight: bold; font-size: 10pt; color: rgb(0, 0, 0);"> Nights: </span></td>
+											<td align="left"><select name="NumNights" id="NumNights" onchange="ChangeNumNights()">
+													<option value="0"></option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option selected="selected" value="15">---</option>
+												</select></td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td onclick="alert(document.getElementById('EndDate').value);" align="left"><span style="font-family: Verdana; font-weight: bold; font-size: 10pt; color: rgb(0, 0, 0);"> Departure: </span></td>
+											<td align="left"><select id="ddlEndDay" name="ddlEndDay" onchange="onchangeDropDownDate()">
+												<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option selected="selected">26</option><option>27</option><option>28</option><option>29</option><option>30</option></select>
+												<select id="ddlEndMonth" onchange="onchangeDropDownDate()" name="ddlEndMonth">
+													<option value="Jan">Jan</option>
+													<option value="Feb">Feb</option>
+													<option value="Mar">Mar</option>
+													<option value="Apr">Apr</option>
+													<option value="May">May</option>
+													<option value="Jun">Jun</option>
+													<option value="Jul">Jul</option>
+													<option value="Aug">Aug</option>
+													<option value="Sep">Sep</option>
+													<option value="Oct">Oct</option>
+													<option selected="selected" value="Nov">Nov</option>
+													<option value="Dec">Dec</option>
+												</select>
+												<select id="ddlEndYear" name="ddlEndYear" onchange="onchangeDropDownDate()"><option selected="selected" value="2010">10</option><option value="2011">11</option><option value="2012">12</option><option value="2013">13</option><option value="2014">14</option><option value="2015">15</option><option value="2016">16</option><option value="2017">17</option><option value="2018">18</option><option value="2019">19</option></select>
+												<input value="26 Nov 2010" name="EndDate" id="EndDate" type="hidden"></td>
+											<td></td>
+										</tr>
+										
+										
+										
+									</tbody></table>
+										</td>
+
+										</tr>
+
+									<tr>
+										<td colspan="5" align="center"><input type="submit" value="Continue" name="go" />
+                                        
+                                        </td>
+									</tr>
+								</tbody></table>
+									</td>
+
+									</tr>
+
+							</tbody></table>
+								</td>
+
+							<td valign="top"><table style="" id="tblCalendars" width="280" bgcolor="#ffffff" border="1" bordercolor="#224192" cellpadding="0" cellspacing="0">
+									<tbody><tr>
+										<td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="1">
+												<tbody><tr>
+													<td style="background-color:#0091c0; padding-top: 5px; padding-bottom: 5px;" width="50%" align="center"><div style="float: left; margin-left: 2px;">
+															<input onclick="onresCalendarAddMonth(-1)" value="&lt;" style="height: 20px; width: 15px;" type="button">
+														</div>
+														<div style="float: right;">&nbsp; &nbsp;</div>
+														<span id="onresCalendarMonth1" style="font-family: Verdana; font-size: 10pt; color: rgb(255, 255, 255); font-weight: bold;">October</span></td>
+													<td rowspan="3" style="width: 3px; padding: 0px; margin: 0px; background-color:#0091c0;"><img src="demo_files/x.gif" width="1px" border="0" height="1px"></td>
+													<td style="background-color: #0091c0; padding-top: 5px; padding-bottom: 5px;" width="50%" align="center"><div style="float: left;">&nbsp; &nbsp;</div>
+														<div style="float: right; margin-left: 2px;">
+															<input onclick="onresCalendarAddMonth(1)" value="&gt;" style="height: 20px; width: 15px;" type="button">
+														</div>
+														<span id="onresCalendarMonth2" style="font-family: Verdana; font-size: 10pt; color: rgb(255, 255, 255); font-weight: bold;">November</span></td>
+												</tr>
+												<tr>
+													<td valign="top" align="center"><div id="onresCalendar1"><table class="onresCalendarTable"><tbody><tr><td class="onresCalendarDayOfWeek">S</td><td class="onresCalendarDayOfWeek">M</td><td class="onresCalendarDayOfWeek">T</td><td class="onresCalendarDayOfWeek">W</td><td class="onresCalendarDayOfWeek">T</td><td class="onresCalendarDayOfWeek">F</td><td class="onresCalendarDayOfWeek">S</td></tr><tr><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td id="cal20101001" class="onresDayDisabled">1</td><td id="cal20101002" class="onresDayDisabled">2</td></tr><tr><td id="cal20101003" class="onresDayDisabled">3</td><td id="cal20101004" class="onresDayDisabled">4</td><td id="cal20101005" class="onresDayDisabled">5</td><td id="cal20101006" class="onresDayDisabled">6</td><td id="cal20101007" class="onresDayDisabled">7</td><td id="cal20101008" class="onresDayDisabled">8</td><td id="cal20101009" class="onresDayDisabled">9</td></tr><tr><td id="cal20101010" class="onresDayDisabled">10</td><td id="cal20101011" class="onresDayDisabled">11</td><td id="cal20101012" class="onresDayDisabled">12</td><td id="cal20101013" class="onresDayDisabled">13</td><td id="cal20101014" class="onresDaySelected" onclick="onresSelectDay(this)">14</td><td id="cal20101015" class="onresDaySelected" onclick="onresSelectDay(this)">15</td><td id="cal20101016" class="onresDaySelected" onclick="onresSelectDay(this)">16</td></tr><tr><td id="cal20101017" class="onresDaySelected" onclick="onresSelectDay(this)">17</td><td id="cal20101018" class="onresDaySelected" onclick="onresSelectDay(this)">18</td><td id="cal20101019" class="onresDaySelected" onclick="onresSelectDay(this)">19</td><td id="cal20101020" class="onresDaySelected" onclick="onresSelectDay(this)">20</td><td id="cal20101021" class="onresDaySelected" onclick="onresSelectDay(this)">21</td><td id="cal20101022" class="onresDaySelected" onclick="onresSelectDay(this)">22</td><td id="cal20101023" class="onresDaySelected" onclick="onresSelectDay(this)">23</td></tr><tr><td id="cal20101024" class="onresDaySelected" onclick="onresSelectDay(this)">24</td><td id="cal20101025" class="onresDaySelected" onclick="onresSelectDay(this)">25</td><td id="cal20101026" class="onresDaySelected" onclick="onresSelectDay(this)">26</td><td id="cal20101027" class="onresDaySelected" onclick="onresSelectDay(this)">27</td><td id="cal20101028" class="onresDaySelected" onclick="onresSelectDay(this)">28</td><td id="cal20101029" class="onresDaySelected" onclick="onresSelectDay(this)">29</td><td id="cal20101030" class="onresDaySelected" onclick="onresSelectDay(this)">30</td></tr><tr><td id="cal20101031" class="onresDaySelected" onclick="onresSelectDay(this)">31</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td></tr></tbody></table></div></td>
+													<td valign="top" align="center"><div id="onresCalendar2"><table class="onresCalendarTable"><tbody><tr><td class="onresCalendarDayOfWeek">S</td><td class="onresCalendarDayOfWeek">M</td><td class="onresCalendarDayOfWeek">T</td><td class="onresCalendarDayOfWeek">W</td><td class="onresCalendarDayOfWeek">T</td><td class="onresCalendarDayOfWeek">F</td><td class="onresCalendarDayOfWeek">S</td></tr><tr><td class="onresDay">&nbsp;</td><td id="cal20101101" class="onresDaySelected" onclick="onresSelectDay(this)">1</td><td id="cal20101102" class="onresDaySelected" onclick="onresSelectDay(this)">2</td><td id="cal20101103" class="onresDaySelected" onclick="onresSelectDay(this)">3</td><td id="cal20101104" class="onresDaySelected" onclick="onresSelectDay(this)">4</td><td id="cal20101105" class="onresDaySelected" onclick="onresSelectDay(this)">5</td><td id="cal20101106" class="onresDaySelected" onclick="onresSelectDay(this)">6</td></tr><tr><td id="cal20101107" class="onresDaySelected" onclick="onresSelectDay(this)">7</td><td id="cal20101108" class="onresDaySelected" onclick="onresSelectDay(this)">8</td><td id="cal20101109" class="onresDaySelected" onclick="onresSelectDay(this)">9</td><td id="cal20101110" class="onresDaySelected" onclick="onresSelectDay(this)">10</td><td id="cal20101111" class="onresDaySelected" onclick="onresSelectDay(this)">11</td><td id="cal20101112" class="onresDaySelected" onclick="onresSelectDay(this)">12</td><td id="cal20101113" class="onresDaySelected" onclick="onresSelectDay(this)">13</td></tr><tr><td id="cal20101114" class="onresDaySelected" onclick="onresSelectDay(this)">14</td><td id="cal20101115" class="onresDaySelected" onclick="onresSelectDay(this)">15</td><td id="cal20101116" class="onresDaySelected" onclick="onresSelectDay(this)">16</td><td id="cal20101117" class="onresDaySelected" onclick="onresSelectDay(this)">17</td><td id="cal20101118" class="onresDaySelected" onclick="onresSelectDay(this)">18</td><td id="cal20101119" class="onresDaySelected" onclick="onresSelectDay(this)">19</td><td id="cal20101120" class="onresDaySelected" onclick="onresSelectDay(this)">20</td></tr><tr><td id="cal20101121" class="onresDaySelected" onclick="onresSelectDay(this)">21</td><td id="cal20101122" class="onresDaySelected" onclick="onresSelectDay(this)">22</td><td id="cal20101123" class="onresDaySelected" onclick="onresSelectDay(this)">23</td><td id="cal20101124" class="onresDaySelected" onclick="onresSelectDay(this)">24</td><td id="cal20101125" class="onresDaySelected" onclick="onresSelectDay(this)">25</td><td id="cal20101126" class="onresDaySelected" onclick="onresSelectDay(this)">26</td><td id="cal20101127" class="onresDay" onclick="onresSelectDay(this)">27</td></tr><tr><td id="cal20101128" class="onresDay" onclick="onresSelectDay(this)">28</td><td id="cal20101129" class="onresDay" onclick="onresSelectDay(this)">29</td><td id="cal20101130" class="onresDay" onclick="onresSelectDay(this)">30</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td></tr><tr><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td><td class="onresDay">&nbsp;</td></tr></tbody></table></div></td>
+												</tr>
+												<tr>
+													<td>&nbsp;</td>
+													<td align="right"><div class="onresClearButton" onclick="onresCalendarClear()" style="background-color:#0CF;"> Clear </div></td>
+												</tr>
+											</tbody></table></td>
+									</tr>
+								</tbody></table></td>
+								</tr>
+
+							
+						</tbody></table>
+						</form>
+						<div id="popupcalendar" class="text">&nbsp;</div>
+						<!-- END -->
+						</td>
+						</tr>
+						</tbody></table>
+					</form>
+                    </div>
+
+
+
+<!--END CONTENT FOR BOOK SEARCH-->

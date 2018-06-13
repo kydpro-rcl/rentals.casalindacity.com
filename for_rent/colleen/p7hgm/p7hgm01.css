@@ -1,0 +1,259 @@
+/* 
+  -----------------------------------
+  Horizontal Glider Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 01 - Blue Mist
+  -----------------------------------
+*/
+.p7HGM01 {
+	padding: 0px;
+	zoom: 1;
+}
+.p7HGM01 .p7HGM_viewport_wrapper {
+	border: 1px solid #37619F;
+	position: relative;
+}
+.p7HGM01 .p7HGM_panel_content {
+	font-size: 13px;
+	line-height: 1.5em;
+	padding: 20px;
+}
+.p7HGM01 .p7HGMtrig {
+	overflow: hidden;
+	background-color: #5B87C6;
+	border-top: 1px solid #A4BBDF;
+	border-right: 1px solid #37619F;
+	border-bottom: 6px solid #37619F;
+	border-left: 1px solid #37619F;
+	font-size: 14px;
+	background-image: url(img/p7hgm_bluegradient.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	zoom: 1;
+}
+.p7HGM01 .p7HGMtrig.trigbottom {
+	border-bottom: 1px solid #37619F;
+	border-top: 6px solid #37619F;
+}
+.p7HGM01 .p7HGMtrig ul {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM01 .p7HGMtrig li {
+	list-style-type: none;
+	float: left;
+	margin: 0px;
+}
+.p7HGM01 .p7HGMtrig a {
+	display: block;
+	padding: 10px 16px;
+	color: #000;
+	text-decoration: none;
+	border-right: 1px solid #000;
+}
+.p7HGM01 .p7HGMtrig a:hover {
+	color: #FFF;
+	background-color: #37619F;
+}
+.p7HGM01 .p7HGMtrig .panel_open {
+	color:#FFF;
+	background-color: #37619F;
+}
+.p7HGM01 .p7HGM_controls div {
+	position: absolute;
+	top: 50%;
+	z-index: 9999;
+	margin-top: -20px;
+	height: 35px;
+	width: 18px;
+	display: none;
+}
+.p7HGM01 .p7HGM_controls div.p7HGM_prev {
+	left: -24px;
+}
+.p7HGM01 .p7HGM_controls div.p7HGM_next {
+	right: -24px;
+}
+.p7HGM01 .p7HGM_controls div img {
+	border: 0;
+	width: 18px;
+	height: 35px;
+}
+.p7HGM01 .p7HGM_controls div.p7HGM_prev a {
+	background-image: url(img/p7hgmBlueMist_CTRLPrev.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM01 .p7HGM_controls div.p7HGM_next a {
+	background-image: url(img/p7hgmBlueMist_CTRLNext.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM01 .p7HGM_controls a:hover {
+	background-position: 0px -35px;
+}
+.p7HGM01 .p7HGM_controls a.off, .p7HGM01 .p7HGM_controls a.off:hover {
+	cursor: default;
+	background-position: 0px -70px;
+}
+.p7HGM01 .p7HGMpaginator {
+	overflow: hidden;
+	font-size: 12px;
+	margin-bottom: 12px;
+	zoom: 1;
+}
+.p7HGM01 .p7HGMpaginator ul {
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM01 .p7HGMpaginator.pagbottom {
+	margin-top: 12px;
+}
+.p7HGM01 .p7HGMpaginator li {
+	list-style-type: none;
+	float: left;
+	margin: 0 6px 0 0;
+}
+.p7HGM01 .p7HGMpaginator a {
+	display: block;
+	padding: 2px 6px;
+	color: #37619F;
+	text-decoration: none;
+	border: 1px solid #37619F;
+}
+.p7HGM01 .p7HGMpaginator a:hover {
+	color: #FFF;
+	background-color: #5B87C6;
+	border-color: #5B87C6 #2E5083 #2E5083 #5B87C6;
+}
+.p7HGM01 .p7HGMpaginator .panel_open {
+	color:#C7D6EB;
+	background-color: #5B87C6;
+	border-color: #5B87C6 #2E5083 #2E5083 #5B87C6;
+}
+.p7HGM01 .p7HGMvcr {
+	zoom: 1;
+}
+.p7HGM01 .p7HGMvcr ul {
+	margin: 0;
+	overflow: hidden;
+	z-index: 999999;
+	width: 148px;
+	padding: 0;
+}
+.p7HGM01 .p7HGMvcr li {
+	list-style-type: none;
+	float: left;
+	margin: 12px 0 0 0;
+}
+.p7HGM01 .p7HGMvcr.vcrtop li {
+	margin: 0 0 12px 0 !important;
+}
+.p7HGM01 .p7HGMvcr img {
+	border: 0;
+}
+.p7HGM01 .p7HGMvcr a {
+	display: block;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_first a {
+	background-image: url(img/p7hgmBlueMist_First.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_first img {
+	width: 28px;
+	height: 30px;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_prev a {
+	background-image: url(img/p7hgmBlueMist_Prev.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_prev img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_play a {
+	background-image: url(img/p7hgmBlueMist_Play.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_play img, .p7HGM01 .p7HGMvcr .p7HGM_play .pause img {
+	width: 32px;
+	height: 30px;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_play .pause {
+	background-image: url(img/p7hgmBlueMist_Play.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -60px !important;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_next a {
+	background-image: url(img/p7hgmBlueMist_Next.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_next img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_last a {
+	background-image: url(img/p7hgmBlueMist_Last.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_last img {
+	width: 28px;
+	height: 30px;
+}
+.p7HGM01 .p7HGMvcr a:hover {
+	background-position: 0px -30px;
+}
+.p7HGM01 .p7HGMvcr .p7HGM_play .pause:hover {
+	background-position: 0px -90px !important;
+}
+.p7HGM01 .p7HGMvcr a.off {
+	background-position: 0px -60px;
+	cursor: default;
+}
+.p7HGM01 .p7HGMvcrtext {
+	font-size: 12px;
+	margin-top: 12px;
+	zoom: 1;
+}
+.p7HGM01 .p7HGMvcrtext.vcrtext_top {
+	margin-bottom: 12px;
+}
+.p7HGM01 .p7HGMvcrtext ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM01 .p7HGMvcrtext li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM01 .p7HGMvcrtext a {
+	padding: 4px 8px;
+	display: block;
+	color: #37619F;
+	text-decoration: none;
+	border: 1px solid #37619F;
+	background-image: none !important;
+}
+.p7HGM01 .p7HGMvcrtext a:hover {
+	background-color: #5B87C6;
+	border-color: #87A7D6 #3F6FB6 #3F6FB6 #87A7D6;
+	color: #FFF;
+}
+.p7HGM01 .p7HGMvcrtext a.off, .p7HGM01 .p7HGMvcrtext a.off:hover {
+	color: #769ACF;
+	cursor: default;
+	border-color: #37619F;
+	background-color: #37619F;
+}
+.p7HGM01 .p7HGMtrig .current_mark {
+	font-weight:bold;
+}
+.p7HGM01 .p7HGM_panel_content .current_mark {
+	color:#000;
+	font-weight:bold;
+}

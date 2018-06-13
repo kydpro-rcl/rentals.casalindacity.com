@@ -1,0 +1,68 @@
+ <script type="text/javascript">
+				$(document).ready(function(name) {
+				$("#news1").fancybox({
+						'width'				: '90%',
+						'height'			: '90%',
+						'autoScale'			: true,
+						'transitionIn'		: 'elastic',
+						'transitionOut'		: 'elastic',
+						'type'				: 'iframe'
+					});
+				});
+</script>
+ <script type="text/javascript">
+				$(document).ready(function(name) {
+				$("#news2").fancybox({
+						'width'				: '950%',
+						'height'			: '90%',
+						'autoScale'			: true,
+						'transitionIn'		: 'elastic',
+						'transitionOut'		: 'elastic',
+						'type'				: 'iframe'
+					});
+				});
+</script>
+
+<h2>Welcome, <?=$_SESSION['owner']['name']." ".$_SESSION['owner']['lastname']?></h2>
+<p style="clear:both;">&nbsp;</p>
+  <hr style="border:1px solid #f9a80b;" />
+  <?
+  	//$data= new getQueries ();
+	//$owners=$data->show_id('owners', $_SESSION['owner']['id']);
+	//echo $_GET['id'];
+	//$ow=$owners[0];
+  ?>
+
+  <? if($_GET['note']){?>
+	<div style="border: 1px solid #767778; padding:5px; margin:5px; background-color: #06C; color:#FFF; font-weight:bold; text-align:center;"><?=$_GET['note']?></div>
+ <? }?>
+     <div style="border: 1px solid #FF7328; padding:0; margin:0; margin:5px; padding:5px; margin-left:25px;margin-right:25px; background-color:#ECECEC;">
+       <table  width="100%"><tr><td  width="50%">
+  <!--//      <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Name:</span> <?=$ow['name']?>  </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Last Name:</span> <?=$ow['lastname']?>  </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Email:</span> <?=$ow['email']?>  </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Phone:</span>  <?=$ow['phone']?> </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Movil:</span>  <?=$ow['movil']?> </p>
+         <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Address:</span>  <?=$ow['address']?> </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Username:</span>  <?=$ow['user']?> </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Password:</span> *******</p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Spoken Language:</span> <? $idiomas=languageArray();  echo $idiomas[$ow['language']];?>  <?/*=$_SESSION['owner']['language']*/?> </p>
+        <p ><span style="color:#084482; font-weight:bold; text-transform:uppercase;">Country:</span> <? $paises=countryArray();  echo $paises[$ow['country']];?> <?/*=$_SESSION['owner']['country']*/?> </p>
+</td><td width="50%">
+<p style="text-align:left; color:#084482; font-weight:bold; text-transform:uppercase;">Profile Picture</p>
+<div style="border: 1px solid #FF7328; padding:0; margin:0;  background-color:#FFFFFF; width:150px; height:150px;">
+<img width="150px;" height="150px;" src="../booking/<?=$ow['photo']?>" alt="" />
+
+</div>
+
+<p style="text-align:left; font-weight:bold; text-transform:uppercase;"><a href="edit_profile.php" alt="" style="color:#F00;">Edit Your Profile</a></p>//-->
+<a id="news1" style="text-decoration:none;" href="http://campaign.r20.constantcontact.com/render?llr=diowavfab&v=001x6tB_6tkB4CAoss_JzRAdGi7NvZSZfvAGsCi8hGA7Xf74J2CUK-vUr5h0QfdNEhWL0fe2--vogsv9TSQROM8YWqYhRR-PgViv4P0k79dcibN0NowknZYDnNSHhTPqYY0uoMwzYCTi0kaimLy-7fxTlrSczxT0BaOeUdWDaCcAt3M2FRnAH9xZItXeZ1a5rFaizIkZnS8q_Q-pXOgTPNFEC4DKSiPz6ozHEH6GrIFnDUdhvNtpu9_E_StCaqDf5XL_Vha23vca1tU-cK9CQJJ0o1z4R6dO8I7mSVEycCCxTtsHfN6SfbwOKvJLQ6FiuJZfTJCD0LWyCA_S690wCvqmw%3D%3D&id=preview" target="_blank">July-August 2011<br/>
+<img src="news_thumbnails/july.aug.jpg" alt=""/></a>
+
+</td><td>
+<a id="news2" style="text-decoration:none;" href="http://campaign.r20.constantcontact.com/render?llr=diowavfab&v=001x6tB_6tkB4CAoss_JzRAdGi7NvZSZfvAGsCi8hGA7Xf74J2CUK-vUr5h0QfdNEhWL0fe2--vogsD6aJBAxUiotBgmEx9CtaIpDJ34-NyaznERlHKOli0cyLXZVXVhHB3NtLCThs_fpsk5I70fOYI0_8-HOG9zuw8pgU8VqCgP1LyOeZr5XPwrwWW7onV4ruDz-gUbDTrCRecmJKYVNVhIwKSGSaGNmqfc-_PzX72Vmj2IpSl4xbSCJpw_kpw7mH0SUuSD_qr7YZc3VQysR1nuD4h0x0UMlyoYeEHZI1MAh6sBHFdULKjpXY4z8spMmR9NreBhaMrQfmAUfLjF3OcVA%3D%3D&id=preview" target="_blank">September-October 2011<br/>
+<img src="news_thumbnails/sept.oct.jpg" alt=""/></a>
+
+</td></tr></table>
+
+    </div>

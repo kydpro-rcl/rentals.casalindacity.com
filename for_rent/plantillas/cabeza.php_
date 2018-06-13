@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Residencial Casa Linda | Villas for Sale, for Rent, Fractional Ownership - Booking</title>
+
+<!--no flollow content-->
+    <meta name="robots" content="none" />
+	<meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="gooblebot" content="noindex, nofollow, noarchive" />
+    <meta http-equiv="cache-control" content="no-cache" />
+<!--no flollow content-->
+
+<meta name="keywords" content="">
+<meta name="description" content="Residencial Casa Linda, Villas for sales, villas for rent and fractional ownership investments.">
+<meta name="copyright" content="� 2009 - Residencial Casa Linda">
+<meta name="author" content="ing.joseluis@msn.com">
+
+
+<script language="javascript" src="js/rollover.js"></script>
+<script language="javascript" src="js/formfields.js"></script>
+<script language="javascript" src="js/formvalidation.js"></script>
+
+<script language="javascript" src="js/p/confirm.js"></script>
+<script language="javascript" src="js/p/formfields.js"></script>
+<script language="javascript" src="js/p/formvalidation.js"></script>
+
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/forent.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" href="https://www.casalindacity.com/favicon.ico">
+<script src="js/js.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--SCRIPT FOR ROLLOVER IMAGE-->
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+</script>
+<link rel="stylesheet" href="css/dhtmlwindow.css" type="text/css">
+<script type="text/javascript" src="js/dhtmlwindow.js">
+
+/***********************************************
+* DHTML Window Widget- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+</head>
+
+<body>
+<div id="dropmenudiv" style="visibility: hidden; width: 100px; background-color: rgb(0, 168, 221); left: 436px; top: 72px;" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"><a href="http://www.casalindacity.com/typevillas.php">Type of Villas</a><a href="http://www.casalindacity.com/villas.php">To buy</a><a href="http://www.casalindacity.com/booking.php">Booking</a><a href="http://www.casalindacity.com/payment_plan.php">Payment Plan</a></div>
+
+<!--SCRIPT FOR ROLLOVER IMAGE-->
+
+<!--FLOOR PLANS-->
+
+<div id="dhtmlwindowholder"><span style="display: none;">.</span></div>
+
+<link rel="stylesheet" href="css/modal.css" type="text/css">
+<script type="text/javascript" src="js/modal.js"></script><div id="interVeil"></div>
+<script type="text/javascript" src="js/floorplans.js"></script>
+<script type="text/javascript" src="js/houses.js"></script>
+
+<!--FLOOR PLANS-->
+
+
+
+
+<script>
+function cerrarse(){
+ if (emailwindow.open) {
+	emailwindow.close()
+  }
+}
+//onclick="cerrarse()"
+</script>
+
+
+<script language="javascript">
+function windowOpener(windowHeight, windowWidth, windowName, windowUri)
+{
+    var centerWidth = (window.screen.width - windowWidth) / 2;
+    var centerHeight = (window.screen.height - windowHeight) / 2;
+
+    newWindow = window.open(windowUri, windowName, 'resizable=yes, scrollbars=yes, toolbar=no,location=false, directories=no, status=no, menubar=no,width=' + windowWidth +
+        ',height=' + windowHeight +
+        ',left=' + centerWidth +
+        ',top=' + centerHeight);
+
+    newWindow.focus();
+    return newWindow.name;
+}
+
+function open_booking()
+{
+windowOpener(665,856,'Booking','http://sosuacasa.com/rentestate.asp');
+}
+</script>
+
+<link rel="stylesheet" href="css/dhtmlwindow.css" type="text/css">
+
+<script type="text/javascript" src="js/dhtmlwindow.js">
+
+/***********************************************
+* DHTML Window Widget- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script><div id="dhtmlwindowholder"><span style="display: none;">.</span></div>
+
+<link rel="stylesheet" href="css/modal.css" type="text/css">
+<script type="text/javascript" src="js/modal.js"></script><div id="interVeil"></div>
+<script type="text/javascript" src="js/booking.js"></script>
+
+ <!--code for offers-->
+<!--<link rel="stylesheet" href="offers/inc/dhtmlwindow.css" type="text/css" />
+
+<script type="text/javascript" src="offers/inc/dhtmlwindow.js">
+
+/***********************************************
+
+* DHTML Window Widget- © Dynamic Drive (www.dynamicdrive.com)
+
+* This notice must stay intact for legal use.
+
+* Visit http://www.dynamicdrive.com/ for full source code
+
+***********************************************/
+
+</script>-->
+<!--code for offers-->
+
+
+<div id="header_wrap">
+	<div id="header_container">
+
+        <div id="logo">
+        	<a href="http://www.casalindacity.com/"><img src="images/logo.gif"></a>
+        </div>
+
+        <div id="account_login">
+        	<div id="login_title">
+            	<img src="images/account_login.gif">
+            </div>
+            <div id="login_form">
+            <!--<img src="images/usa.jpg" />-->
+            <a href="http://localhost/casalindacity/sp/booking.php"><img src="images/espana.jpg"></a>
+            <!--<img src="images/alemania.jpg" />
+
+           <img src="images/noruega.jpg" />-->
+           <a href="http://localhost/casalindacity/fre/booking.php"><img src="images/francia.jpg"></a>
+          <!--  <img src="images/holanda.jpg" />-->
+
+            </div>
+        </div>
+
+        <div id="navigation_container">
+        	<div id="navigation_left"><img src="forent_files/navigation_left.gif"></div>
+
+            	<div id="navigation_main">
+                	<span class="navigation_link"><a href="http://www.casalindacity.com/index.php">Home</a></span>
+                	<span class="navigation_link"><a href="http://www.casalindacity.com/about.php">About Us <!--<img src="images/arrow.gif"  border="0"/>--></a></span>
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/villas.php" onclick="document.location.href='villas.php';return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu3, '100px')" onmouseout="delayhidemenu()">Villas <img src="images/arrow.gif" border="0"></a></span>
+                   <!--<span class="navigation_link"><a href="offers.php" >Offers&nbsp;</a></span> -->
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/news/">What's New?&nbsp;<!--<img src="images/promo/ico-new.gif" height="13" width="30"/> --><!--<img src="images/arrow.gif"  border="0"/>--></a></span>
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/services.php">Services </a></span>
+
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/contact.php">Contact us</a></span>
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/gallery.php">Gallery</a></span>
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/faqs.php">FAQ's</a></span>
+                    <span class="navigation_link"><a href="http://www.casalindacity.com/more.php" onclick="document.location.href='more.php';return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu1, '130px')" onmouseout="delayhidemenu()">More <img src="images/arrow.gif" border="0"></a></span>
+                    <!--<span class="navigation_link"><a href="help/">Help&nbsp;</a></span>-->
+
+                </div>
+
+        </div>
+
+        <div id="headerimg_container">
+
+        </div>
+
+        <div id="worldclocks_ticker">
+        	<!--<img src="http://localhost:8080/casalinda/images/Samana.gif" width="400" height="500" />-->
+
+            <span id="worldclocks_ticker">
+            </span>
+        </div>
+
+    </div>
+
+    <div id="content_container">
+
+    <div id="content">
+
+	<div class="content_wrap" style="border: 1px solid rgb(100, 194, 253);">
+    <h3>Villas for Rent - Residencial Casa Linda</h3>
+    <br>
+<!--EL CONTENIDO VAS MAS ABAJO-->

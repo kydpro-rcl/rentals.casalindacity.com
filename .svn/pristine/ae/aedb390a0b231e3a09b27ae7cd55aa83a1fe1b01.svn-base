@@ -1,0 +1,41 @@
+<script type="text/javascript" src="js/confirm.js"></script>
+
+<!--
+<form name="delete_int" method="post" action="dis-interm.php" onsubmit="return confirmSubmit()">
+<input type="submit" name="delete" value="delete">
+</form>-->
+
+<?php
+    $data= new getQueries ();
+    $commisioners=$data->show_all('commission', 'id');
+    ?>
+    <!--<p>&nbsp;</p>--><br />
+    <p class="header">click on (<img src="images/b_drop.png" title="delete" alt="delete" width="16px" height="16px" border="0" />) symbol to remove</p>
+    <table align="center" cellpadding="2" cellspacing="2" border="0"><tr class="title"><td class='centro' id="td">NAME</td><td class='centro' id="td">EMAIL</td><td class='centro' id="td">URL</td><td class='centro' id="td">PHONE</td><td class='centro' id="td">PERCENT</td><td class='centro' id="td">STATUS</td></tr>
+    <?php
+    $x=0;
+    foreach ($commisioners as $k){
+    #echo $customers['4']['name'];
+    ?>
+    <tr class="fila<?=$x?>" >
+    <td class='derecha' id='td' style="text-align:left;">
+    <a href="dis-interm.php?del=<?=$k['id']?>" onclick="return confirmSubmit()" > <img src="images/b_drop.png" title="delete" alt="delete" width="16px" height="16px" border="0" /></a>
+    <? echo $k['name']." ".$k['lastname'];?></td>
+    <td id='td'><?=$k['email'];?></td>
+    <td id='td'><?=$k['url'];?></td>
+    <td id='td'><?=$k['phone'];?></td>
+    <td id='td'><? echo ($k['percent']*100)." % ";?></td>
+    <?
+    if ($k['active']==1){echo "<td class='centro' id='td'>Active</td>";}else{echo "<td class='centro rojo' id='td'>Disabled</td>"; }
+
+     if ($x==0){$x++;} elseif ($x==1){$x--;} ?>
+
+  <? } ?>
+
+	</tr>
+    </table>
+
+
+<?
+
+?>

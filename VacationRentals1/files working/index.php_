@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	
+    <!-- TITLE OF SITE -->
+    <title>Vacation Villas Landing Page - HTML5 and CSS3 Responsive Template</title>
+
+    <meta name="description" content="Residencial Casa Linda - Vacation Villas" />
+    <meta name="keywords" content="hotel, resort, booking, responsive,landing, spa" />
+    <meta name="author" content="Crenoveative">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- =========================
+      FAV AND TOUCH ICONS  
+    ============================== -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+
+    <!-- =========================
+       STYLESHEETS 
+    ============================== -->
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="icons/font-awesome/css/font-awesome.min.css">
+
+    <!-- CAROUSEL SLIDERS -->
+    <link rel="stylesheet" href="css/flexslider.css" media="screen" />  
+
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:700,400,300,300italic' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- CSS3 ANIMATION -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- MAIN CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</head>
+
+<body>
+
+
+
+<div id="qLoverlay"></div>
+
+
+	
+<!-- =========================
+     HEADER AREA
+============================== -->
+<header id="header">
+	<div class="logo">
+		<img src="images/logo.png" alt="Logo" />
+	</div>
+</header>
+ <!-- /END HEADER AREA -->
+
+ 
+ 
+ 
+
+ 
+ <!-- =========================
+  BIG BANNER SLIDER
+============================== -->
+<section class="big-banner-wrapper">
+	<div id="main-slider" class="flex-set-height">
+		<div id="mainFlexSlider" class="flexslider flexslider-clear">
+			<ul class="slides">
+				<li class="slide">
+					<div class="flexslider-image-bg" style="background: url(images/slider/flexslider-01.jpg) center top no-repeat;"></div>
+					<div class="flex-overlay"></div>
+					<div class="flex-caption center">
+						<h1 class="animation fromBottom transitionDelay2 transitionDuration6">Family Vacation Villas in the <br>Dominican Republic</h1><br>
+						<p class="animation fromBottom transitionDelay4 transitionDuration10">Save money on fixed price packages</p><br>
+						<a href="#" class="btn animation fromBottom transitionDelay6 transitionDuration10">Discover Now!</a>
+					</div>
+				</li><!-- slide1 end -->
+
+				<li class="slide">
+					<div class="flexslider-image-bg" style="background: url(images/slider/flexslider-02.jpg) center top no-repeat;"></div>
+					<div class="flex-overlay"></div>
+					<div class="flex-caption center">
+						<h1 class="animation fromBottom transitionDelay2 transitionDuration6">Kite and windsurf vacation in Cabarete</h1><br>
+						<p class="animation fromBottom transitionDelay4 transitionDuration10">Surf school and Villas for the whole family</p><br>
+						<a href="#" class="btn animation fromBottom transitionDelay6 transitionDuration10">Discover Now!</a>
+					</div>
+				</li><!-- slide2 end -->
+
+				<li class="slide">
+					<div class="flexslider-image-bg" style="background: url(images/slider/flexslider-03.jpg) center top no-repeat;"></div>
+					<div class="flex-overlay"></div>
+					<div class="flex-caption center">
+						<h1 class="animation fromBottom transitionDelay2 transitionDuration6">Golf Vacation in the Dominican Republic</h1><br>
+						<p class="animation fromBottom transitionDelay4 transitionDuration10">Golf at great places along the Ocean</p><br>
+						<a href="#" class="btn animation fromBottom transitionDelay6 transitionDuration10">Discover Now!</a>
+					</div>
+				</li><!-- slide3 end -->
+			</ul><!-- slides end -->
+		</div><!-- flexslider end -->
+	</div>
+</section>
+<!-- /END BIG BANNER SLIDER  -->
+
+<!-- =========================
+  FIND ROOM FORM
+============================== -->
+<div id="find-room-form-wrapper" class="light-bg">
+	<div class="container">
+		<div class="inner">
+<input type="hidden" name="referral" value="">
+		  <input type="hidden" name="villa" value="">
+<input type="hidden" name="show" value="1">
+		  <input type="hidden" name="promotion_code" value="">
+
+			<form class="row" name="bookform" id="bookform" method="post" action="index.php">
+			
+				<div class="col-xs-12 col-sm-12 col-md-5">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group form-icon">
+								<input type="text" name="fecha_ini" class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="mm/dd/yyyy" id="check-in" placeholder="Check-in">
+								<i class="fa fa-calendar"></i>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group form-icon">
+								<input type="text" name="fecha_ter" class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="mm/dd/yyyy" id="check-out" placeholder="Check-out">
+								<i class="fa fa-calendar"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-5">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="form-group">
+								<select name="custom-select-1" class="form-control styled-select" tabindex="1">
+									<option value="0">Adults</option>
+									<option value="1">0</option>
+									<option value="2">1</option>
+									<option value="3">2</option>
+									<option value="4">3</option>
+									<option value="5">4</option>
+									<option value="6">5</option>
+									<option value="7">6</option>
+									<option value="8">7</option>
+									<option value="9">8</option>
+									<option value="10">9</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="form-group">
+								<select name="custom-select-2" class="form-control styled-select" tabindex="1">
+									<option value="0">Children</option>
+									<option value="1">0</option>
+									<option value="2">1</option>
+									<option value="3">2</option>
+									<option value="4">3</option>
+									<option value="5">4</option>
+									<option value="6">5</option>
+									<option value="7">6</option>
+									<option value="8">7</option>
+									<option value="9">8</option>
+									<option value="10">9</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+							<div class="form-group">
+								<select name="beds" class="form-control styled-select" tabindex="1">
+									<option value="">Bedrooms</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>									<option value="6">6</option>
+
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-2">
+					<button class="btn btn-primary btn-block caps">Book Now</button>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</form>
+		</div>
+<a data-toggle="modal" class="btn btn-lg btn-primary" data-show="true" href="http://preview.superstore.travel/flights?brand_key=c623ddf20e3b031642fbda19254ff1182d3069c4" data-target="#myModal">FIND FLIGHTS</a>
+
+<!-- Modal -->
+
+<div class="modal fade" style="opacity:0.9;left:0;right:0;" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:1200px;">
+        <div class="modal-content" style="width:1200px;">
+            <div class="modal-header" style="display:none;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>		
+            <div class="modal-body" style="width:1200px;">
+			<iframe id="wego"  src="http://preview.superstore.travel/flights?brand_key=c623ddf20e3b031642fbda19254ff1182d3069c4" frameborder="0" width="100%" height="600"></iframe>
+			</div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+	</div>
+</div>
+<!-- /END FIND ROOM FORM  -->
+ <? if(!$_POST){?>
+<!-- =========================
+  HOTEL ROOM ITEM
+============================== -->
+<section>
+    <div class="container">
+        
+		<div class="row">
+			<div class="section-header-3 col-md-8 col-md-offset-2">
+
+				<h2 class="text-color-02">Relax in Style</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! Lorem ipsum dolor sit amet, consectetur.</p>
+
+            </div> <!-- end of .section-header -->
+        </div> <!-- end of .row -->
+
+		<div class="row gap-20">
+		
+			<div class="col-xss-12 col-xs-6 col-md-3 col-sm-6">
+				<div class="hotel-room-item-02 wow fadeIn" data-wow-delay="0s">
+					<div class="img">
+						<a href="#">
+							<img class="lazy" data-original="images/hotel-room/hotel-higher-01.jpg" alt="Vacation Villa Rooms" />
+							<div class="overlay">
+								<span class="icon">
+									<i class="fa fa-external-link "></i>
+								</span>
+							</div>
+						</a>
+					</div>
+					<article class="content">
+						<h3><a href="#">King Size Bedroom</a></h3>
+						
+						<p>free wifi, airport shuttle, Tour discounts</p>
+						
+						<hr />
+						
+						<div class="bottom">
+							
+							<span class="price">
+								$130 for 4 Person <span class="small">USD</span>
+							</span>
+							
+							<a href="#" class="link-more">
+								<i class="arrow_carrot-right_alt2"></i> Book Now!
+							</a>
+							
+						</div>
+					</article>
+				</div>
+			</div>
+			
+			<div class="col-xss-12 col-xs-6 col-md-3 col-sm-6">
+				<div class="hotel-room-item-02 wow fadeIn" data-wow-delay="0.2s">
+					<div class="img">
+						<a href="#">
+							<img class="lazy" data-original="images/hotel-room/hotel-higher-02.jpg" alt="Vacation Villa roo" />
+							<div class="overlay">
+								<span class="icon">
+									<i class="fa fa-external-link "></i>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="content">
+						<h3><a href="#">Dining Room</a></h3>
+						
+						<p>free wifi, airport shuttle, Tour discounts</p>
+						
+						<hr />
+						
+						<div class="bottom">
+							
+							<span class="price">
+								$130  <span class="small">USD for 4 Persons</span>
+							</span>
+							
+							<a href="#" class="link-more">
+								<i class="arrow_carrot-right_alt2"></i> Book Now!
+							</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xss-12 col-xs-6 col-md-3 col-sm-6">
+				<div class="hotel-room-item-02 wow fadeIn" data-wow-delay="0.4s">
+					<div class="img">
+						<a href="#">
+							<img class="lazy" data-original="images/hotel-room/hotel-higher-03.jpg" alt="Vacation Villa room" />
+							<div class="overlay">
+								<span class="icon">
+									<i class="fa fa-external-link "></i>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="content">
+						<h3><a href="#">Living Room </a></h3>
+						
+						<p>free wifi, airport shuttle, tour discounts</p>
+						
+						<hr />
+						
+						<div class="bottom">
+							
+							<span class="price">
+								$124  <span class="small">USD for 4 Person</span>
+							</span>
+							
+							<a href="#" class="link-more">
+								<i class="arrow_carrot-right_alt2"></i> Book Now!
+							</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xss-12 col-xs-6 col-md-3 col-sm-6">
+				<div class="hotel-room-item-02 wow fadeIn" data-wow-delay="0.6s">
+					<div class="img">
+						<a href="#">
+							<img class="lazy" data-original="images/hotel-room/hotel-higher-04.jpg" alt="hotel room" />
+							<div class="overlay">
+								<span class="icon">
+									<i class="fa fa-external-link "></i>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="content">
+						<h3><a href="#">open kitchen </a></h3>
+						
+						<p>free wifi, airport shuttle, tour discounts</p>
+						
+						<hr />
+						
+						<div class="bottom">
+							
+							<span class="price">
+								$150 <span class="small">USD for 6 Person </span>
+							</span>
+							
+							<a href="#" class="link-more">
+								<i class="arrow_carrot-right_alt2"></i> Book Now!
+							</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+
+    </div> <!-- /.container -->
+</section>
+<!-- /END HOTEL ROOM ITEM  -->
+
+
+
+
+
+
+
+
+
+
+ <!-- =========================
+    SPECIAL OFFER
+============================== -->
+<section class="parallax-background" data-type="parallax" style="background-image:url(images/parallax/2.jpg);">
+
+	<div class="overlay pattern"></div>
+	
+	<div class="container clearfix">
+
+		<div class="special-offer-single">
+					
+			<div class="discount">
+				<div class="inner">
+					<span class="large">
+						15%
+					</span>
+					OFF
+				</div>
+			</div>
+			
+			<div class="content">
+				<h3>A limited time offer</h3>
+				<p>Want to book a vacation in the Dominican Republic? Whether you're off for a romantic vacation, family trip, or on a special tour offer, Check our vacation packages here to plan your trip affordable and live in a Vacation Villa.</p>
+			</div>
+			
+			<div class="absolute-right">
+			
+				<a href="#" class="btn btn-lg btn-primary">Grab Now!</a>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+</section>
+<!-- /END SPECIAL OFFER -->
+
+ 
+ 
+ 
+ 
+ <!-- =========================
+    PACKGAES
+============================== -->
+<section id="best-package">
+
+	<div class="container clearfix">
+	
+		<div class="row">
+		
+			<!-- =========================
+				section-header-2
+			============================== -->
+			<div class="section-header-3 col-md-8 col-md-offset-2">
+
+				<h2 class="text-color-02">Best Packages</h2>
+				<p>No one can doubt that golf in the Dominican Republic has risen dramatically in the last couple of years. And there are many explanations as to why.</p>
+
+            </div> <!-- end of .section-header-3 -->
+        </div> <!-- end of .row -->
+		
+		
+		<div class="package-slider">           
+			<ul class="slides">      
+			
+				<li class="clearfix">                        
+					
+					<div class="row">
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="featured-img">
+								<div class="img xs-mb-20">
+									<img src="images/package/package-01.jpg" alt="hotel room" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="package-module">
+								<h3><a href="#">Golf Package</a></h3>
+								
+								<p>No one can doubt that golf in the Dominican Republic has risen dramatically in the last couple of years. And there are many explanations as to why.<br>One is the Full year seasons with caribbean weather<br>and reasonable living areas with maximum comfort<br> well designed Golfcourses by Trend Jones and Famous Golfers. Take advantage of Golf Tours in the Dominican Republic they also offer some classes for beginners, while vacationaing in one of our Villa.</p>
+								
+								<div class="mb-20"></div>
+								
+								<h4>With Inclusive:</h4>
+								
+								<ol>
+									<li>Discount for Parties of 4</li>
+									<li>Airport Pickup and Transit to various golf courses.</li>
+									<li>Air Flight offers.</li>
+									
+								</ol>
+								
+								<div class="bottom">
+										
+									<span class="price">
+										<span class="large">$196 person</span> <span class="small">USD</span> Per Person
+									</span>
+									
+									<a href="#" class="link-more">
+										<i class="arrow_carrot-right_alt2"></i> More Details
+									</a>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					
+						
+					</div>
+					
+				</li>
+				
+				<li class="clearfix">                        
+					
+					<div class="row">
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="featured-img">
+								<div class="img xs-mb-20">
+									<img src="images/package/package-02.jpg" alt="hotel room" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="package-module">
+								<h3><a href="#">Surf School</a></h3>
+								
+								<p>Ecstatic advanced and procured civility not absolute put continue. Overcame breeding or my concerns removing desirous so absolute. My melancholy unpleasing imprudence considered in advantages so impression. Almost unable put piqued talked likely houses her met. Met any nor may through resolve entered. An mr cause tried oh do shade happy.</p>
+								
+								<div class="mb-20"></div>
+								
+								<h4>With Inclusive:</h4>
+								
+								<ol>
+									<li>Stronger unpacked felicity to of mistaken.</li>
+									<li>Fanny at wrong table ye in.</li>
+									<li>Be on easily cannot innate in lasted months on.</li>
+									<li>Almost unable put piqued talked likely houses her met.</li>
+								</ol>
+								
+								<div class="bottom">
+										
+									<span class="price">
+										<span class="large">156</span> <span class="small">USD</span> Per Person
+									</span>
+									
+									<a href="#" class="link-more">
+										<i class="arrow_carrot-right_alt2"></i> More Details
+									</a>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					
+						
+					</div>
+					
+				</li>
+				
+				<li class="clearfix">                        
+					
+					<div class="row">
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="featured-img">
+								<div class="img xs-mb-20">
+									<img src="images/package/package-03.jpg" alt="hotel room" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 col-sm-6">
+							<div class="package-module">
+								<h3><a href="#">Whale Watching</a></h3>
+								
+								<p>Whale-watching season in the DR starts 14 January and continues through 15 March. Sometimes the season extends itself through the end of March. Ken De Pree, DR1?s whale expert, reports on the arrival of the humpback whales and whale-watching season. </p>
+								
+								<div class="mb-20"></div>
+								
+								<h4>With Inclusive:</h4>
+								
+								<ol>
+									<li>Stronger unpacked felicity to of mistaken.</li>
+									<li>Fanny at wrong table ye in.</li>
+									<li>Be on easily cannot innate in lasted months on.</li>
+									<li>Almost unable put piqued talked likely houses her met.</li>
+								</ol>
+								
+								<div class="bottom">
+										
+									<span class="price">
+										<span class="large">156</span> <span class="small">USD</span> Per Person
+									</span>
+									
+									<a href="#" class="link-more">
+										<i class="arrow_carrot-right_alt2"></i> More Details
+									</a>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					
+						
+					</div>
+					
+				</li>
+				
+			</ul>
+		</div>
+	  	
+	</div>
+	
+
+</section>
+ <!-- /END PACKGAES -->
+ 
+ 
+
+ 
+ 
+ <!-- =========================
+    TESTIMONIAL
+============================== -->
+<section id="testimonial" class="parallax-background" data-type="parallax" style="background-image:url(images/parallax/3.jpg);">
+
+	<div class="parallax-overlay no-padding">
+		
+			<div class="two-columns-full-layout wow fadeIn">
+
+				<div class="left-inner" data-match-height="equal-height-1">
+				
+					<div class="inner">
+						
+						<ul class="testimonial nav-tabs"  role="tablist">
+							<li role="presentation" class="active">
+								<a href="#testimonial-man-1" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-01.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+							
+							<li role="presentation">
+								<a href="#testimonial-man-2" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-02.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#testimonial-man-3" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-03.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#testimonial-man-4" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-04.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#testimonial-man-5" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-05.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#testimonial-man-6" role="tab" data-toggle="tab">
+									<div class="image">
+										<img class="lazy" data-original="images/man/man-square-06.jpg" alt="man" />
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+				
+				<div class="right-inner" data-match-height="equal-height-1">
+				
+					<div class="inner">
+
+						<div class="tab-content">
+						
+							<div role="tabpanel" class="tab-pane fade in active" id="testimonial-man-1">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+									<h3>"First class Stay"</h3>		<p>Just returned from a fabulous stay at Casa Linda. We rented a fabulous four bedroom villa (#751) to enjoy with our family - there were a total of 7 of us. The villa was roomy, well appointed and the outdoor 'kitchen' was enjoyed by our son who loves to cook and is great at it!! The Casa Linda shuttle is... </p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name"> Sue C
+ </p>
+										<br />
+										Reviewer, Tripadviser
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane fade" id="testimonial-man-2">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+						<h3>Relaxing Stay at Casa Linda</h3>		<p>a couple invited my girlfriend and I over to a Villa they rented here and must say it was a very nice experience. The villa itself is very clean, well kept, and great place to rent out for a group of friends. The kitchen is very nice and gives you alot of room and the pool was awesome. Beautiful well... </p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name"> Lewis U</p>
+										<br />
+										New York, United States
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane fade" id="testimonial-man-3">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+								<h3>"Clean and Safe""</h3>			<p>Great place to stay if you want security, great staff and modern Villas. Only down side is that you?re not really walking distance to anything and the front gate can be a long way from your villa depending on where you are. Would recommend this place if you want privacy and a safe place to stay. </p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name">  
+Senior Reviewer</p>
+										<br />
+										CSGT99, Bermuda
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane fade" id="testimonial-man-4">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+						<h3>Incredible Family vacation and my kids loved it.</h3>				<p>Just returned from a vacation of a lifetime. We stayed in a gorgeous luxury villa (626B) and I was with my two young sons. They swam in the gorgous tiled pool 5 times each day. The villa would easily sleep 6, and my wife enjoyed cooking in the full kitchen for us. On Saturday night in the main street of... .</p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name"> Saint Paul, Minnesota </p>
+										<br />
+										Senior Reviewer Tripadviser
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane fade" id="testimonial-man-5">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+						<h3>Enjoyed our stay</h3>					<p>We stayed in Casa Linda the week after Christmas for New Years. We were a group of 8ppl and stayed in Villa 63 a four bdrm, 3 bath with a large pool and good sized kitchen, dining room and comfy living room. Each bdrm had AC. All had queen beds. The master & another bdrm had ensuite bathrooms, the other... </p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name"> Brian P </p>
+										<br />
+										New York City, New York, USA
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane fade" id="testimonial-man-6">
+							
+								<div class="testimonial-large-item">
+							
+									<div class="content">
+									
+				<h3>"Beautiful gated community".</h3>							<p>My wife and I stayed in casa Linda for 1 week in November we absolutely loved it. The staff was very friendly , check in was fast and smooth and the villa was beautiful with a private pool. The villa had everything we needed for our stay in puerta plata. There was a problem with wifi when we first arrived... </p>
+										
+									</div>
+									
+									<div class="testimonial-man">
+										<p class="name">  NewTorkFinest
+Jackson Heights  </p>
+										<br />
+										New York, United State
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+					</div>
+		
+				</div>
+
+			</div>
+ 
+		</div>
+		
+		
+
+</section>
+ <!-- /END TESTIMONIAL -->
+
+
+
+ 
+ 
+
+<!-- =========================
+    FEATURE IMAGES
+============================== -->
+<section class="">
+	
+	<div class="container clearfix">
+	
+		<div class="row">
+			<div class="section-header-3 col-md-8 col-md-offset-2">
+
+				<h2 class="text-color-02">Vacation Villa Facilities</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! Lorem ipsum dolor sit amet, consectetur.</p>
+
+            </div> <!-- end of .section-header -->
+        </div> <!-- end of .row -->
+		
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+
+				<ul class="featured-img-list">
+				
+					<li class="wow fadeIn clearfix">
+						<div class="inner">
+							<div class="img">
+								<img src="images/features/featured-img-01-alt.jpg" alt="hotel room" />
+							</div>
+							<div class="content">
+								<h3>Swimming Pool</h3>
+								<p>Looking started he up perhaps against. How remainder all additions get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye. Families blessing he in to no daughter.</p>
+							</div>
+						</div>
+					</li>
+					
+					<li class="wow fadeIn clearfix">
+						<div class="inner">
+							<div class="img">
+								<img src="images/features/featured-img-02-alt.jpg" alt="hotel room" />
+							</div>
+							<div class="content">
+								<h3>Equipped Kitchen</h3>
+								<p>Looking started he up perhaps against. How remainder all additions get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye. Families blessing he in to no daughter.</p>
+							</div>
+						</div>
+					</li>
+					
+					<li class="wow fadeIn clearfix">
+						<div class="inner">
+							<div class="img">
+								<img src="images/features/featured-img-03-alt.jpg" alt="hotel room" />
+							</div>
+							<div class="content">
+								<h3>Airport Pickup</h3>
+								<p>Looking started he up perhaps against. How remainder all additions get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye. Families blessing he in to no daughter.</p>
+							</div>
+						</div>
+					</li>
+					
+					<li class="wow fadeIn clearfix">
+						<div class="inner">
+							<div class="img">
+								<img src="images/features/featured-img-04-alt.jpg" alt="hotel room" />
+							</div>
+							<div class="content">
+								<h3>On SIte Restaurant</h3>
+								<p>Looking started he up perhaps against. How remainder all additions get elsewhere resources. One missed shy wishes supply design answer formed. Prevent on present hastily passage an subject in be. Be happiness arranging so newspaper defective affection ye. Families blessing he in to no daughter.</p>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+
+            </div> <!-- end of .section-header -->
+        </div> <!-- end of .row -->
+	
+	</div>
+
+</section>
+ <!-- /END FEATURE IMAGES -->
+ 
+ 
+ 
+
+
+ 
+ <!-- =========================
+    FEATURE IMAGES
+============================== -->
+<div id="newsletter" class="">
+	
+	<div class="container clearfix">
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+			
+				<span class="labels">Let us remind you of the latest specials</span>
+				<div class="clear"></div>
+				
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+
+				<form role="form" id="newsLetterForm" method="post" action="#" class="newsLetterValidator">
+					<div class="form-group">
+						<div class="alert alert-success" style="display: none;"></div>
+						<input type="email" class="form-control" name="email" placeholder="Enter Email Address">
+						<input type="submit" class="btn" value="SUBSCRIBE" />
+					</div>
+				</form>
+            </div>
+        </div> <!-- end of .row -->
+
+	</div>
+
+</div>
+ <!-- /END NEWSLETTER -->
+ 
+ 
+ 
+ 
+ 
+ 
+					
+  <!-- =========================
+    ADDRESS
+============================== -->
+<section id="contact" class="">
+	<div class="container clearfix">
+	
+		<div class="row">
+			<div class="section-header-3 col-md-8 col-md-offset-2">
+
+				<h2 class="text-color-02">GET IN TOUCH</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! Lorem ipsum dolor sit amet, consectetur.</p>
+
+            </div> <!-- end of .section-header -->
+        </div> <!-- end of .row -->
+
+		<div class="row mt-20">
+					
+			<div class="col-xs-12 col-sm-6 col-md-6 xs-mb-50 wow fadeInLeft">
+			
+				<form id="contantForm" method="post" class="contact-form" action="#">
+				
+					<div class="alert alert-success" style="display: none;"></div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" name="conactName" placeholder="Your Name">
+					</div>
+					
+					<div class="form-group">
+						<input type="email" class="form-control" name="email" placeholder="Your Email">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" name="subject" placeholder="Subject">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" rows="4" name="messagetext" placeholder="message" ></textarea>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary" value="SEND" style="float: right; display: block;">
+					</div>
+					
+				</form>
+
+			</div>
+			
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 wow fadeInRight" data-wow-duration="1s">
+				
+				<p class="address-item">
+					<span class="icon"><i class="fa fa-map-marker"></i></span>
+					Residencial Casa Linda, Sosua, Puerto Plata 57400<br> Dominican Republic
+				</p>
+				<p class="address-item">
+					<span class="icon"><i class="glyphicon glyphicon-earphone"></i></span>
+					Phone:  +1-809-571-1190 <br />
+					Fax: +1 809-571-1411<br />
+				</p>
+				<p class="address-item">
+					<span class="icon"><i class="fa fa-envelope"></i></span>
+					Support: <a href="mailto:info@casalindacity.com">info@casalindacity.com</a> <br/>
+					Booking: <a href="mailto:info@casalindacity.com">info@casalindacity.com</a>
+				</p>
+				<p class="address-item">
+					<span class="icon"><i class="fa fa-globe"></i></span>
+					Support: <a href="#">www.casalindacity.com</a> <br/>
+				</p>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+</section>
+ <!-- /END ADDRESS -->
+
+ <?php 
+ }else{
+	echo "Result";
+ } 
+ ?>
+
+<!-- =========================
+  FOOTER 
+============================== -->
+<footer class="footer" id="footer">
+    <div id="footer-bottom">
+		<div class="container pt-50 pb-30">
+		
+			<div class="footer-social mb-20" >
+				<a href="https://www.facebook.com/CasaLindaDR" class="facebook-color wow fadeInUp" data-wow-offset="50" data-wow-delay="0s"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/casalindadr" class="twitter-color wow fadeInUp" data-wow-offset="50" data-wow-delay="0.3s"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.pinterest.com/rz2820/casa-linda/" class="pinterest-color wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s"><i class="fa fa-pinterest"></i></a>
+				<a href="https://www.flickr.com/people/residencialcasalinda/" class="pinterest-color wow fadeInUp" data-wow-offset="50" data-wow-delay="1.2s"><i class="fa fa-flickr"></i></a>
+				<a href="https://plus.google.com/108036012911994352891/posts" class="google-plus-color wow fadeInUp" data-wow-offset="50" data-wow-delay="1.5s"><i class="fa fa-google-plus"></i></a>
+			</div>
+			
+			<ul class="inline-menu mb-20">
+				<li><a href="http://casalindacity.com">Home</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Terms of Service</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+			
+			<p class="text-center">Copyright &#169; 2015 RCL Residencial Casa Linda. All rights reserved worldwide.</p>
+		</div>
+	</div>
+</footer>
+<!-- /END FOOTER -->
+
+
+
+
+
+<div id="back-to-top">
+   <a href="#">Back to Top</a>
+</div>
+
+
+
+
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/device.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/jquery.customSelect.js"></script>
+<script type="text/javascript" src="js/customs.js"></script>   
+
+</body>
+
+
+</html>

@@ -1,0 +1,23 @@
+
+<!--//<h1><a href="http://casalindacity.com/" alt="Go to our home page" title="Go to our home page"> <img src="images/logo.gif" alt="Residencial Casa Linda" border="0" /></a></h1>//-->
+ <? if ((!$_POST)||($_GET['error']['email'])){?>
+	<h2><!--//Dear Owner,<br>//-->Please, type your email address below to receive your login details</h2>
+	<hr/>
+	<p>&nbsp;</p>
+<table align="center"><tr><td>
+	<form method="post" name="fogot_pass" action="forgot_pass.php" >
+	<p>Enter your email address below. Click the "Continue" button.</p>
+		<p class="center">Email <input type="text" name="email_forgot" value="<?=$_POST['email_forgot']?>" size="45">&nbsp;<!--//<input type="submit" class="book_but" name="send" value="send"/>//--></p>
+
+		<p><button class="Button" type="submit"><span class="btn"><span class="btn">Continue</span></span></button></p>
+		<? if ($_GET['error']['email']){?><p id="error_s" class="center"><?=$_GET['error']['email'];?></p><?}?>
+	</form>
+  </td></tr></table>
+ <?php
+ }else{
+
+	//if ($_GET['notification']){		?>
+      <!--//<hr/>//-->
+      <p>&nbsp;</p>
+     <p style="font-weight:bold; color:blue; font-size:14px;"><?=$_GET['notification'];?></p>
+ <?}?>

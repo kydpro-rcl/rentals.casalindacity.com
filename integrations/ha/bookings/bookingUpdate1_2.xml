@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookingUpdate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://aus-off-file01/departments/Product_Integrations/Integration_Process/OLB-PPB/OLB%201.2/HA-XML-OLB-1.2.xsd">
+	<documentVersion>1.2</documentVersion>
+	<bookingUpdateDetails>
+		<advertiserAssignedId>1931</advertiserAssignedId>
+		<listingExternalId>AH2</listingExternalId>
+		<unitExternalId>AH2</unitExternalId>
+		<externalId>16676</externalId>
+		<guestProfileExternalId>65845</guestProfileExternalId>
+		<inquirer locale="en_US">
+			<title>Miss</title>
+			<firstName>Jane</firstName>
+			<lastName>Moore</lastName>
+			<emailAddress>j.moore@nomail.com</emailAddress>
+			<phoneCountryCode>01</phoneCountryCode>
+			<phoneNumber>201 555 1212</phoneNumber>
+			<phoneExt>1234</phoneExt>
+			<address rel="BILLING">
+				<addressLine1>10 Main Street</addressLine1>
+				<addressLine3>Austin</addressLine3>
+				<addressLine4>TX</addressLine4>
+				<country>US</country>
+				<postalCode>78701</postalCode>
+			</address>
+		</inquirer>
+		<locale>en_US</locale>
+		<orderList>
+			<order>
+				<currency>USD</currency>
+				<orderItemList>
+					<orderItem>
+						<description>Rent</description>
+						<feeType>RENTAL</feeType>
+						<name>Rent</name>
+						<preTaxAmount currency="USD">2100</preTaxAmount>
+						<status>ACCEPTED</status>
+						<totalAmount currency="USD">2329.95</totalAmount>
+					</orderItem>
+					<orderItem>
+						<description>Resort Fee</description>
+						<feeType>MISC</feeType>
+						<name>Resort Fee</name>
+						<preTaxAmount currency="USD">63</preTaxAmount>
+						<status>ACCEPTED</status>
+						<totalAmount currency="USD">69.9</totalAmount>
+					</orderItem>
+				</orderItemList>
+				<paymentSchedule>
+					<acceptedPaymentForms>
+						<paymentInvoiceDescriptor>
+							<paymentFormType>INVOICE</paymentFormType>
+							<paymentNote>Invoice Payment Note</paymentNote>
+						</paymentInvoiceDescriptor>
+					</acceptedPaymentForms>
+					<paymentScheduleItemList>
+						<paymentScheduleItem>
+							<amount currency="EUR">2399.85</amount>
+							<dueDate>2017-03-23</dueDate>
+						</paymentScheduleItem>
+					</paymentScheduleItemList>
+				</paymentSchedule>
+					<stayFees>
+					<stayFee>
+						<description>An addition City Fee of $15 cash must also be collected upon arrival.</description>
+					</stayFee>
+				</stayFees>
+			</order>
+		</orderList>
+		<reservationPaymentStatus>UNPAID</reservationPaymentStatus>
+		<reservation>
+			<numberOfAdults>1</numberOfAdults>
+			<numberOfChildren>0</numberOfChildren>
+			<numberOfPets>0</numberOfPets>
+			<reservationDates>
+				<beginDate>2016-08-01</beginDate>
+				<endDate>2016-08-10</endDate>
+			</reservationDates>
+			<checkinTime>15</checkinTime>
+			<checkoutTime>11</checkoutTime>
+			<reservationOriginationDate>2001-12-17T09:30:47Z</reservationOriginationDate>
+		</reservation>
+		<reservationStatus>CONFIRMED</reservationStatus>
+	</bookingUpdateDetails>
+</bookingUpdate>

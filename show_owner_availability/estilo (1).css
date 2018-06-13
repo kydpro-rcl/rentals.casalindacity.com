@@ -1,0 +1,194 @@
+BODY  {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 10pt;
+	background-color : #ffffff;
+	text-align:center;
+}
+
+TD  {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 10pt;
+	padding: 7px;
+}
+
+INPUT  {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 8pt;
+}
+
+TEXTAREA  {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 8pt;
+}
+
+SELECT  {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 8pt;
+}
+
+.day-label{
+background-color: #DDEDF9;
+    color: #000000;
+	}
+.tablacalendario{
+	/*width: 200px;*/
+}
+ #cal-legend, #cal-legend div {
+    float: left;
+}
+
+#cal-legend {
+    margin-bottom: 10px;
+}
+
+.label {
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: 0.25em;
+    min-height: 25px;
+    vertical-align: middle;
+	/*float:left;*/
+}
+ #cal-legend .key {
+    border: 1px solid #BFBFBF;
+    clear: left;
+    display: block;
+    float: left;
+    height: 25px;
+    margin-top: 0.25em;
+    text-align: center;
+    width: 25px;
+}
+ .s {
+   /* background-color: #3ffd47;*/
+   background-color: #F9A80B;
+}
+.tablacalendario TD {
+	font-family: Helvetica,Arial,Sans-serif;
+	font-size : 12px;
+	text-align: center;
+}
+.tablacalendario TD A{
+	text-decoration: none;
+}
+.diasemana  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	color: #ffffff;
+	background-color: #b9c794;/* NOMBRE DE DIAS DE LA SEMANA */ 
+	text-align: center;
+}
+/* ABAJO OCUPADO O DISPONIBLE*/
+#short {
+	background-color: #F9A80B;
+	color:white;
+	}
+#long {
+	background-color:green;
+	color:white;
+	}
+#owner {
+	background-color:blue;
+	color:white;
+	}
+#maint {
+	background-color:#FF0000;
+	color:white;
+	}	
+
+#disponible {
+	background-color:#FFFFFF;
+	}
+	
+#fecha_pasada {
+	background-color:#e2eacc;
+	}	
+/*ARRIBA OCUPADO O DISPONIBLE*/	
+.tit, .titmesano  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	color: #FFFFFF;
+	background-color: #2A6EBB; /*TITULO DEL MES Y ANOS*/
+	font-weight: bold;
+}
+.titmesano{
+	text-align: center;
+}
+.messiguiente, .mesanterior{
+	font-size:10pt;
+	font-weight:bold;
+	width: 16px;
+	height: 16px;
+}
+.messiguiente{
+	background: transparent url(131.png) no-repeat 140px;
+}
+.mesanterior{
+	background: transparent url(132.png) no-repeat 2px;
+	text-align: left;
+}
+.messiguiente span, .mesanterior span{
+	visibility: hidden;
+}
+/*.mesanterior{
+	
+}*/
+.messiguiente a, .mesanterior a{
+	color:white;
+	text-decoration:none;
+}
+.diainvalido{
+	/*background-color: #ddd;*/
+}
+.hoy {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	/*background-color: #060;*/
+}
+.domingo {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	/*background-color: #990000;*/
+	color: #000000;
+}
+.domingo a, .hoy a{
+	color: #990000;
+}
+.diario {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	/*background-color: #ccf;*/
+	color: black;
+}
+.tform {
+	border-width: 1px;
+	border-color: 75263C;
+	border-style: solid;
+}
+.inputfecha{
+	height: 24px;
+	background: transparent url(calendario.png) no-repeat right;
+	padding: 2px;
+	width: 100px;
+	border: 1px solid #8BA0DF;
+	font-size: 12px;
+}
+
+#boton{
+background:none repeat scroll 0 0 #004879;
+border:1px solid #F9A80B;
+color:#FFFFFF;
+font-weight:bold;
+}	
+
+#boton:hover{
+background-color:#3399FF !important;
+color:white;	
+}
+
+#error_s{
+font-weight:bold;
+color:red;
+font-size:12px;
+background-color:#FF0;	
+}

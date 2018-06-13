@@ -1,0 +1,260 @@
+BODY  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	background-color : #ffffff;
+}
+/*table format*/
+/*table, td
+{
+    border-color: #600;
+    border-style: solid;
+}
+
+table
+{
+    border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td
+{
+    margin: 0;
+    padding: 4px;
+    border-width: 1px 1px 0 0;
+    background-color: #FFC;
+}*/
+/*table format*/
+
+#villas_head_table{
+	/*border: 1px solid #990066;*/
+	border:1px solid black;
+
+	/*border-color: #600;
+	border-width: 1 1 1 1px;*/
+   /* border-spacing: 0;*/
+	}
+#border_tabla {
+	border: 1px solid #990066;
+	}
+
+TD  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+}
+
+INPUT  {
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+}
+
+TEXTAREA  {
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+}
+
+SELECT  {
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+}
+
+.altn  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	color: #ffffff;
+	background-color: #666666;
+}
+
+.tit  {
+	font-family : verdana,arial,helvetica;
+	font-size : 10pt;
+	color: #ffffff;
+	background-color: #004879;
+	font-weight: bold;
+}
+
+.fuentes{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	}
+	.fuentes_bold{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	font-weight:bold;
+	border: solid 1px #FFFFFF;
+	}
+	.fuentes_left{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	background-color:#dedede;
+	border: solid 1px #dedede;
+	}
+
+	.fuentes_left1{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	background-color: #CCC;
+	/*border: solid 1px  #09C;*/
+	}
+	.fuentes_left11{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	/*border: solid 1px  #09C;*/
+	}
+
+	.fuentes_left2{
+
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	background-color:#dedede;
+	/*border: solid 1px #dedede;*/
+	}
+
+.name_head{
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	
+  /*border: solid 1px #999;*/
+
+	}
+	.name_head_today{
+	font-family : verdana,arial,helvetica;
+	font-size : 8pt;
+	color: black;
+	/*padding-left:2px;
+	padding-right:2px;
+	padding-top:1px;
+	padding-bottom:1px;
+  color:green;*/
+  border: solid 1px #FF0000;
+  }
+
+.fs	{
+	font-family : verdana,arial,helvetica;
+	background-color:	#ff0000;
+	color:	#FFFFFF;
+	font-weight: bold;
+	text-align:	center;
+	}
+.da	{
+	font-family : verdana,arial,helvetica;
+	background-color: #F0E68C;
+	color:	#FFFFFF;
+	font-weight: bold;
+	text-align:	center;
+	}
+
+.img_left{
+
+	float:left
+	}
+
+.error{
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:red;
+font-size:16px;
+margin-left:10px;
+}
+
+#error_s{
+font-family:Arial, Helvetica, sans-serif;
+color:red;
+font-size:10px;
+font-weight:normal;
+margin-right:10px;
+}
+
+.p_center{
+	text-align:center;
+
+	}
+
+.p_azul{
+	font-family:Arial, Helvetica, sans-serif;
+	color: #666;
+	font-size:12px;
+	text-align:left;
+	clear:both;
+}
+
+.villa_detail1{
+	padding:0;
+	margin:0;
+	width:258px;
+	height:415px;
+	float:left;
+	overflow:hidden;
+	}
+.villa_detail2{
+	padding:0;
+	margin:0;
+	width:224px;
+	height:415px;
+	float:left;
+	overflow:hidden;
+	}
+.villa_detail3{
+	padding:0;
+	margin:0;
+	width:213px;
+	height:415px;
+	float:left;
+	overflow:hidden;
+	}
+.villa_detail4{
+	padding:0;
+	margin:0;
+	width:227px;
+	height:415px;
+	float:left;
+	overflow:auto;
+	/*border:1px solid black;*/
+	}
+.blue_head {
+font-size:11px;
+font-weight:bold;
+color:#1b9de0;
+font-family:Arial, Helvetica, sans-serif;	
+}
+
+.villa_detail4 p,.villa_detail3 p,.villa_detail2 p,.villa_detail1 p{
+font-size:11px;
+font-weight:normal;
+color:#0f1887;
+font-family:Arial, Helvetica, sans-serif;  
+}
+
+.blue_light {
+font-size:13px;
+font-weight:bold;
+/*color:#1b9de0;*/
+color: #06F;
+font-family:Arial, Helvetica, sans-serif;	
+}
+
+.blue_dark{
+font-size:13px;
+font-weight:bold;
+/*color:#0f1887;*/
+color: #666;
+font-family:Arial, Helvetica, sans-serif;  
+}
+
+.p_estilos{
+ font-family:Arial, Helvetica, sans-serif;
+ font-weight:bold;
+ font-size:12px;	
+}

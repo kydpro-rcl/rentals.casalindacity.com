@@ -1,0 +1,82 @@
+#flechas{
+width:197px;	
+/*border: 1px solid #9c0000;*/
+border: 2px solid #FFF;
+}
+
+.parf{
+	padding:0; margin:0;
+	color:#9c0000;
+	text-align:center;
+	text-transform:uppercase;
+	}
+.parf1{
+	padding:0; margin:0;
+	color:#FFFFFF;
+	text-align:center;
+	text-transform:uppercase;
+	}
+.titl{
+	font-size:18px;
+	font-weight:bold;
+	padding:0; margin:0;
+	color:#9c0000;
+	text-align:center;
+	text-transform:uppercase;
+	padding-bottom:10px;
+	padding-top:10px;
+	}
+.titl1{
+	font-size:18px;
+	font-weight:bold;
+	padding:0; margin:0;
+	color:#FFFFFF;
+	text-align:center;
+	text-transform:uppercase;
+	padding-bottom:10px;
+	padding-top:10px;
+	}
+
+.paso{
+	/*background: url("arrows.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 51px;*/
+	width:197px;
+	/*float:left;*/
+	background-color:#fcd3c2;
+	
+	}
+	
+.paso1{
+	/*background: url("arrows.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 51px;*/
+	width:197px;
+	background-color:#9c0000;
+	/*	float:left;*/
+	
+	}	
+
+.divi{
+	background: url("completo.png") repeat scroll 0 0 transparent;
+    /*float: left;*/
+    height: 44px;
+	width:197px;
+	background-position:  0 -156px;
+	}
+	
+.divi1{
+	background: url("completo.png") repeat scroll 0 0 transparent;
+    /*float: left;*/
+    height: 51px;
+	width:197px;
+	 background-position:  0 -60px;
+	}
+	
+.divi2{
+	background: url("completo.png") repeat scroll 0 0 transparent;
+   /* float: left;*/
+    height: 48px;
+	width:197px;
+	 background-position:  0 -106px;
+	}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookingRequest>
+	<documentVersion>1.2</documentVersion>
+	<bookingRequestDetails>
+		<advertiserAssignedId>1931</advertiserAssignedId>
+		<listingExternalId>AH2</listingExternalId>
+		<unitExternalId>AH2</unitExternalId>
+		<propertyUrl>http://stage.homeaway.com/vacation-rental/p3173184</propertyUrl>
+		<listingChannel>HOMEAWAY_US</listingChannel>
+		<masterListingChannel>HOMEAWAY_US</masterListingChannel>
+		<clientIPAddress>127.0.0.1</clientIPAddress>
+		<message>Please provide a crib.</message>
+		<inquirer>
+			<title>Ms.</title>
+			<firstName>Amy</firstName>
+			<lastName>Smith</lastName>
+			<emailAddress>amy@gmail.com</emailAddress>
+			<phoneNumber> 5125551212</phoneNumber>
+			<address rel="BILLING">
+				<addressLine1>10 Main Street</addressLine1>
+				<addressLine3>Austin</addressLine3>
+				<addressLine4>TX</addressLine4>
+				<country>US</country>
+				<postalCode>78703</postalCode>
+			</address>
+		</inquirer>
+		<commission/>
+		<olbMeta>
+			<serviceFee currency="USD">125.50</serviceFee>
+		</olbMeta>
+		<reservation>
+			<numberOfAdults>2</numberOfAdults>
+			<numberOfChildren>1</numberOfChildren>
+			<numberOfPets>0</numberOfPets>
+			<reservationDates>
+				<beginDate>2013-09-01</beginDate>
+				<endDate>2013-09-07</endDate>
+			</reservationDates>
+			<reservationOriginationDate>2001-12-17T09:30:47Z</reservationOriginationDate>
+		</reservation>
+		<orderItemList>
+			<orderItem>
+				<feeType>MISC</feeType>
+				<name>name</name>
+				<preTaxAmount currency="USD">0.00</preTaxAmount>
+				<totalAmount currency="USD">2399.85</totalAmount>
+			</orderItem>
+		</orderItemList>
+		<paymentForm>
+			<paymentInvoice>
+				<paymentFormType>INVOICE</paymentFormType>
+				<address rel="BILLING">
+					<addressLine1>10 Main Street</addressLine1>
+					<addressLine3>Austin</addressLine3>
+					<addressLine4>TX</addressLine4>
+					<country>US</country>
+					<postalCode>78703</postalCode>
+				</address>
+				<firstName>Amy</firstName>
+				<lastName>Smith</lastName>
+				<title>Ms.</title>
+			</paymentInvoice>
+		</paymentForm>
+		<trackingUuid>20c98eb5-b596-4e1a-b74d-a391e3fd2a93</trackingUuid>
+		<travelerSource>HOMEAWAY_US</travelerSource>
+	</bookingRequestDetails>
+</bookingRequest>

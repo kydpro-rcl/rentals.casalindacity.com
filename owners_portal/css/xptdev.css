@@ -1,0 +1,18 @@
+/* Development only styles */
+/* Commong to all strings */
+span.unlocalizedText, span.unlocalizedMktgText, span.fullyLeverFileText, span.translatedFileText,
+span.multipurposeText, span.regionalText, span.excludedText {background-image: none !important; padding: 0 !important; margin: 0 !important;	border: 0 !important; display: inline !important;}
+/* Strings IDs that do not exist or that have l10nStatus="TBT" in the localized SML.(Light Cian)*/
+span.unlocalizedText {background-color: #cff; }
+/* Strings IDs that do not exist or that have l10nStatus="TBT" in the localized SML and file is Marketing or MarketingCommandDriven. (Blue)*/
+span.unlocalizedMktgText {background-color: #4f8bed;}
+/* Strings in updated files that leveraged 100% from translation memory. (Green)*/
+span.fullyLeverFileText {background-color: #b1f5b4;}
+/* Strings in updated files that did not leverage 100% from translation memory and were sent to translators. (Yellow)*/
+span.translatedFileText {background-color: #f4e898;}
+/*Multipurpose Highlighting for special translation drops (Orange).*/
+span.multipurposeText {background-color: #ffbb70;}
+/* Strings that have the translateByRegion attribute set for a particular language (Purple)*/
+span.regionalText {background-color: #ffcfff;}
+/* Strings in files that have been excluded from translation (Red).  This is used as a safety check.  The red highlight should never be seen in a valid flow unless L10N accidentally added the file to the exclusion list.*/
+span.excludedText {background-color: #ff7070;}

@@ -1,0 +1,4 @@
+<? require_once('inc/session.php');
+  require_once('init.php');
+  display('login');
+?>

@@ -1,0 +1,53 @@
+/***************************************************************************/
+/* RESPONSIVE FIXES */
+/***************************************************************************/
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width: 360px) {
+  html,
+  body {
+    font-size: 90%;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+/* Few Mobile versions */
+@media only screen and (max-width: 576px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+ 
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 481px) and (max-width: 992px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 992px) {
+ 
+}
+@media only screen and (min-width: 768px) {
+ 
+}
+@media only screen and (min-width: 992px) {
+ 
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -1,0 +1,57 @@
+<?php
+header("Content-type: text/xml");
+require_once('../../booking/init.php');
+
+//$_GET['property_id']='22';
+ if ($_GET['property_id']){ }
+ $link= new getQueries();
+ $bookings=$link->availability_flipkey($_GET['property_id']);
+ 
+echo '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+echo '<lodgingConfigurationContent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/sgriffin/Desktop/HA-XML-Listings-4.1.xsd">';
+	echo '<listingExternalId>501</listingExternalId>';
+	echo '<unitExternalId>501a</unitExternalId>';
+	echo '<lodgingConfiguration>';
+		echo '<acceptedPaymentForms>';
+			echo '<paymentCardDescriptor>';
+				echo '<paymentFormType>CARD</paymentFormType>';
+				echo '<cardCode>AMEX</cardCode>';
+				echo '<cardType>CREDIT</cardType>';
+			echo '</paymentCardDescriptor>';
+			echo '<paymentCardDescriptor>';
+				echo '<paymentFormType>CARD</paymentFormType>';
+				echo '<cardCode>MASTERCARD</cardCode>';
+				echo '<cardType>CREDIT</cardType>';
+			echo '</paymentCardDescriptor>';
+			echo '<paymentCardDescriptor>';
+				echo '<paymentFormType>CARD</paymentFormType>';
+				echo '<cardCode>VISA</cardCode>';
+				echo '<cardType>CREDIT</cardType>';
+			echo '</paymentCardDescriptor>';
+		echo '</acceptedPaymentForms>';
+		echo '<bookingPolicy>';
+			echo '<policy>INSTANT</policy>';
+		echo '</bookingPolicy>';
+		echo '<cancellationPolicy>';
+			echo '<policy>NO_REFUND</policy>';
+		echo '</cancellationPolicy>';
+		echo '<checkInTime>13:00</checkInTime>';
+		echo '<checkOutTime>11:00</checkOutTime>';
+		echo '<childrenAllowedRule>';
+			echo '<allowed>true</allowed>';
+		echo '</childrenAllowedRule>';
+		echo '<eventsAllowedRule>';
+			echo '<allowed>false</allowed>';
+		echo '</eventsAllowedRule>';
+		echo '<maximumOccupancyRule>';
+			echo '<adults>5</adults>';
+			echo '<guests>5</guests>';
+		echo '</maximumOccupancyRule>';
+		echo '<petsAllowedRule>';
+			echo '<allowed>false</allowed>';
+		echo '</petsAllowedRule>';
+		echo '<smokingAllowedRule>';
+			echo '<allowed>true</allowed>';
+		echo '</smokingAllowedRule>';
+	echo '</lodgingConfiguration>';
+echo '</lodgingConfigurationContent>';

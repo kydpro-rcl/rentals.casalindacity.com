@@ -1,0 +1,104 @@
+#buynavigationthisdoc {
+	float: left;
+	height: 600px;
+	width: 175px;
+	margin-top: 100px;
+	margin-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+#housemodels {
+	float: left;
+	height: 1200px;
+	width: 650px;
+	margin-top: 115px;
+	margin-left: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #272727;
+	line-height: 18px;
+	margin-right: 25px;
+}
+#picsattop {
+	height: 150px;
+	width: 900px;
+	background-image: url(/Assets/Buy/headerforbuy.jpg);
+}
+
+#topnavigation {
+	height: 30px;
+	width: 900px;
+	font-size: 10px;
+}
+#headershowone {
+	float: left;
+	height: 151px;
+	width: 258px;
+	background-color: #FFF;
+}
+#headershowthree {
+	float: left;
+	height: 151px;
+	width: 258px;
+	background-color: #FFF;
+	margin-top: 32px;
+}
+
+#headershowtwo {
+	background-color: #FFF;
+	float: left;
+	height: 134px;
+	width: 134px;
+	margin-left: 125px;
+	margin-top: 5px;
+}
+#buynavigation {
+	float: left;
+	height: 600px;
+	width: 175px;
+	margin-top: 180px;
+	margin-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+#buytranslatewrapper {
+	float: left;
+	height: 600px;
+	width: 175px;
+	margin-left: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#slideshowvillas {
+	float: right;
+	height: 235px;
+	width: 350px;
+	margin-top: 25px;
+}
+#rentalrates {
+	float: right;
+	height: 150px;
+	width: 350px;
+	margin-top: 15px;
+}
+
+#textforvillas {
+	float: left;
+	height: 405px;
+	width: 285px;
+	margin-top: 25px;
+}
+#floorplan {
+	float: left;
+	height: 600px;
+	width: 600px;
+}
+
+#translate {
+	float: left;
+	height: 45px;
+	width: 175px;
+	text-align: right;
+	padding-top: 20px;
+}

@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Residencial Casa Linda - Car Rental Arrangement</title>
+</head>
+<body style="padding: 10px;" onClick="parent.agreewin.hide()">
+
+<h3 style="margin-top: 0; color:#09F;">Car Rental Arrangement</h3>
+
+<p style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;"><strong>This service must be required by the customers at the moment they reserve their villas.</strong> </p>
+<p style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">*Subject to availability.</p>
+
+</body>
+</html>

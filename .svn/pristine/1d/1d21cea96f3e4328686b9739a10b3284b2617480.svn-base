@@ -1,0 +1,33 @@
+<link href="p7pmm/p7PMMv08.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="p7pmm/p7PMMscripts.js"></script>
+<div id="p7PMM_2" class="p7PMMv08 p7PMMnoscript">
+  <ul class="p7PMM">
+    <li><a href="/PAGES/Buying/CasaLinda Floor Plans .php">Villa Floor Plans &amp; Prices</a></li>
+    <li><a href="/PAGES/Buying/Rental Guarantee.php">Rental Guarantee</a></li>
+    <li><a href="/PAGES/Buying/Standard Specifications.php">Standard Specifications</a></li>
+    <li><a href="/PAGES/Buying/Project Features and Amenities.php">Project Features & Amenities</a></li>
+    <li><a href="/PAGES/Buying/Villa Management and Rental Program.php">Villa Management & Rental Program</a></li>
+    <li><a href="/PAGES/Buying/Plot Plan.php">Plot Plan</a></li>
+    <li><a href="/PAGES/Buying/Fly Buy Free Stay.php">Fly & Buy</a></li>
+    <li><a href="/PAGES/Buying/Fly Buy Free Stay.php">Free Stay During Construction</a></li>
+    <li><a href="/PAGES/Buying/Payment Terms.php">Payment Terms & Financing</a></li>
+    <li><a href="/PAGES/Buying/The_Buying_Process.php">The Buying Process</a></li>
+    <li><a href="/PAGES/Buying/Titles_Foreign_Buyers.php">The DR Title System</a></li>
+    <li><a href="/PAGES/Buying/Titles_Foreign_Buyers.php">Foreign Buyers</a></li>
+    <li><a href="/PAGES/Buying/Titles_Foreign_Buyers.php">Residency</a></li>
+  </ul>
+  <!--[if lte IE 7]>
+<style>.p7PMMv08, .p7PMMv08 a, .p7PMMv08 ul {height:1%;}.p7PMMv08 li{float:left;clear:both;width:100%;}</style>
+<![endif]-->
+  <!--[if IE 5.500]>
+<style>.p7PMMv08 {position: relative; z-index: 9999999;}</style>
+<![endif]-->
+  <!--[if IE 5]>
+<style>.p7PMMv08 a, .p7PMMv08 ul {height: 1%; overflow: visible !important;}</style>
+<![endif]-->
+  <script type="text/javascript">
+<!--
+P7_PMMop('p7PMM_2',0,2,-5,-5,0,0,0,1,0,3,1,1,0,0,0);
+//-->
+  </script>
+</div>

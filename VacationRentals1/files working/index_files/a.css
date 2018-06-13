@@ -1,0 +1,953 @@
+/*
+    Advice element
+*/
+advice
+{
+    background-color: red !important;
+    position: relative;    
+    width: auto;
+    height: auto;
+}
+
+advice.pending
+{
+}
+
+advice.allowed
+{
+    background: rgba(0%, 100%, 0%, 0.5) !important;
+}
+
+advice.unknown
+{
+    background: rgba(100%, 100%, 0%, 0.5) !important;
+}
+
+advice.blocked
+{
+    background: rgba(100%, 0%, 0%, 0.5) !important;
+}
+
+/*
+    Baloon element
+*/
+baloon
+{    
+    width: 274px !important;
+    height: auto !important;
+    
+    position: fixed !important;
+    display: block !important;
+    
+    font-size: 0px !important;
+    text-rendering: auto !important;
+    text-align: left !important;    
+    
+    z-index: 2147483647;
+}
+
+baloon_top,
+baloon_center,
+baloon_bottom
+{
+    display: inline-block !important;
+    position: relative !important;
+    width: 274px !important;
+    
+    top: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    right: 0px !important;
+    
+    /*border: 1px solid black !important;*/
+    
+    height: 20px !important;
+}
+baloon_top.right_bottom
+{
+    height: 70px !important;
+    background-image: url("images/baloon_top_left.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_top_left.png") 1x, url("images/baloon_top_left@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_top_left.png") 1x, url("images/baloon_top_left@2x.png") 2x) !important;
+}
+baloon_top.right_bottom.kl_retina
+{
+	background-image: url("images/baloon_top_left@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_top.left_bottom
+{   
+    height: 70px !important;
+    background-image: url("images/baloon_top_right.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_top_right.png") 1x, url("images/baloon_top_right@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_top_right.png") 1x, url("images/baloon_top_right@2x.png") 2x) !important;
+}
+baloon_top.left_bottom.kl_retina
+{
+	background-image: url("images/baloon_top_right@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_top.right_top
+{
+    background-image: url("images/baloon_top.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_top.png") 1x, url("images/baloon_top@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_top.png") 1x, url("images/baloon_top@2x.png") 2x) !important;
+}
+baloon_top.right_top.kl_retina
+{
+	background-image: url("images/baloon_top@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_top.left_top
+{   
+    background-image: url("images/baloon_top.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_top.png") 1x, url("images/baloon_top@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_top.png") 1x, url("images/baloon_top@2x.png") 2x) !important;
+}
+baloon_top.left_top.kl_retina
+{
+	background-image: url("images/baloon_top@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_center
+{   
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    
+    padding-left: 28px !important;
+    
+    height: auto !important;
+    background-image: url("images/baloon_center.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_center.png") 1x, url("images/baloon_center@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_center.png") 1x, url("images/baloon_center@2x.png") 2x) !important;
+}
+baloon_center.kl_retina
+{
+	background-image: url("images/baloon_center@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_bottom.right_bottom
+{    
+    background-image: url("images/baloon_bottom.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_bottom.png") 1x, url("images/baloon_bottom@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_bottom.png") 1x, url("images/baloon_bottom@2x.png") 2x) !important;
+}
+baloon_bottom.right_bottom.kl_retina
+{
+	background-image: url("images/baloon_bottom@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_bottom.left_bottom
+{    
+    background-image: url("images/baloon_bottom.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_bottom.png") 1x, url("images/baloon_bottom@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_bottom.png") 1x, url("images/baloon_bottom@2x.png") 2x) !important;
+}
+baloon_bottom.left_bottom.kl_retina
+{
+	background-image: url("images/baloon_bottom@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_bottom.right_top
+{
+    background-image: url("images/baloon_bottom_left.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_bottom_left.png") 1x, url("images/baloon_bottom_left@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_bottom_left.png") 1x, url("images/baloon_bottom_left@2x.png") 2x) !important;
+}
+baloon_bottom.right_top.kl_retina
+{
+	background-image: url("images/baloon_bottom_left@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_bottom.left_top
+{   
+    background-image: url("images/baloon_bottom_right.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/baloon_bottom_right.png") 1x, url("images/baloon_bottom_right@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/baloon_bottom_right.png") 1x, url("images/baloon_bottom_right@2x.png") 2x) !important;
+}
+baloon_bottom.left_top.kl_retina
+{
+	background-image: url("images/baloon_bottom_right@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+baloon_flag.left,
+baloon_flag.right
+{
+    display: block !important;
+    position: absolute !important;
+    width: 31px !important;
+    height: 57px !important;
+    
+    z-index: 2147483647;
+}
+
+baloon_flag.left
+{
+    left: 30px !important;
+}
+baloon_flag.right
+{
+    left: 214px !important;
+}
+baloon_flag.allowed
+{
+    background-image: url("images/green_flag.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/green_flag.png") 1x, url("images/green_flag@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/green_flag.png") 1x, url("images/green_flag@2x.png") 2x) !important;
+}
+baloon_flag.allowed.kl_retina
+{
+	background-image: url("images/green_flag@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_flag.unknown
+{
+    background-image: url("images/grey_flag.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/grey_flag.png") 1x, url("images/grey_flag@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/grey_flag.png") 1x, url("images/grey_flag@2x.png") 2x) !important;
+}
+baloon_flag.unknown.kl_retina
+{
+	background-image: url("images/grey_flag@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+baloon_flag.blocked
+{
+    background-image: url("images/red_flag.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/red_flag.png") 1x, url("images/red_flag@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/red_flag.png") 1x, url("images/red_flag@2x.png") 2x) !important;
+}
+
+baloon_flag.blocked.kl_retina
+{
+	background-image: url("images/red_flag@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_flag.bottom
+{
+    top: 12px !important;
+}
+baloon_flag.top
+{
+    top: 10px !important;
+}
+
+baloon_label_top
+{
+    font: 16px Helvetica !important;
+    text-align: left !important;
+    z-index: 2147483647 !important;
+    
+    top: 30px !important;
+    
+    display: block !important;
+    position: absolute !important;
+}
+baloon_label_top.right
+{
+    left: 30px !important;
+}
+baloon_label_top.left
+{
+    left: 81px !important;
+}
+baloon_label_top.allowed
+{
+    color: #23a52d !important;
+}
+baloon_label_top.blocked
+{
+    color: #af1919 !important;
+}
+baloon_label_top.unknown
+{
+    color: #646464 !important;
+}
+
+baloon_label_text
+{
+    font: 12px Helvetica !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    z-index: 2147483647 !important;
+    
+    margin-right: 50px !important;
+    margin-bottom: 15px !important;
+    
+    display: inline-block !important;
+    position: relative !important;
+}
+baloon_label_text.top
+{
+    margin-top: 60px !important;
+}
+baloon_label_text.bottom
+{
+    margin-top: 10px !important;
+}
+
+baloon_tick
+{
+    z-index: 2147483647 !important;
+    
+    width: 16px !important;
+    height: 16px !important;
+    
+    margin-bottom: 10px !important;
+    margin-right: 5px !important;
+    
+    display: inline-block !important;
+    position: relative !important;
+}
+baloon_tick.blocked
+{
+    background-image: url("images/blocked_tick.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/blocked_tick.png") 1x, url("images/blocked_tick@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/blocked_tick.png") 1x, url("images/blocked_tick@2x.png") 2x) !important;
+}
+baloon_tick.blocked.kl_retina
+{
+	background-image: url("images/blocked_tick@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_tick.unknown
+{
+    background-image: url("images/unknown_tick.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/unknown_tick.png") 1x, url("images/unknown_tick@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/unknown_tick.png") 1x, url("images/unknown_tick@2x.png") 2x) !important;
+}
+baloon_tick.unknown.kl_retina
+{
+	background-image: url("images/unknown_tick@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_tick.allowed
+{
+    background-image: url("images/allowed_tick.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/allowed_tick.png") 1x, url("images/allowed_tick@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/allowed_tick.png") 1x, url("images/allowed_tick@2x.png") 2x) !important;
+}
+baloon_tick.allowed.kl_retina
+{
+	background-image: url("images/allowed_tick@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+baloon_link
+{
+    z-index: 2147483647 !important;
+    
+    font: 12px Helvetica !important;
+    
+    display: inline !important;
+    position: relative !important;
+    
+    margin-right: 50px !important;
+    
+    /* [FIX] dirty hack for inline-block */
+    top: -15px !important;
+    z-index: 2147483647 !important;    
+}
+baloon_link.allowed
+{
+    color: #73a583 !important;
+}
+baloon_link.blocked
+{
+    color: #af5a5a !important;
+}
+baloon_link.unknown
+{
+    color: #646464 !important;
+}
+
+baloon_category
+{
+    display:  block !important;
+    position: relative !important;
+}
+
+baloon_category_left,
+baloon_category_right,
+baloon_category_middle
+{
+    z-index: 2147483647 !important;
+    
+    height: 21px !important;
+    
+    display:  inline-block !important;
+    position: relative !important;
+}
+
+baloon_category_left
+{
+    width: 21px !important;
+    background-image: url("images/tag_left.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/tag_left.png") 1x, url("images/tag_left@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/tag_left.png") 1x, url("images/tag_left@2x.png") 2x) !important;
+}
+
+baloon_category_left.kl_retina
+{
+	background-image: url("images/tag_left@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_category_right
+{
+    width: 5px !important;
+    background-image: url("images/tag_right.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/tag_right.png") 1x, url("images/tag_right@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/tag_right.png") 1x, url("images/tag_right@2x.png") 2x) !important;
+}
+baloon_category_right.kl_retina
+{
+	background-image: url("images/tag_right@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_category_middle
+{            
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding-top: 5px !important;
+    top: -6px !important;
+    
+    font: 12px Helvetica !important;
+    color: #646464 !important;
+    
+    width: auto !important;
+    background-image: url("images/tag_middle.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/tag_middle.png") 1x, url("images/tag_middle@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/tag_middle.png") 1x, url("images/tag_middle@2x.png") 2x) !important;
+}
+baloon_category_middle.kl_retina
+{
+	background-image: url("images/tag_middle@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_lm_icon
+{
+    width: 7px !important;
+    height: 16px !important;
+    
+    z-index: 2147483647 !important;
+    
+    display: inline-block !important;
+    position: relative !important;
+    
+    background-image: url("images/learn_more.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/learn_more.png") 1x, url("images/learn_more@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/learn_more.png") 1x, url("images/learn_more@2x.png") 2x) !important;
+}
+baloon_lm_icon.kl_retina
+{
+	background-image: url("images/learn_more@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+baloon_lm_label,
+.baloon_lm_label
+{
+    font: 10px Helvetica !important;
+    color: #0099cc !important;
+    
+    display: inline-block !important;
+    position: relative !important;
+    
+    margin-right: 5px !important;
+    
+    /* [FIX] dirty hack for inline-block */
+    top: -3px !important;
+    
+    z-index: 2147483647 !important;
+}
+baloon_tou_label,
+.baloon_tou_label
+{
+    font: 10px Helvetica !important;
+    color: #646464 !important;
+    text-decoration: underline !important;
+    
+    float: right;
+    
+    display: inline !important;
+    position: relative !important;
+    
+    z-index: 2147483647 !important; 
+}
+baloon_tou_label
+{
+    margin-right: 30px !important;
+}
+
+/*
+    Image element
+*/
+advice_image
+{
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    
+    margin:-3px;
+    margin-left:5px !important;
+    margin-right:5px !important;
+    z-index: 2147483646 !important;    
+}
+
+/* [TODO] сделать какие-то массивы в коде с адресами
+          или, раз уж все равно где-то все это должно храниться,
+          таки хранить это здесь?
+*/
+advice_image.allowed
+{
+   background-image: url("images/allowed.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/allowed.png") 1x, url("images/allowed@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/allowed.png") 1x, url("images/allowed@2x.png") 2x) !important;
+}
+advice_image.allowed.kl_retina
+{
+	background-image: url("images/allowed@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+advice_image.unknown
+{
+    background-image: url("images/unknown.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/unknown.png") 1x, url("images/unknown@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/unknown.png") 1x, url("images/unknown@2x.png") 2x) !important;
+}
+
+advice_image.unknown.kl_retina
+{
+	background-image: url("images/unknown@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+advice_image.blocked
+{
+    background-image: url("images/blocked.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background: image-set(url("images/blocked.png") 1x, url("images/blocked@2x.png") 2x) !important;
+	background: -webkit-image-set(url("images/blocked.png") 1x, url("images/blocked@2x.png") 2x) !important;
+}
+
+advice_image.blocked.kl_retina
+{
+	background-image: url("images/blocked@2x.png") !important;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+/*
+    Shader
+*/
+.leftside
+{
+    display: inline-block !important;
+    position: relative;
+    left: 0px;
+    height: 27px;
+    width: 5px;
+}
+.middleside
+{
+    display: inline-block !important;
+    position: relative;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 10px;
+    height: 20px;
+    
+    white-space: normal !important;
+    font: 12px Helvetica, sans-serif; text-align: center;
+}
+.rightside
+{
+    display: inline-block !important;
+    position: relative;
+    right: 0px;
+    height: 27px;    
+    width: 5px;
+}
+
+/* No button */
+#nolink
+{
+    display: inline-block !important;
+    position: absolute;
+    bottom: 25px;
+    right: 40px;   
+    
+    text-decoration: none;    
+    cursor: pointer;
+}
+#nolink .leftside
+{
+    background: url("images/buttons/white/but_white_l_normal.png") no-repeat;
+}
+#nolink .middleside
+{
+    background: url("images/buttons/white/but_white_m_normal.png");
+    color: #3f3f3f !important;    
+}
+#nolink .rightside
+{
+    background: url("images/buttons/white/but_white_r_normal.png") no-repeat;
+}
+#nolink .leftside.kl_retina
+{
+    background: url("images/buttons/white/but_white_l_normal@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+#nolink .middleside.kl_retina
+{
+    background: url("images/buttons/white/but_white_m_normal@2x.png");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;       
+}
+#nolink .rightside.kl_retina
+{
+    background: url("images/buttons/white/but_white_r_normal@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+
+/*
+#nolink:hover .leftside
+{
+    background: url("images/buttons/white/but_white_l_hover.png") no-repeat;
+}
+#nolink:hover .middleside
+{
+    background: url("images/buttons/white/but_white_m_hover.png");
+}
+#nolink:hover .rightside
+{
+    background: url("images/buttons/white/but_white_r_hover.png") no-repeat;
+}
+*/
+#nolink:active .leftside
+{
+    background: url("images/buttons/white/but_white_l_pressed.png") no-repeat;
+}
+#nolink:active .middleside
+{
+    background: url("images/buttons/white/but_white_m_pressed.png");
+    color: #3f3f3f !important;    
+}
+#nolink:active .rightside
+{
+    background: url("images/buttons/white/but_white_r_pressed.png") no-repeat;
+}
+#nolink:active .leftside.kl_retina
+{
+    background: url("images/buttons/white/but_white_l_pressed@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+#nolink:active .middleside.kl_retina
+{
+    background: url("images/buttons/white/but_white_m_pressed@2x.png");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+#nolink:active .rightside.kl_retina
+{
+    background: url("images/buttons/white/but_white_r_pressed@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+
+/* Yes button */
+#yeslink
+{
+    display: inline-block !important;
+    position: absolute;
+    bottom: 25px;
+    right: 135px; 
+
+    text-decoration: none;
+    cursor: pointer;
+}
+#yeslink .leftside
+{
+    background: url("images/buttons/red/but_red_l_normal.png") no-repeat;
+}
+#yeslink .middleside
+{
+    background: url("images/buttons/red/but_red_m_normal.png");
+    color: #ffffff !important;    
+}
+#yeslink .rightside
+{
+    background: url("images/buttons/red/but_red_r_normal.png") no-repeat;
+}
+#yeslink .leftside.kl_retina
+{
+    background: url("images/buttons/red/but_red_l_normal@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+#yeslink .middleside.kl_retina
+{
+    background: url("images/buttons/red/but_red_m_normal@2x.png");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;   
+}
+#yeslink .rightside.kl_retina
+{
+    background: url("images/buttons/red/but_red_r_normal@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+
+/*
+#yeslink:hover .leftside
+{
+    background: url("images/buttons/red/but_red_l_hover.png") no-repeat;
+}
+#yeslink:hover .middleside
+{
+    background: url("images/buttons/red/but_red_m_hover.png");
+}
+#yeslink:hover .rightside
+{
+    background: url("images/buttons/red/but_red_r_hover.png") no-repeat;
+}
+*/
+#yeslink:active .leftside
+{
+    background: url("images/buttons/red/but_red_l_pressed.png") no-repeat;
+}
+#yeslink:active .middleside
+{
+    background: url("images/buttons/red/but_red_m_pressed.png");
+    color: #ffffff !important;    
+}
+#yeslink:active .rightside
+{
+    background: url("images/buttons/red/but_red_r_pressed.png") no-repeat;
+}
+#yeslink:active .leftside.kl_retina
+{
+    background: url("images/buttons/red/but_red_l_pressed@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+#yeslink:active .middleside.kl_retina
+{
+    background: url("images/buttons/red/but_red_m_pressed@2x.png");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;   
+}
+#yeslink:active .rightside.kl_retina
+{
+    background: url("images/buttons/red/but_red_r_pressed@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}
+
+#popuptitle
+{
+    position: absolute !important;
+    
+    left: 160px !important;
+    
+    font: 15px Helvetica, sans-serif !important;
+    text-align: left !important;
+    
+    top: 17px;
+    
+    white-space: normal !important;
+
+    color: #3f3f3f !important;
+}
+
+#popupmessage
+{
+    position: absolute !important;
+    
+    top: 50px !important;
+    left: 110px !important;
+    
+    font: 12px Helvetica, sans-serif !important;
+    text-align: left !important;
+    
+    padding-right: 30px;
+    
+    white-space: normal !important;
+
+    color: #3f3f3f !important;
+}
+
+#popupmessage .popup_link
+{
+    display: inline;
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+#shader
+{    
+    z-index: 2147483647;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
+    
+    background: rgba(0%, 0%, 0%, 0.7) !important;
+}
+
+#kaspersky_popup
+{
+    display: inline-block !important;
+    position: fixed;
+    top: 30%;
+    left: 30%;    
+    
+    width: 519px;
+    height: 251px;
+    
+    padding: 5px; margin: 10px; z-index: 100;
+    
+    color: #3f3f3f;
+    background: url("images/baloon_message_red.png") no-repeat;
+    font: 16px Helvetica, sans-serif; text-align: center;
+}
+#kaspersky_popup .kl_retina
+{
+    background: url("images/baloon_message_red@2x.png") no-repeat;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;    
+}

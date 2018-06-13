@@ -1,0 +1,116 @@
+#corp #partner0 #tm1 {	
+	margin: 0;
+	float:left;
+	width:33%;
+	height:18px;
+	/*background-color:#FFF;*/
+	background-color: #f4ec6f;
+	text-align:center;
+	border-right:solid 1px white;
+	color:black;
+	font-weight:bold;
+}
+#corp #partner0 #tm2,#corp #partner0 #tm3 {	
+	margin: 0;
+	float:left;
+	width:33%;
+	height:18px;
+	background-color:#58A41C;
+	text-align:center;
+	border-right:solid 1px white;
+	color:white;
+	font-weight:bold;
+}/*
+#corp #partner0 #tm2,#corp #partner0 #tm3,#corp #partner0 #tm4 {	
+	margin: 0;
+	float:left;
+	width:20%;
+	height:25px;
+	background-color:#58A41C;
+	text-align:center;
+	border-right:solid 1px white;
+	color:white;
+	font-weight:bold;
+}*/
+/*
+#corp #partner0 #tm5 {	
+	margin: 0;
+	float:right;
+	width:19%;
+	height:25px;
+	background-color:#58A41C;
+	text-align:center;
+	border-right:solid 1px white;
+	color:white;
+	font-weight:bold;
+}*/
+/*
+#corp #partner0  #tm1 a.javascript:hover,#corp #partner0  #tm2:hover,#corp #partner0  #tm3:hover,#corp #partner0  #tm4:hover,#corp #partner0  #tm5:hover,
+{background-color:yellow;color:black;}
+#corp #partner0  #tm1 a:active,#corp #partner0  #tm2 a:active,#corp #partner0  a #tm3:active,#corp #partner0  #tm4 a:active,#corp #partner0  a #tm5:active,
+{background-color:yellow;color:black;}
+*/
+
+/*  TAGS  */
+
+
+.tdContent h2, .tdContent h3, .navLeft h2, .navLeft h3 {	
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+/* ----- Themes: activities, institutions, documents ----- */
+
+#corp #partner0  #contentcontainer {
+	margin-top: 0;
+	z-index: 1;
+	color: #333;
+	/*background-color: #FFF;*/
+	background-color: #f4ec6f;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-left: 1px solid #c4c4b8;
+	border-top: 1px solid #F4EC6F;
+	text-align:left;
+	position:relative;
+	height:200px;
+	padding:1%;
+	clear:both;
+	width: 540px;
+}
+#corp #partner0  #contentcontainer #content1 {
+	visibility:hidden;
+	margin-top:0;
+	position:absolute;
+	clear:both;
+	float:none;
+	width:537px;
+	height: 185px;
+}
+#corp #partner0  #contentcontainer #content2 {visibility:hidden;margin-top:0;position:absolute;clear:both;float:none; width:537px; height: 185px;}
+#corp #partner0  #contentcontainer #content3 {visibility:hidden;margin-top:0;position:absolute;clear:both;float:none;  width:537px; height: 185px;}
+/*#corp #partner0  #contentcontainer #content4 {visibility:hidden;margin-top:0;position:absolute;clear:both;float:none;width:90%;}
+#corp #partner0  #contentcontainer #content5 {visibility:hidden;margin-top:0;position:absolute;clear:both;float:none;width:90%;}*/
+
+.content p {
+	margin-top: 5px;
+	margin-left: 10px;
+	font-weight: normal;
+	text-align:left;
+	font-family:arial;
+}
+
+.content ul {
+	margin-top: 5px;
+	list-style-type: disc;
+	text-align:left;
+	font-family:arial;	
+}
+.content a,.content li a,.content p a{
+		color: #266F16;
+		font-weight:bold;
+		font-family:arial;
+}

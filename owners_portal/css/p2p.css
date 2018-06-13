@@ -1,0 +1,204 @@
+/* CSS for P2P Love Pilot Project - Spec 17899 - Authors: mkriskovic, tsilva, jcarrillo, dabrown */
+
+/* Overwriting some CoreLayout (global.css) styles to support P2P Design */
+#content {height:1%;  background:url(../images/scr_p2pbg_1x335.jpg) repeat-x bottom left;} /*padding:0 20px 20px 20px;*/
+#main {width:415px !important;}
+.layout1 {overflow:visible !important;}
+#sidebar {float:left; width:auto !important; margin-left:30px;}
+div.messageBox {margin-top:2em;clear:both;}
+div.messageBox ul {width:auto; height:auto; line-height:normal; overflow:visible; position:static; text-indent:0;}
+fieldset.primary {border:1px solid #ADC2D6; padding:15px; padding-top:0; background:#FFF;}
+fieldset.primary h4 {color:#333; padding-top:15px; font-size:14px;}
+fieldset#amountEntry {margin-bottom:1.5em;}
+label#recentContacts {margin-top:.75em;}
+#headline h2 {float:left; width:450px; display:inline;}
+fieldset#amountEntry .optional, p#sendToAutoSuggest .optional, p.sendFrom .optional {margin-left:.5em;}
+fieldset#amountEntry .optional a, p#sendToAutoSuggest .optional a, p.sendFrom .optional a  {text-decoration:none; border-bottom:1px dashed #084482;}
+
+p.auctionDate span.auction_date_month {margin-right: 1.7em;}
+p.auctionDate span.auction_date_day {margin-right: 3em;}
+
+/* Need to start the next label on a new line due to the date component being in a table */
+#itemURL { clear: both; }
+
+/* Currency Conversion */
+#conversionInProgress, #conversionError {display:none; clear:both;}
+#currencyEquivalent {clear:both;}
+.currencyUpdater {display:none;}
+form#requestMoney #recent_select {width:300px;}
+
+/* RM homepage */
+fieldset#requestType {margin-bottom:2em;}
+fieldset#requestType legend {padding-bottom:.5em;}
+fieldset#requestType ul { margin: 0 .5em;}
+fieldset#requestType ul li {float:left; width:15em; list-style:none; margin:.2em 0 0 0;}
+fieldset#requestType ul li label {float: left; width: 12em;}
+fieldset#requestType ul li input {margin:.15em .4em 0 0; float:left;}
+textarea#uome_recipients {margin-bottom:.5em;}
+
+/* SM homepage tabs */
+
+/* SAME CALLS */
+fieldset#smtPersonal, fieldset#smtPurchase, fieldset#smtPersonal ul, fieldset#smtPurchase ul, #smtPurchaseHeader, 
+#smtPersonalHeader, #smtNoTabHeader, #smtPersonalDisclaimer {margin:0; padding:0;}
+
+fieldset#smtPersonal, fieldset#smtPurchase {padding:.9em .9em .9em 1.1em; border:solid 1px #D1D1D1; width:28em;}
+fieldset#smtPersonal:after, fieldset#smtPurchase:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+fieldset#smtPersonal ul input, fieldset#smtPurchase ul input {margin:.15em .4em 0 0; float:left;}
+#smtPersonalList li, #smtPurchaseList li {float:left; width:13em; list-style:none; margin:.4em 0 0 0;}
+
+/* Fixing spacing for longer DE translations */
+#smtPurchaseList #PurchaseServiceRef, #smtPurchaseList #smtPurchaseGoods {width:15em;}
+		
+/* fix the radio button border and add just text box border */
+#smtPurchaseList li input, #smtPersonalList li input {border:none;}
+#smtPersonalList label, #smtPurchaseList label {float:left;}
+
+/* eBay */
+#smtEbayOptions li input {border:solid 1px #D1D1D1;}
+#smtEbayOptions {border-top:1px solid #D1D1D1; margin-left:10px !important;}
+#smtEbayOptions em {color:#919191; display:inline;}
+#smtEbayOptions li {clear:left; padding:.2em 0 0 2em; width:16em;}	
+#smtEbayOptions li label {display:block; width:100%;}
+#smtEbayOptions li.fullwidth {padding-left:.2em; *padding-top:15px; width:auto;}
+#smtEbayOptions input.button-as-link {width: auto; padding: 0 0 0 16px; background:transparent url(/en_US/i/scr/scr_orgarrow.gif) no-repeat left center; border: none; color: #084482; cursor: pointer; font-size: inherit; font-weight:bold; text-decoration: underline; margin: 0; text-align: left;}
+.prefPay {position:absolute; top:7em; *top:8em; left: 0; width:auto; padding:0;}
+
+/* off main SMTtabs ID */
+div.noTabsYesJS legend, div.noTabsNoJS legend, div.noJS legend {display:none;}
+#SMTtabs h3 {display:block; font-size:12px; white-space: nowrap; }	
+#SMTtabs h3 a {text-decoration:none; color:#064481;}
+
+/* common position */
+ul#smtEbayOptions, div.yesJS fieldset#smtPersonal, div.yesJS fieldset#smtPurchase {position:absolute;}
+div.yesJS, div.noJS fieldset#smtPersonal, div.noTabsNoJS fieldset#smtPersonal, div.noJS fieldset#smtPurchase, div.noTabsNoJS fieldset#smtPurchase {position:relative;}
+ 
+/* main fieldset */
+#SendMoney {position:relative;}
+#SendMoney .relocateButton {display: block; position:absolute; bottom:1.1em;}
+#SendMoney .buttonDesc {display: block; width:425px; position:relative; bottom:1.1em; margin:0; padding:0 10px 0 0;}
+#SendMoney p.buttonDesc .relocateButton { position:relative; bottom:auto;}
+#SendMoney p.descPosition {position:absolute;}
+#SendMoney p.buttonPara {margin:0;}
+#SendMoney .buttonDesc #submit{float:left; margin-right:10px !important;}
+#SendMoney .hide {display:none;}
+/* END SAME CALLS */
+
+/* NO JAVASCRIPT CALLS */
+/* tabs */		
+div.noJS .smtPurchaseHeightEbayAll {height:21em;}
+div.noJS .smtPurchaseHeightEbay {height:13.4em;}
+div.noJS .smtPurchaseNoHt {height:auto;}
+div.noJS #smtEbayOptions {top:7.8em;}
+div.noJS {margin-bottom:1.6em;}
+div.noJS .eBayHideCont {display:none;}
+
+/* common */
+div.noJS, div.noTabsNoJS {width:29.7em;}
+div.noJS h3, div.noTabsNoJS h3 {padding:1em 0 .5em 0;}
+div.noJS #smtEbayOptions, div.noTabsNoJS #smtEbayOptions {left:0; width:93.5%;}
+
+/* no tabs */
+div.noTabsNoJS {margin-bottom:2.6em;}
+div.noTabsNoJS	#smtNoTabHeader {margin:.4em 0 .3em 0;}
+div.noTabsNoJS .smtPurchaseHeightEbayAll {height:21.9em;}
+div.noTabsNoJS .smtPurchaseHeightEbay {height:14em;}
+div.noTabsNoJS .smtPurchaseNoHt {height:auto !important;}
+div.noTabsNoJS #smtEbayOptions {top:4.2em;}
+div.noTabsNoJS .eBayHideCont{display:none;}
+/* END NO JAVASCRIPT CALLS */
+
+/* JAVASCRIPT CALLS */
+/* tabs */
+div.yesJS .smtMainPersonalMargin {margin:0 0 0 1.55em;}
+div.yesJS .smtSubPersonalMargin {margin:.5em 0 0 -.05em;}
+div.yesJS .smtSubPurchaseMargin {margin:.5em 0 0 -1em;}
+div.yesJS .smtSubTab, div.yesJS .smtMainTab {display:block;}
+div.yesJS .smtSubRightBorder {border-left:solid 1px #D1D1D1;}	
+div.yesJS h3 {font-weight:normal; float:left;}
+div.yesJS #smtEbayOptions {left:0; top:6.9em; width:90%;}
+div.yesJS .smtSubTab { width:100%; padding: .2em; border-right:solid 1px #D1D1D1; margin-left:1em; text-align:center; }
+div.yesJS .smtMainTab { color:#333; width:100%; font-weight:bold; padding:.4em; border:solid 1px #D1D1D1; border-width:0 1px; text-align:center; position:relative; z-index:1;}
+div.yesJS fieldset#smtPersonal, div.yesJS fieldset#smtPurchase {top:2.1em; left:0;} 
+div.yesJS  .smtMainPersonalMargin #smtPersonalTabLink{margin-top:1px;}
+
+/* tab background images */
+div.yesJS .smtSubRightImages {background:url(/en_US/i/scr/scr_tabs2_wide_500x200.jpg) no-repeat right -7em ;}
+div.yesJS .smtSubRightImages:hover {background:url(/en_US/i/scr/scr_tabs2_wide_500x200.jpg) no-repeat right -148px;}
+div.yesJS .smtMainImages {background:url(../images/scr_tabs2_wide_500x200.jpg) no-repeat top left;}
+div.yesJS .smtSubImages  {background:url(../images/scr_tabs2_wide_500x200.jpg) no-repeat left -84px;}
+div.yesJS .smtSubImages:hover {background:url(../images/scr_tabs2_wide_500x200.jpg) no-repeat left -148px ;}		
+
+/* common */
+div.yesJS, div.noTabsYesJS {clear:both;}
+div.yesJS {width:29.8em;}
+
+/* no tabs */
+div.noTabsYesJS #smtNoTabHeader {margin:.4em 0 .3em .2em;}
+div.noTabsYesJS #smtPurchase {padding-top:.5em;}
+div.noTabsYesJS #smtEbayOptions {left:1em; *left:2.2em !important; top:18em; width:27em;}
+/* END JAVASCRIPT CALLS */		
+/* END SM homepage tabs */
+
+/* 21912-P2P Pricing Phase 2  */
+.p2p #main {width:456px !important;}
+.ESM #main {width:508px !important;}
+.p2p #sidebar {width:270px !important; margin-top:28px; margin-left:24px;}
+.ESM #sidebar {width:218px !important;}
+.p2ppricing p {clear:both; margin:0; padding-left:15px;}
+.p2ppricing #content {background:none;}
+.p2ppricing #headline {overflow:auto;}
+.p2ppricing #main {width:auto !important;}
+.p2ppricing #AddBank {margin-top:12px; background:url(/en_US/i/scr/blueGrad_1x350.gif) repeat-x scroll 0 0; height:1%;}
+.p2ppricing .acctoptions {float:left; margin-top:15px;}
+.p2ppricing p.acctdetails {margin-bottom:10px;}
+.p2ppricing ul.info {margin: 12px 0 0 30px; float:left;}
+.p2ppricing ul.info li {margin:12px 0 12px 0; padding-left:12px; background:url(/en_US/i/pui/core/icon_content_arrow.gif) no-repeat 2px 6px; list-style:none;}
+.p2ppricing p.group {float:left; margin-right:8px;}
+.p2ppricing p.account {clear:right; padding:0;}
+#invalidRouting, #inProgress, #invalidBankError, #bankLookupError {clear:both; float:left; margin:15px 0 0 0; padding-left:15px; color:#FF0000; font-size:0.9em;}
+.p2ppricing p#bank {margin-top:15px;}
+#bankNameLookup {margin:15px 0 0 0;}
+#bankNameLookup label {display:inline;}
+.p2ppricing p.buttons {padding:10px 0 0 15px;}
+fieldset.multi .label {padding-top:12px; display:block}
+.esmfrom {margin-top:18px;}
+input.esminput {margin-bottom:6px;}
+div#SMTtabs {margin-top:20px;}
+div#SMTtabs ul {clear:both;}
+.p2p #content {overflow:hidden;}
+form.error #smtPurchase p.error span.help, form.error #smtPersonal p.error span.help {padding-top:10px;}
+form p.group, form.error fieldset {margin-left:0;}
+#SendMoney div p.error label, form.error fieldset.error p.help, form.error #conversionInProgress.error, form.error #conversionError.error, form.error #currencyEquivalent.error {padding-left:20px;}
+#smtPurchase.group legend, #smtPurchase.error div, #smtPurchase.error div .help, #smtPersonal.group legend, #smtPersonal.error div, #smtPersonal.error div .help {padding-left:0;}
+fieldset p.group {margin-bottom:0;}
+#smtPurchase, #smtPersonal {width:95%}
+#SMTtabs fieldset.group legend span {display:none;}
+#SMTtabs fieldset.group div label {margin:0.4em 0pt 0pt; width:14em; display:inline; float:left;}
+#SMTtabs fieldset.group div label input {float:left;}
+#SMTtabs fieldset.group div label .smtLabel {float:left; width:11em;display:block;}
+#SMTtabs fieldset.group div label.ebayesm{width:0; margin:0;}
+#SMTtabs fieldset#smtPurchase legend{display:block;}
+#smtPurchase div #smtPurchaseHeader, #smtPersonal div #smtPersonalHeader, #smtPurchase div #smtPurchaseHeaderDesc, #smtPersonal div #smtPersonalHeaderDesc {display:block; clear:both; width:100%}
+#smtPersonal li, #smtPurchase li {float:left; width:14em; list-style:none; margin:.4em 0 0 0;}
+#smtPurchase #PurchaseServiceRef, #smtPurchase #smtPurchaseGoods {width:15em;}
+fieldset.multi, #smtEbayOptions p.group {margin:0;}
+div#footerhps {clear:both; padding:50px 0 20px 0; font-size:0.9em;}
+div#footerhps p, div#footerhps a {color:#666666;}
+.nvpHeaderBorder {background:transparent url(/en_US/i/pui/core/nav_sprite.gif) repeat-x scroll left top; height:6px;}
+div.p2p .smErrorPadding {padding-left:20px;}
+
+.rtl #headline h2, .rtl div.yesJS h3, .rtl #SMTtabs fieldset.group div label input, .rtl #SMTtabs fieldset.group div label .smtLabel, .rtl #SMTtabs fieldset.group div label, .rtl fieldset#requestType ul li, .rtl fieldset#requestType ul li label {float:right;}
+.rtl div.yesJS fieldset#smtPersonal, .rtl div.yesJS fieldset#smtPurchase, .rtl .prefPay {right:0;}
+.rtl div.yesJS .smtSubImages {background:url(/en_US/i/scr/scr_tabs2_wide_500x200.jpg) no-repeat scroll right -84px transparent;}
+.rtl div.yesJS .smtSubTab {border-left:1px solid #D1D1D1; margin-right:1em; border-right:none; margin-left:0;}
+.rtl fieldset#smtPersonal ul input, .rtl fieldset#smtPurchase ul input {float:right; margin:0.15em 0 0 0.4em;}
+.rtl #smtEbayOptions input.button-as-link { background:url(/en_US/i/scr/rtl_scr_orgarrow.gif) no-repeat right center transparent; padding:0 16px 0 0;}
+.rtl div.yesJS .smtMainImages {background:url(/en_US/i/scr/scr_tabs2_wide_500x200.jpg) no-repeat scroll right top transparent;}
+.rtl div.yesJS .smtSubRightImages {background:url(/en_US/i/scr/scr_tabs2_wide_500x200.jpg) no-repeat scroll left -7em transparent;}
+.rtl div.yesJS .smtMainPersonalMargin {margin:0 1.55em 0 0;}
+.rtl fieldset#smtPersonal, .rtl fieldset#smtPurchase {padding:0.9em 1.1em 0.9em 0.9em;}
+.rtl div.yesJS .smtSubPurchaseMargin {margin:0.5em -1em 0 0;}
+.rtl div.yesJS .smtSubLeftBorder {border-right:solid 1px #D1D1D1;}
+.rtl fieldset#requestType ul li input {float:right; margin:0.15em 0 0 0.4em;}
+.rtl fieldset.multi .label {text-align:right;}

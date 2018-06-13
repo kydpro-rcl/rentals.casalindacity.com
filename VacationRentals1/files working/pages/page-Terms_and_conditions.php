@@ -1,0 +1,185 @@
+<!-- =========================
+  HOTEL ROOM ITEM
+============================== -->
+<section>
+    <div class="container">      				
+		<div class="row">
+			<div class="section-header-3 col-md-8 col-md-offset-2">
+
+				<h2 class="text-color-02">TERMS &amp; CONDITIONS </h2>
+				
+
+            </div> <!-- end of .section-header -->
+        </div> <!-- end of .row -->
+	
+		
+		
+		<div class="content_pag">
+		  <p><strong></strong><br>
+			<strong>RCL ADMINISTRACIONES S.R.L. (RESIDENCIAL CASA LINDA) </strong></p>
+		  <p><strong>In using this website you are deemed to have read and  agreed to the following terms and conditions:</strong><br>
+			The following  terminology applies to these Terms and Conditions, Privacy Statement and  Disclaimer Notice and any or all Agreements: &quot;Client&quot;,  &quot;You&quot; and &quot;Your&quot; refers to you, the person accessing this  website and accepting the Company's terms and conditions. &quot;The  Company&quot;, &quot;Ourselves&quot;, &quot;We&quot; and &quot;Us&quot;, refers  to our Company RCL ADMINISTRACIONES S.R.L. operating as RESIDENCIAL CASA LINDA.  &quot;Party&quot;, &quot;Parties&quot;, or &quot;Us&quot;, refers to both the  Client and ourselves, or either the Client or ourselves. All terms refer to the  offer, acceptance and consideration of payment necessary to undertake the  process of our assistance to the Client in the most appropriate manner, whether  by formal meetings of a fixed duration, or any other means, for the express  purpose of meeting the Client's needs in respect of provision of the Company's  stated services/products, in accordance with and subject to, prevailing  Dominican Law. Any use of the above terminology or other words in the singular,  plural, capitalization and/or he/she or they, are taken as interchangeable and  therefore as referring to same.<br>
+		  </p>
+		  <p><strong>Description of the Service (s):</strong><br>
+			</p>
+		  <p><strong>Privacy Statement</strong><br>
+			We are committed to  protecting your privacy. Authorized employees within the company on a need to  know basis only use any information collected from individual customers. We  constantly review our systems and data to ensure the best possible service to  our customers. Dominican Congress has created specific offences for  unauthorized actions against computer systems and data. We will investigate any  such actions with a view to prosecuting and/or taking civil proceedings to  recover damages against those responsible.</p>
+		  <p><strong>Confidentiality</strong><br>
+			We are registered under  the law 126-02 art. 21 until Dominican Law releases a non-literally mandatory  &quot;Data Protection law&quot;, and as such, any information concerning the  Client and their respective Client Records may be passed on. However, Client  records are regarded as confidential and therefore will not be divulged to any  third party, other than [internal department designed as Reservations/Customer  Service] if legally required to do so to the appropriate authorities. Clients  have the right to request sight of, and copies of any and all Client Records we  keep, on the proviso that we are given reasonable notice of such a request.  Clients are requested to retain copies of any literature issued in relation to  the provision of our services. Where appropriate, we shall issue Client's with  appropriate written information, handouts or copies of records as part of an  agreed contract, for the benefit of both parties.<br>
+			We will not sell,  share, or rent your personal information to any third party or use your e-mail  address for unsolicited mail. Any emails sent by this Company (RCL  ADMINISTRACIONES S.R.L. Residencial Casa Linda) will only be in connection with  the provision of agreed services and products.<br>
+		  </p>
+		  <p><strong>Disclaimer:</strong></p>
+		  <p><strong>Exclusions and Limitations</strong><br>
+			The information on this  web site is provided on an &quot;as is&quot; basis. To the fullest extent  permitted by law, this Company: </p>
+		  <ul>
+			<li>Excludes all representations and warranties relating to this  website and its contents or which is or may be provided by any affiliates or  any other third party, including in relation to any inaccuracies or omissions  in this website and/or the Company's literature; and </li>
+			<li>Excludes all liability for damages arising out of or in  connection with your use of this website. This includes, without limitation,  direct loss, loss of business or profits (whether or not the loss of such  profits was foreseeable, arose in the normal course of things or you have  advised this Company of the possibility of such potential loss), damage caused  to your computer, computer software, systems and programs and the data thereon  or any other direct or indirect, consequential and incidental damages. This  Company does not however exclude liability for death or personal injury caused by  its negligence. The above exclusions and limitations apply only to the extent  permitted by law. None of your statutory rights as a consumer are affected.</li>
+		  </ul>
+		  <p><strong>Payment</strong><br>
+			Payment deposit per  villa reservation is due upon booking. Cash, Bank Deposits to the Company's  account in the designated Bank under the name BANCO POPULAR DOMINICANO, online  payment via PayPal, are all acceptable methods of payment. Note: Debit cards  are only valid in your presence.<br>
+			We reserve the right to  seek recovery of any money remaining unpaid sixty days from the date of invoice  via collection Agencies and/or through the Small Claims Court in the event that  the outstanding balance does not exceed £3000. In such circumstances, you shall  be liable for any and all additional administrative and/or court costs [Amend  as appropriate].<br>
+			A Deposit totaling  75.00 USD per bedroom rented or a blank voucher with signature will be required  upon check-in. This rule is mandatory and not negotiable.<br>
+			Invoices will be sent  to you as per cancellation rules (see below). In order to keep your reservation  and avoid a cancellation you need to pay accordingly.<br>
+		  </p>
+		  <p><strong>Applicable Cancellation Policy</strong></p>
+		  <ul>
+			<li>If cancelled prior to 30 days before date of arrival, one night  will be charged.</li>
+			<li>If cancelled prior to 7 days before date of arrival, 50 percent  of total price of the stay will be charged.</li>
+			<li>If cancelled later or in case of no-show, the total price of the  reservation will be charged.</li>
+			<li>We reserve the right to change all bookings without notifying  The Customer.</li>
+		  </ul>
+		  <p><strong>Basic Rules and Regulations for the Residential</strong></p>
+		  <blockquote>
+			<p ><strong>Within our residential</strong></p>
+			<ol>
+			  <li>Music at a moderate volume is allowed, keeping in mind respecting the tranquility of our neighbors. Hours for  music is until&nbsp;10  pm.</li>
+			  <li>Please keep your language at a&nbsp;respectful level. We do not accept loud noises or profanities in our residential.</li>
+			  <li>Speed limit is 30 km/h or 18 mph.</li>
+			  <li>Parking: One car per single driveway; two cars per double driveway; three cars in circular driveways. Additional vehicles must be parked in the Administration Parking or specified marked lots.</li>
+			  <li>Motorcycles and ATVs must be parked at the Administration parking lot.</li>
+			  <li>FIREARMS, ILLEGAL DRUGS AND NARCOTICS ARE NOT PERMITTED.</li>
+			</ol>
+			<p><strong>Guests</strong><br>
+			Each adult client can have one registered guest at a time unless maximum capacity of villa has been met. Client may register or unregister a guest at  any time, night or day. Client must be present during registration process.</p>
+			<p>
+			  <strong>Visitors</strong><br>
+			  Visitors are welcome from&nbsp;8  AM to 11 PM.</p>
+			<p><em>
+			</em><strong>Guests and Visitor rules</strong></p>
+			<ol>
+			  <li>All guests and visitors actions are  all solely under the responsibility of the clients renting the villa. Approved  service providers are not subject to this charge.</li>
+			  <li>A valid photo ID is required of all adult clients, guests and visitors. Satisfactory IDs are passports, driver license, or a Dominican cedula ID. No photocopies of any IDs will be  acceptable. Registration is to be done at Reception or Security gate.</li>
+			  <li>All visitor passes must be returned to security each time the guest exits Casa Linda. When reentering they will be issued a new pass at the entry gate. The replacement cost for a lost pass is $20.00 USD or the equivalent in Dominican pesos.</li>
+			  <li>Once within the complex guests/visitors are not permitted to walk unescorted within the Casa Linda complex. No loitering or waiting for rides are permitted at the gates to the  entrances of Residencial Casa Linda. Failure may lead to blacklisting of both client and guest/visitor.</li>
+			
+ <li>Villa  Capacity Limits for registered overnight/guests per accommodations:<br></li></ol>
+  <ul>
+    <li>
+    <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 2 Bedroom Villas–Max. occupancy family of 4 (2 Adults plus 2  children), or 4 Adults (2 couples) <br>
+    or 2 Single persons<br></li>
+    
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 3 Bedroom Villas – Max. occupancy family of 6 <br>
+    (Any combination Adult/Children not exceeding <br>
+    6 persons in total), or 6 Adults (3 couples) or 3 Single  persons<br></li>
+    
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 4 Bedroom  Villas – Max. occupancy family of 8 <br>
+    (Any combination Adult/Children not exceeding 8 persons in  total), or 8 Adults (4 couples) or 4 Single persons<br></li>
+    
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 5 Bedroom  Villas – Max. occupancy family of 10 (Any combination Adult/Children not  exceeding <br>
+    10 persons in total), or 10 Adults (5 couples) or 5 Single  persons<br></li>
+    
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 6 Bedroom  Villas– Max.occupancy family of 12 (Any combination Adult/Children not  exceeding 12 persons in total), or 12 Adults (6 couples) or 6 Single persons </li>
+</ul>
+
+<ul>
+  <strong>Additional Visitors</strong><br>
+    <li> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 2 Bedroom Villas – up to 2 guests until 11 pm, <br>
+    no overnight guests allowed in Villa<br></li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 3 Bedroom Villas – up to 3 guests until 11 pm, <br>
+    no overnight guests allowed in Villa<br></li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 4 Bedroom Villas – up to 4 guests until 11 pm, <br>
+    no overnight guests allowed in Villa<br></li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 5 Bedroom Villa – up to 5 guests until 11 pm, <br>
+    no overnight guests allowed in Villa<br></li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color:blue"></span> 6 Bedroom Villa – up to 6 guests until 11 pm, <br>
+    no overnight guests allowed in Villa</li>
+</ul>
+
+
+			
+			
+		  <strong>Special Events<br>
+		  </strong>Any additional guests or visitors must be authorized by Administration during office hours, special events must be requested minimum 48H prior to event. Where the amount of extra guests must be specified as well as full names and copies of ID.<br/>Note: pool party, bachelor party, birthday party aren't specials events. <br>
+		  <br>
+			  If you do not follow these rules: The first offense is a verbal warning, The second offense is a written warning which is recorded with Administration. The third offense is cause for immediate eviction and blacklisting of all guests and clients causing the disturbance. Payments are non refundable. If deemed necessary we reserve the right to enforce the third offence action directly.</p>
+		  </blockquote>
+		  <p><strong>Bookings</strong><br>
+		Guests may book in advance  or on arrival. Rooms are subject to availability and Residencial Casa Linda  reserves the right to refuse any booking for good reason.</p>
+		  <p><strong>Check in-out</strong><br>
+			Guests may check-in at  any time from 3.00 p.m. on day of arrival. If a guest has not checked-in by 6.00 p.m., Residencial Casa Linda is entitled to re-let the room unless the guest has notified Residencial Casa Linda that he/she will be arriving late.<br>
+			On departure, guests must vacate their rooms and check-out by no later than 12.00am. Guest may request late checkout through reception, this can not be guaranteed and a late checkout fee will be applied to the reservation.</p>
+		  <p><strong>&nbsp;</strong><strong>Payment</strong><br>
+			Guests must pay all  outstanding charges on departure. We accept all major debit &amp; credit cards  except American Express. We reserve the right to keep the hold and charge up to  but not restricted to 3 days after departure.<br>
+		  Residencial Casa Linda  reserve the right to use the guests credit card hold to deduct from their  account any unpaid outstanding balances i.e. late room charges, fumigation of  the bedroom, damage charges..</p>
+		  <p><strong>Right of Refusal</strong><br>
+		  Residencial Casa Linda  reserves the right to refuse a guest entry and accommodation if, on arrival,  management reasonably considers that the guest is under the influence of drink  or drugs, previously blacklisted, is unsuitably dressed or is behaving in a  threatening, abusive or otherwise unacceptable manner.</p>
+		  <p><strong>Disturbance</strong><br>
+			Residencial Casa Linda  reserves the right to require a guest to leave if he/she is causing a  disturbance, annoying other guests or its staff or is behaving in an  unacceptable manner.</p>
+		  <p><strong>Losses, Liabilities etc.</strong></p>
+		  <ol>
+			<li>Guests must report any loss  of or damage to their property immediately on discovery to our&rsquo;s Lost Property,  Security or other appropriate staff members, and shall make themselves  available to assist with any reports made by Residencial Casa Linda to the  police.</li>
+			<li>Property that is left  behind in the guest rooms will be kept for 3 weeks. All unassigned property  will be forwarded to a charity or disposed of depending value. If we send  articles back to the customer, we will charge a postage and packaging fee to  the credit card on file.</li>
+			<li>Guests shall not enter  areas of the Residential which are indicated as being closed to the public.  Residencial Casa Linda shall not be responsible for death, personal injury or  loss or damage to property suffered by a guest in such areas.</li>
+			<li>Residencial Casa Linda  shall not be liable to a guest for any loss or damage to property caused by the  misconduct or Negligence of a guest or an Act of God, or where the guest  remains in exclusive charge of the property concerned.</li>
+			<li>Residencial Casa Linda  shall not be liable for any failure or delay in performing any of its  obligations under this Agreement if the failure or delay was due to any cause  beyond its reasonable control, including (without limitation) war or threat of  war, civil or political action or disturbance, riot, natural disaster, fire,  epidemic, bad weather, terrorist activity (threatened or actual), military  activity, governmental or regulatory action, industrial dispute, act of God,  failure of power or machinery, failure of or interruption in externally  provided services and utilities, and all similar events outside Residencial  Casa Linda&rsquo;s control.</li>
+			<li>Whilst all reasonable  efforts have been taken by Residencial Casa Linda to ensure that Bookings made  under this Agreement are able to proceed, We reserves the right to relocate any  Bookings to another villa within the project of similar size and standard. The  Client acknowledges that Residencial Casa Linda accepts no liability for any  loss or damage suffered by or caused to the Client in consequence of the  relocation of the Client.</li>
+			<li>For the avoidance of doubt,  Residencial Casa Linda does not exclude its liability for death or personal  injury caused by Residencial Casa Lindas negligence.</li>
+			<li>Guests should also refer to  the Notice relating to Loss or Damage to Guest&rsquo;s Property displayed in  Reception.</li>
+			<li>Residencial is not liable  for any loss or damage caused to a guest&rsquo;s vehicle, unless caused by the Residencial  Casa Linda&rsquo;s wilful misconduct.</li>
+			<li>Guests will be liable for any loss, damage or personal injury they  may cause at Residencial Casa Linda.</li>
+			<li>These Conditions shall be  governed by Dominican law and you agree to submit to the jurisdiction of the  Dominican courts.</li>
+		  </ol>
+		  <p><br>
+			<strong>Termination of Agreements and Refunds Policy</strong><br>
+			We ourselves reserve  the right to terminate any Services Agreement for any reason, including the  ending of services that are already underway. No refunds shall be offered,  where a Service is deemed to have begun and is, for all intents and purposes,  underway.<br>
+		  </p>
+		  <p><strong>Availability</strong><br>
+			You are solely  responsible for evaluating the fitness for a particular purpose of any  downloads, programs and text available through this site. Redistribution or  republication of any part of this site or its content is prohibited, including  such by framing or other similar or any other means, without the express  written consent of the Company. The Company does not warrant that the service  from this site will be uninterrupted, timely or error free, although it is  provided to the best ability. By using this service you thereby indemnify this  Company, its employees, agents and affiliates against any loss or damage, in  whatever manner, howsoever caused.<br>
+		  </p>
+		  <p><strong>Log Files</strong><br>
+			We use IP addresses to  analyse trends, administer the site, track user's movement, and gather broad  demographic information for aggregate use. IP addresses are not linked to  personally identifiable information. Additionally, for systems administration,  detecting usage patterns and troubleshooting purposes, our web servers  automatically log standard access information including browser type, access  times/open mail, URL requested, and referral URL. This information is not  shared with third parties and is used only within this Company on a  need-to-know basis. Any individually identifiable information related to this  data will never be used in any way different to that stated above without your  explicit permission or any intended case that the in Right Authorities.<br>
+		  </p>
+		  <p><strong>Cookies</strong><br>
+			Like most interactive  web sites this Company's website [or ISP] uses cookies to enable us to retrieve  user details for each visit. Cookies are used in some areas of our site to  enable the functionality of this area and ease of use for those people  visiting. Some of our affiliate partners may also use cookies.<br>
+		  </p>
+		  <p><strong>Links to this website</strong><br>
+			You may not create a  link to any page of this website without our prior written consent. If you do  create a link to a page of this website you do so at your own risk and the  exclusions and limitations set out above will apply to your use of this website  by linking to it.<br>
+		  </p>
+		  <p><strong>Links from this website</strong><br>
+			We do not monitor or  review the content of other party's websites which are linked to from this  website. Opinions expressed or materials appearing on such websites are not  necessarily shared or endorsed by us and should not be regarded as the  publisher of such opinions or material. Please be aware that we are not  responsible for the privacy practices, or content, of these sites. We encourage  our users to be aware when they leave our site &amp; to read the privacy statements  of these sites. You should evaluate the security and trustworthiness of any  other site connected to this site or accessed through this site yourself,  before disclosing any personal information to them. This Company will not  accept any responsibility for any loss or damage in whatever manner, howsoever  caused, resulting from your disclosure to third parties of personal  information.<br>
+		  </p>
+		  <p><strong>Copyright Notice</strong><br>
+			Copyright and other  relevant intellectual property rights exist on all text relating to the  Company's services and the full content of this website.<br>
+			This Company's logo is  a registered trademark of this Company in Dominican Republic and other  countries. The brand names and specific services of this Company featured on  this web site are trade.<br>
+		  </p>
+		  <p><strong>Communication</strong><br>
+			We have several  different e-mail addresses for different queries. These, &amp; other contact  information, can be found under our &ldquo;About Casa Linda&rdquo; tab on our &ldquo;Meet the  Casa Linda Family&rdquo; link on our website or via Company literature or via the  Company's stated telephone, facsimile or mobile telephone numbers.<br>
+			This company is  registered by the Dominican Law RNC 1-05-04480-3. (Registro  Nacional de Contribuyentes) National Registration of Contributors registered  (&quot;DGII Direccion General de Impuestos Internos&quot;) office Antera Mota  St. Puerto Plata Dominican Republic 57000. <br>
+		  </p>
+		  <p><strong>Force Majeure</strong><br>
+			Neither party shall be  liable to the other for any failure to perform any obligation under any  Agreement which is due to an event beyond the control of such party including  but not limited to any Act of God, terrorism, war, Political insurgence,  insurrection, riot, civil unrest, act of civil or military authority, uprising,  earthquake, flood or any other natural or manmade eventuality outside of our  control, which causes the termination of an agreement or contract entered into,  nor which could have been reasonably foreseen. Any Party affected by such event  shall forthwith inform the other Party of the same and shall use all reasonable  endeavors to comply with the terms and conditions of any Agreement contained  herein.<br>
+  </p>
+  <p><strong>Waiver</strong><br>
+    Failure of either Party  to insist upon strict performance of any provision of this or any Agreement or  the failure of either Party to exercise any right or remedy to which it, he or  they are entitled hereunder shall not constitute a waiver thereof and shall not  cause a diminution of the obligations under this or any Agreement. No waiver of  any of the provisions of this or any Agreement shall be effective unless it is  expressly stated to be such and signed by both Parties.<br>
+  </p>
+  <p><strong>General</strong><br>
+    The Dominican laws  compiled under the name &quot;Constitution&quot; govern these terms and  conditions. By accessing this website [and using our services/buying our  product] you consent to these terms and conditions and to the exclusive  jurisdiction of the Dominican courts in all disputes arising out of such  access. If any of these terms are deemed invalid or unenforceable for any  reason (including, but not limited to the exclusions and limitations set out  above), then the invalid or unenforceable provision will be severed from these  terms and the remaining terms will continue to apply. Failure of the Company to  enforce any of the provisions set out in these Terms and Conditions and any  Agreement, or failure to exercise any option to terminate, shall not be  construed as waiver of such provisions and shall not affect the validity of  these Terms and Conditions or of any Agreement or any part thereof, or the  right thereafter to enforce each and every provision. These Terms and  Conditions shall not be amended, modified, varied or supplemented except in  writing and signed by duly authorized representatives of the Company.<br>
+    </p>
+  <p><strong>Notification of Changes</strong><br>
+    The Company reserves  the right to change these conditions from time to time as it sees fit and your  continued use of the site will signify your acceptance of any adjustment to  these terms. If there are any changes to our privacy policy, we will announce  that these changes have been made on our home page and on other key pages on  our site. If there are any changes in how we use our site customers' Personally  Identifiable Information, notification on our website section &quot;News&quot;  will be made to those affected by this change. Any changes to our privacy  policy will be posted on our web site 15 days prior to these changes taking  place. You are therefore advised to re-read this statement on a regular basis.<br>
+    <strong>These terms and conditions form part of the Agreement  between the Client and ourselves the Company (RCL ADMINISTRACIONES S.R.L.  Residencial Casa Linda). You&rsquo;re accessing of this website and/or undertaking of  a booking or Agreement indicates your understanding, agreement to and  acceptance, of the Disclaimer Notice and the full Terms and Conditions  contained herein. Your statutory Consumer Rights are unaffected.</strong></p>
+</div>
+	
+    </div> <!-- /.container -->
+</section>
+<!-- /END HOTEL ROOM ITEM  -->

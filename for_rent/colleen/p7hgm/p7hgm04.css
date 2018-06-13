@@ -1,0 +1,251 @@
+/* 
+  -----------------------------------
+  Horizontal Glider Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 04 - Basic
+  -----------------------------------
+*/
+.p7HGM04 {
+	padding: 0px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGM_viewport_wrapper {
+	position: relative;
+	border: 1px solid #666;
+}
+.p7HGM04 .p7HGM_panel_content {
+	font-size: 13px;
+	line-height: 1.5em;
+	padding: 20px;
+}
+.p7HGM04 .p7HGMtrig {
+	overflow: hidden;
+	font-size: 14px;
+	zoom: 1;
+	margin-bottom: 6px;
+}
+.p7HGM04 .p7HGMtrig.trigbottom {
+	margin-bottom: 0px;
+	margin-top: 6px;
+}
+.p7HGM04 .p7HGMtrig ul {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMtrig li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMtrig a {
+	display: block;
+	padding: 10px 16px;
+	color: #000;
+	border: 1px solid #000;
+	text-decoration: none;
+}
+.p7HGM04 .p7HGMtrig a:hover {
+	color: #CCC;
+	background-color: #000;
+}
+.p7HGM04 .p7HGMtrig .panel_open {
+	color: #CCC;
+	background-color: #000;
+}
+.p7HGM04 .p7HGM_controls div {
+	position: absolute;
+	top: 50%;
+	z-index: 9999;
+	margin-top: -20px;
+	height: 35px;
+	width: 18px;
+	display: none;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_prev {
+	left: -24px;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_next {
+	right: -24px;
+}
+.p7HGM04 .p7HGM_controls div img {
+	border: 0;
+	width: 18px;
+	height: 35px;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_prev a {
+	background-image: url(img/p7hgmBasic_CTRLPrev.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_next a {
+	background-image: url(img/p7hgmBasic_CTRLNext.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM04 .p7HGM_controls a:hover {
+	background-position: 0px -35px;
+}
+.p7HGM04 .p7HGM_controls a.off, .p7HGM04 .p7HGM_controls a.off:hover {
+	cursor: default;
+	background-position: 0px -70px;
+}
+.p7HGM04 .p7HGMpaginator {
+	overflow: hidden;
+	font-size: 12px;
+	margin-bottom: 6px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGMpaginator ul {
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMpaginator.pagbottom {
+	margin-top: 6px;
+}
+.p7HGM04 .p7HGMpaginator li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMpaginator a {
+	display: block;
+	padding: 2px 6px;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #000;
+}
+.p7HGM04 .p7HGMpaginator a:hover {
+	color: #CCC;
+	background-color: #000;
+}
+.p7HGM04 .p7HGMpaginator .panel_open {
+	color: #CCC;
+	background-color: #000;
+}
+.p7HGM04 .p7HGMvcr {
+	overflow: hidden;
+	margin-top: 12px;
+}
+.p7HGM04 .p7HGMvcr ul {
+	margin: 0;
+	width: 148px;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMvcr li {
+	list-style-type: none;
+	float: left;
+}
+.p7HGM04 .p7HGMvcr.vcrtop {
+	margin-bottom: 12px;
+}
+.p7HGM04 .p7HGMvcr.vcrtop li {
+	margin: 0;
+}
+.p7HGM04 .p7HGMvcr img {
+	border: 0;
+}
+.p7HGM04 .p7HGMvcr a {
+	display: block;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_first a {
+	background-image: url(img/p7hgmBasic_First.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_first img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_prev a {
+	background-image: url(img/p7hgmBasic_Prev.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_prev img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play a {
+	background-image: url(img/p7hgmBasic_Play.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play img, .p7HGM04 .p7HGMvcr .p7HGM_play .pause img {
+	width: 32px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play .pause {
+	background-image: url(img/p7hgmBasic_Play.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -60px !important;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_next a {
+	background-image: url(img/p7hgmBasic_Next.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_next img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_last a {
+	background-image: url(img/p7hgmBasic_Last.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_last img {
+	width: 28px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr a:hover {
+	background-position: 0px -30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play .pause:hover {
+	background-position: 0px -90px !important;
+}
+.p7HGM04 .p7HGMvcr a.off {
+	background-position: 0px -60px;
+	cursor: default;
+}
+.p7HGM04 .p7HGMvcrtext {
+	font-size: 12px;
+	margin-top: 6px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGMvcrtext.vcrtext_top {
+	margin-bottom: 6px;
+}
+.p7HGM04 .p7HGMvcrtext ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMvcrtext li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMvcrtext a {
+	padding: 4px 8px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #000;
+}
+.p7HGM04 .p7HGMvcrtext a:hover {
+	color: #CCC;
+	background-color: #000;
+}
+.p7HGM04 .p7HGMvcrtext a.off, .p7HGM04 .p7HGMvcrtext a.off:hover {
+	color: #7D7D7D;
+	cursor: default;
+	background-color: #CCC;
+	border-color: #CCC;
+}
+.p7HGM04 .p7HGMtrig .current_mark {
+	font-weight:bold;
+}
+.p7HGM04 .p7HGM_panel_content .current_mark {
+	color:#000;
+	font-weight:bold;
+}

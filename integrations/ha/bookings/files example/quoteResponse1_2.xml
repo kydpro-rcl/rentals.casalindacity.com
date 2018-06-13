@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quoteResponse>
+	<documentVersion>1.2</documentVersion>
+	<quoteResponseDetails>
+		<locale>en_US</locale>
+		<orderList>
+			<order>
+				<currency>USD</currency>
+				<orderItemList>
+					<orderItem>
+						<description>Rent</description>
+						<feeType>RENTAL</feeType>
+						<name>Rent</name>
+						<preTaxAmount currency="USD">2800</preTaxAmount>
+						<totalAmount currency="USD">3106.60</totalAmount>
+					</orderItem>
+					<orderItem>
+						<description>Resort Fee</description>
+						<feeType>MISC</feeType>
+						<name>Resort Fee</name>
+						<preTaxAmount currency="USD">84</preTaxAmount>
+						<totalAmount currency="USD">93.20</totalAmount>
+					</orderItem>
+				</orderItemList>
+				<paymentSchedule>
+					<acceptedPaymentForms>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>VISA</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>MASTERCARD</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentCardDescriptor>
+							<paymentFormType>CARD</paymentFormType>
+							<cardCode>DISCOVER</cardCode>
+							<cardType>CREDIT</cardType>
+						</paymentCardDescriptor>
+						<paymentInvoiceDescriptor>
+							<paymentFormType>INVOICE</paymentFormType>
+							<paymentNote>A note about invoice processing</paymentNote>
+						</paymentInvoiceDescriptor>
+					</acceptedPaymentForms>
+					<paymentScheduleItemList>
+						<paymentScheduleItem>
+							<amount currency="USD">3199.8</amount>
+							<dueDate>2015-04-20</dueDate>
+						</paymentScheduleItem>
+					</paymentScheduleItemList>
+				</paymentSchedule>
+				<reservationCancellationPolicy>
+					<description>Cancellation Policy Text Goes Here</description>
+				</reservationCancellationPolicy>
+				<stayFees>
+					<stayFee>
+						<description>An addition City Fee of $15 cash must also be collected upon arrival.</description>
+					</stayFee>
+				</stayFees>
+			</order>
+		</orderList>
+		<rentalAgreement>
+			<agreementText>Rental Agreement Text Goes Here</agreementText>
+		</rentalAgreement>
+	</quoteResponseDetails>
+</quoteResponse>

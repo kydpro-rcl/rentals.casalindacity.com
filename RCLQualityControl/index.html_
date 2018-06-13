@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Page 1</title>
+
+
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="css/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="css/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+   <style type="text/css">
+.art-post .layout-item-0 { padding-right: 10px;padding-left: 10px; }
+   .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+   .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+   </style>
+
+</head>
+<body>
+<div id="art-main">
+    <div class="cleared reset-box"></div>
+    <div id="art-header-bg" class="art-header">
+    </div>
+    <div class="cleared reset-box"></div>
+    <div id="art-hmenu-bg" class="art-bar art-nav">
+    </div>
+    <div class="cleared reset-box"></div>
+    <div class="art-box art-sheet">
+        <div class="art-box-body art-sheet-body">
+            <div class="art-header">
+                <div class="art-headerobject"></div>
+                        <div class="art-logo">
+                                                 <h1 class="art-logo-name"><a href="./index.html">RCL Quality Control</a></h1>
+                                                                         <h2 class="art-logo-text">Residencial Casa Linda</h2>
+                                                </div>
+                
+            </div>
+            <div class="cleared reset-box"></div>
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+	<ul class="art-hmenu">
+		<li>
+			<a href="./new-page.html" class="active">Page 1</a>
+			<ul>
+				<li>
+                    <a href="./new-page/new-page.html">Subpage 1</a>
+
+                </li>
+				<li>
+                    <a href="./new-page/new-page-2.html">Subpage 2</a>
+
+                </li>
+				<li>
+                    <a href="./new-page/new-page-3.html">Subpage 3</a>
+
+                </li>
+			</ul>
+		</li>	
+		<li>
+			<a href="./new-page-2.html">Page 2</a>
+		</li>	
+	</ul>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content">
+<div class="art-box art-post">
+    <!-- <div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+                                <h2 class="art-postheader"><span class="art-postheadericon">Page 1
+                                </span></h2>
+                                                                <div class="art-postcontent">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 100%;">
+        <p><img src="images/preview.jpg" alt="an image" id="preview-image" name="preview-image" />Enter Page content here...</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</p>
+        
+        <p><a href="#">Read more</a></p>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 50%;">
+        <ul>
+            <li>Suspendisse pharetra auctor pharetra. Nunc a sollicitudin est.</li>
+        
+            <li>Donec vel neque in neque porta venenatis sed sit amet lectus.</li>
+        
+            <li>Curabitur ullamcorper gravida felis, sit amet scelerisque lorem iaculis sed.</li>
+        </ul>
+    </div><div class="art-layout-cell layout-item-0" style="width: 50%;">
+        <blockquote style="margin: 10px 0">
+            Nunc a sollicitudin est. Curabitur ullamcorper gravida felis, sit amet scelerisque lorem iaculis sed. Donec vel neque in neque porta venenatis sed sit amet lectus.
+        </blockquote>
+    </div>
+    </div>
+</div>
+
+                </div>
+                <div class="cleared"></div>
+                </div>
+
+		<div class="cleared"></div>
+    </div> -->
+</div>
+
+                          <div class="cleared"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+            
+    		<div class="cleared"></div>
+        </div>
+    </div>
+    <div class="art-footer">
+        <div class="art-footer-body">
+            <div class="art-footer-center">
+                <div class="art-footer-wrapper">
+                    <div class="art-footer-text">
+                        <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        <p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+
+<p>Copyright © 2011. All Rights Reserved.</p>
+                        <div class="cleared"></div>
+                        <p class="art-page-footer"><a href="http://www.artisteer.com/?p=website_templates" target="_blank">Website Template</a> created with Artisteer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="cleared"></div>
+</div>
+
+</body>
+</html>

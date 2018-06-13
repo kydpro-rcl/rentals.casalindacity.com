@@ -1,0 +1,3 @@
+<?php;
+header('Location:https://portal.casalindacity.com/rentals/vacation-rentals.php');
+?>
